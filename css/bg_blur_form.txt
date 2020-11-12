@@ -1,0 +1,176 @@
+background image with blur option
+===================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			*
+			{
+				margin:0;
+				padding:0;
+			}
+			body
+			{
+				height:100%;
+			}
+			.bg-image
+			{
+				background-image:url("office.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				height: 100vh;
+				/* opacity: 0.4; */
+				filter:blur(8px);
+				
+			}
+			.bg-div
+			{
+				width:450px;
+				height:450px;
+				border:3px solid #b8336a;
+				position: absolute;
+				top:15%;
+				left:35%;
+			}
+			.bg-div img
+			{
+				width:100px;
+				height:100px;
+				display: block;
+				margin: 40px auto;
+				border-radius: 50px;
+				border:3px solid #b8336a;
+			}
+			input[type="text"]
+			{
+				width:400px;
+				height:40px;
+				border:3px solid #b8336a;
+				display: block;
+				margin:30px auto;
+				border-radius: 20px;
+				background: transparent !important;
+			}
+			input[type="password"]
+			{
+				width:400px;
+				height:40px;
+				border:3px solid #b8336a;
+				display: block;
+				margin:30px auto;
+				border-radius: 20px;
+				background: transparent !important;
+			}
+
+			input[placeholder]
+			{
+				text-align: center;
+				font-size: 22px;
+			}
+			input[type="submit"]
+			{
+				display: block;
+				margin:30px auto;
+				padding:10px;
+				width:100px;
+				border:3px solid #b8336a;
+				background: transparent !important;
+				font-size: 20px;
+				transition: all 1s linear;
+
+			}
+			input[type="submit"]:hover
+			{
+				transform: rotate(360deg);
+
+			}
+		</style>		
+	</head>
+	<body>
+			<div class="bg-image"></div>
+			<div class="bg-div">
+					<img src="tonypic.jpg" />
+					<form>
+							<input type="text" name="t1" placeholder="username" />
+
+							<input type="password" name="t2" placeholder="password"/>
+	
+							<input type="submit" value="Login"/>
+					</form>
+			</div>
+			
+	</body>	
+</html>
+
+
+buttons design using transition
+====================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			.container
+			{
+				text-align:center;
+				margin-top:180px;
+			}
+			.btn1,.btn2
+			{
+				
+				border:1px solid black;
+				display: inline-block;
+				width:100px;
+				height:30px;
+				line-height: 30px;
+				transition: all 1s ease-in-out;
+			}
+			.btn1:hover
+			{
+					background-color:blue;
+					color:white;
+					border:none;
+			}
+			.btn2:hover
+			{
+					background-color:red;
+					color:white;
+					border:none;
+					width:200px;
+			}
+
+		</style>		
+	</head>
+	<body>
+			<div class="container">
+				<div class="btn1">Hover</div>
+				<div class="btn2">Hover</div>
+			</div>
+	</body>	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

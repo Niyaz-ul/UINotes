@@ -1,0 +1,611 @@
+Browser Object Model (BOM)
+==========================
+The Browser Object Model is used to interact with Browser.
+
+The default object for Browser is "window" object.It means we can call 
+all functions of window object by specifying "window" or directly.
+
+ex:
+		alert("This is Alert Box");
+	
+		or 
+
+		window.alert("This is Alert Box");
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				document.writeln(window);			
+			</script>
+	</body>
+</html>
+
+
+window
+-------
+The window object represents a window in a browser.
+
+window object is created by the browser.
+
+window is an object of Browser.It is not a object of JavaScript.
+
+The JavaScript objects are String,Array, Date and etc.
+
+"window" object is used to write Browser related programming.
+
+With the help of window object we can perform following task.
+
+1)Get Width and Height of Browser window.
+
+2)Open and Close Browser window.
+
+3)Move and Resize Browser window.
+
+4)Get URL,Hostname, protocol of a Browser window.
+
+5)Scroll to Browser window.
+
+6)Get History of Browser window.
+
+Methods of Window Object
+-----------------------
+1)alert()
+----------
+It display alert dialog box.
+It has message and ok button.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function f1()
+				{
+						alert("This is Alert Box");
+				}				
+			</script>
+			<button onclick="f1()">ClickMe</button>
+	</body>
+</html>	
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<button onclick="alert('This is Alert Box');">ClickMe</button>
+	</body>
+</html>
+
+confirm()
+-----------
+It displays confirm dialog box.
+It has message with ok and cancel button.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function f1()
+				{
+					var v=confirm("Are you sure ?");
+					if(v==true)
+					{
+						alert("ok");
+					}
+					else
+					{
+						alert("cancel");
+					}
+				}
+			</script>
+			<button onclick="f1()">ClickMe</button>
+	</body>
+</html>
+
+prompt
+-------
+It displays prompt dialog box for input.
+
+It has message and textfield.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function f1()
+				{
+					var v=prompt("What is you Name :");
+					alert("My Name is = "+v);
+				}
+			</script>
+			<button onclick="f1()">ClickMe</button>
+	</body>
+</html>
+
+innerWidth and innerHeight
+----------------------------
+The innerWidth property returns  the width of a window's content area.
+
+The innerHeight property returns the height of a window's content area.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+					var w=window.innerWidth;
+					var h=window.innerHeight;
+					document.writeln(w+"<br>");
+					document.writeln(h+"<br>");
+			</script>
+			
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+					
+					document.writeln(window.innerWidth+"<br>");
+					document.writeln(window.innerHeight+"<br>");
+			</script>
+			
+	</body>
+</html>
+
+open()
+------
+It is used to open a new window.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function f1()
+				{
+					//window.open("http://www.google.com"); //new tab
+					//window.open("http://www.google.com","_blank"); // new tab
+					window.open("http://www.google.com","_parent"); //same tab
+				}
+			</script>
+			<button onclick="f1()">clickMe</button>
+	</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function f1()
+				{
+					window.open("http://www.google.com","_blank","width=500px,height=200px"); 
+				}
+			</script>
+			<button onclick="f1()">clickMe</button>
+	</body>
+</html>
+
+close()
+--------
+It is used to close the current window.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				var mywindow;
+				function createWindow()
+				{
+				mywindow=window.open("http://www.google.com","_blank","width=500px,height=200px");
+			
+				}
+				function cancelWindow()
+				{
+					mywindow.close();
+				}
+			</script>
+			<button onclick="createWindow()">create window</button>
+			<button onclick="cancelWindow()">cancel window</button>
+	</body>
+</html>
+
+In the below example we can see our new browser window will take top-Left position.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function createWindow()
+				{
+				window.open("http://www.google.com","_blank","width=500px,height=200px");
+			
+				}
+				
+			</script>
+			<button onclick="createWindow()">create window</button>
+	</body>
+</html>
+
+If we want to adjust this browser then we need to use moveBy() or moveTo() functions.
+
+moveTo()
+---------
+moveTo() function will move the browser window by using Absolute position i.e screen level.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				var mywindow;
+				function createWindow()
+				{
+				mywindow=window.open("http://www.google.com","_blank","width=500px,height=200px");
+				mywindow.moveTo(100,100);
+				}
+				
+			</script>
+			<button onclick="createWindow()">create window</button>
+	</body>
+</html>
+
+Sometimes we can't move predefine windows because windows will be restricted.
+if we try to move then we wil get one error in a console page.
+
+To overcome this problem we can use our own window but not predefine window like google.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				var mywindow;
+				function createWindow()
+				{
+				mywindow=window.open("http://www.google.com","","width=500px,height=200px");
+				
+				//creating a new window
+				 mywindow.document.write("<p>This is Paragraph Tag </p>");
+				}
+				function moveWindow()
+				{
+					mywindow.moveTo(100,100);
+				}
+			</script>
+			<button onclick="createWindow()">create window</button>
+			<button onclick="moveWindow()">move window</button>
+	</body>
+</html>
+
+In the above example a newly opened browser window does not have any focus.
+
+To get the focus on browser window we need to use focus() method.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				var mywindow;
+				function createWindow()
+				{
+				mywindow=window.open("http://www.google.com","","width=500px,height=200px");
+				
+				//creating a new window
+				 mywindow.document.write("<p>This is Paragraph Tag </p>");
+				}
+				function moveWindow()
+				{
+					mywindow.moveTo(100,100);
+					mywindow.focus();
+				}
+			</script>
+			<button onclick="createWindow()">create window</button>
+			<button onclick="moveWindow()">move window</button>
+	</body>
+</html>
+
+moveBy()
+-------
+moveBy() function will move the browser window by using relative position i.e content level.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				var mywindow;
+				function createWindow()
+				{
+				mywindow=window.open("http://www.google.com","","width=500px,height=200px,top=100px,left=100px");
+				
+				//creating a new window
+				 mywindow.document.write("<p>This is Paragraph Tag </p>");
+				}
+				function moveWindow()
+				{
+					mywindow.moveBy(100,100);
+					mywindow.focus();
+				}
+			</script>
+			<button onclick="createWindow()">create window</button>
+			<button onclick="moveWindow()">move window</button>
+	</body>
+</html>
+
+setTimeout function
+---------------------
+It performs given task after the specified milliseconds.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				function f1()
+				{
+					setTimeout(function(){ 
+								alert("Welcome To GlobalEdx")
+								} ,2000);// 2000 ms = 2s
+				}
+			</script>
+			<button onclick="f1()">ClickMe</button>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+
+	</head>
+	<body>
+			<script>
+				setTimeout(Anim,3000);
+				//Anim is a function name and 3000 is a 3 milliseconds
+				function Anim()
+				{
+					document.writeln("Hello");
+				}
+				
+			</script>
+			
+	</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div{
+					width:150px;
+					height:150px;
+					background: red;
+				}
+			</style>
+	</head>
+	<body>
+			<script>
+				 setTimeout(Anim,3000);
+				//Anim is a function name and 3000 is a 3 milliseconds
+				function Anim()
+				{
+					//target the div.
+					var target=document.getElementById("test");
+					target.style.width="500px";
+					
+				}
+				
+			</script>
+			<div id="test"></div>
+	</body>
+</html>
+
+clearTimeout() function
+-----------------------
+If we want to stop the animation in between then we need to use clearTimeout()
+function.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div{
+					width:150px;
+					height:150px;
+					background: red;
+				}
+			</style>
+	</head>
+	<body>
+			<script>
+				 var id=setTimeout(Anim,5000);
+				//Anim is a function name and 3000 is a 3 milliseconds
+				function Anim()
+				{
+					//target the div.
+					var target=document.getElementById("test");
+					target.style.width="500px";
+					
+				}
+				function stopAnim()
+				{
+					clearTimeout(id);
+				}
+				
+			</script>
+			<div id="test"></div>
+			<button onclick="stopAnim()">Stop Animation</button>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div{
+					width:150px;
+					height:150px;
+					background: red;
+					margin-top:10px;
+				}
+				
+			</style>
+	</head>
+	<body>
+			<script>
+				 var id=setTimeout(Anim,5000);
+				//Anim is a function name and 3000 is a 3 milliseconds
+				function Anim()
+				{
+					//target the div.
+					var target1=document.getElementById("test1");
+					target1.style.width="500px";
+						//target the div.
+					var target2=document.getElementById("test2");
+					target2.style.width="500px";
+					
+				}
+				function stopAnim()
+				{
+					clearTimeout(id);
+				}
+				
+			</script>
+			<div id="test1"></div>
+			<div id="test2"></div>
+			<button onclick="stopAnim()">Stop Animation</button>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

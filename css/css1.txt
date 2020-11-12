@@ -1,0 +1,348 @@
+Q)What are the differences between HTML and HTML5?
+
+ans)
+HTML						HTML5
+------						-----
+1)To represent HTML document we need to use     To represent HTML5 document we need to use 
+  <!DOCTYPE>.					<!DOCTYPE html>.
+
+2)HTML is bit slow.				HTML5 is more faster because it is leight weight.
+
+3)HTML is not efficient.			HTML5 is more efficient.
+
+4)HTML is inflexible for the developer.		HTML5 is flexible for the developer.
+
+5)HTML is Less mobile friendly.			HTML5 is mobile friendly.
+
+6)Does not support drag and drop effects.	It supports Drag and Drop effects.
+
+7)Not supported Audio and video without using	Supports audio and video with the help of 
+  flash player.					<audio> and <video> tag without using flash player.
+
+8)IT does not support javascript to run	        It supports javascript to run in background with 
+  on browser.					the help of JS Web Worker API.
+
+
+9)Vector graphics supported with the help of    Vector graphics is supported with the help of 
+  technologies such as VML,Silver light,adobe   internal technologies such as SVG and CANVAS.
+  flash and etc.
+
+10)Can't handle inaccurate syntax.		IT can handle Inaccurate syntax.
+
+
+11)shapes like circle,rectangle,triangle	Shapes like circle ,triangle,rectangle is easy to draw.
+ are not possible.
+
+
+CSS
+====
+CSS stands for "Cascading Style Sheet".
+
+CSS is widely used language on a web like HTML.
+
+To learn CSS we should have knowledge on HTML.
+
+This language is used to design HTML Tags/Elements.
+
+In General, CSS is  responsible to apply styles like
+
+1)IT also helps an element/tag in positioning.
+
+2)How an Element/Tag should look like on a web page.
+
+3)It also does some sort of animations.
+
+The latest version of CSS3 introduced in 2001.
+
+CSS files must be save with ".css" extension.
+
+Advantages of CSS
+-------------------
+1)Flexibility
+
+2)Easy/Low Maintainence.
+
+3)Supports Global change.
+
+4)Multiple device compatibility(Responsive).
+
+5)CSS saves lot of time.
+
+6)Page load fater/performance is excellent.
+
+Disadvantages of CSS
+----------------------
+1)Fragmentation
+
+2)Need to update on various CSS levels.
+
+CSS structure
+-------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+		-
+		-
+		-
+	</body>	
+</html>
+
+Note:
+-----
+	styles are cascading from head section to body section.
+
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			<style type="text/css">
+			    div
+				{
+					color:red;
+				}
+			</style>
+	</head>
+	<body>
+			<div>This Is First CSS Program</div>
+	</body>
+</html>
+
+CSS syntax
+-----------
+A CSS rule-set consists of a selector and declaration block.
+ex:
+
+      selector
+          |
+	div{ color:red;font-size:40px;}
+             |________________________|
+ 		   Declaratiob block
+
+The selector points to the HTML Element/Tag which we want to style.
+
+Declaratiob block consist of property name and propertyvalue seperated with colon(:).
+
+Multiple CSS Property declarations are seperated with semicolon(;) and 
+declaration block surrounded by curly braces({}).
+
+ex:2
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			<style type="text/css">
+			    div
+				{
+					color:#6F1E51;
+					font-size:40px;
+					font-family:tahoma;
+					
+				}
+			</style>
+	</head>
+	<body>
+			<div>This Is Second CSS Program</div>
+	</body>
+</html>
+
+Types of CSS and Ways to insert CSS
+=====================================
+We have three types of CSS.They are 
+
+1)Inline CSS
+
+2)Internal CSS/ Embedded CSS
+
+3)External CSS / Seperate CSS
+
+1)Inline CSS
+--------------
+Inline CSS may be used to apply a unique style for a single Element/Tag.
+
+We can achieve inline CSS with the help of "style" attribute.
+
+The "style" attribute may contains any CSS property.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+
+	</head>
+	<body>
+			<h1  style="color:#D980FA;text-align:center;">This Is Heading</h1>
+			<p style="color:#EE5A24;font-size:40px">This is Paragraph</p>
+	</body>
+</html>
+
+
+2)Internal CSS / Embedded CSS
+---------------------------
+Internal CSS may be used if one single html page has a unique style.
+
+We can achieve internal CSS with the help <style> tag/element.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			<style type="text/css">
+				body
+				{
+					background-color:#ffcccc;
+				}
+				h1
+				{
+					color:red;
+					font-family:tahoma;
+					text-align:center;
+				}
+			</style>
+	</head>
+	<body>
+			<h1>This is GlobalEdx</h1>
+			<h1>This is Internal CSS</h1>
+	</body>
+</html>
+
+3)External CSS / Seperate CSS
+----------------------------
+External CSS is used to change the look of the entire website by changing just one file.
+
+Each html pages includes a reference to the external style sheet file inside 
+the <link> tag.
+
+Diagram : css1.1
+
+In external css we have two create two files. i.e ".html" and ".css" file.
+
+The external ".css" file should not contain any html tags. 
+
+globaledx.html
+-------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			<link rel="stylesheet" type="text/css" href="mystyles.css">
+	</head>
+	<body>
+			<h1>This is Heading Tag</h1>
+			<p>This is Paragraph Tag</p>
+	</body>
+</html>
+
+Note:
+----
+Here "type" attribute of <link> tag is optional.
+
+
+mystyles.css
+-------------
+h1
+{
+	color:navy;
+	text-align:center;
+}
+p
+{
+	color:tomato;
+	font-family:arial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

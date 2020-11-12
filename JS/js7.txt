@@ -1,0 +1,483 @@
+setInterval()
+-----------------
+The setInterval() method calls a function or evalutes an expression at specified
+intervals i.e milliseconds.
+
+The setInterval() method will continue calling the function untill 
+clearInterval() method is called or the window is closed.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div
+				{
+					width:150px;
+					height:150px;
+					background:red;
+				}
+			</style>
+	</head>
+	<body>
+			<script>
+				var a=0;
+				setInterval(Anim,1000);
+				function Anim()
+				{
+					a=a+ 10;
+					var target=document.getElementById("test");
+					target.style.marginLeft=a + 'px';
+				}
+			</script>
+			<div id="test"></div>
+	</body>
+</html>
+
+clearInterval()
+-----------------
+The clearInterval() method clears a timer set with the setInterval() method.
+	
+The ID value return by a setInterval() is used as a parameter for the 
+clearInterval() method.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div
+				{
+					width:150px;
+					height:150px;
+					background:red;
+				}
+			</style>
+	</head>
+	<body>
+			<script>
+				var a=0;
+				var id=setInterval(Anim,1000);
+				function Anim()
+				{			
+					a=a+ 10;
+					if(a==100)
+					{
+						clearInterval(id);
+					}
+					else
+					{
+					var target=document.getElementById("test");
+					target.style.marginLeft=a + 'px';
+					}
+				}
+			</script>
+			<div id="test"></div>
+	</body>
+</html>
+
+Window History
+---------------
+Using JavaScript we can achieve Browser History also.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				a{
+					text-decoration:none;
+					font-size:30px;
+				}
+				p{
+					color: blue;
+				}
+				
+				p:hover{
+					color:red;	
+				}
+			</style>
+			
+	</head>
+	<body>
+			<a href="javascript:history.back();">
+					<p >Backward</p>
+			</a>
+			
+			<a href="javascript:history.forward();">
+					<p>Forward</p>
+			</a>
+	</body>
+</html>
+
+window localStorage
+---------------------
+The localStorage properties allows to save key/value pairs in  a web browser.
+
+the localStorage object stores data with no expiration date.The data will not
+be deleted when the browser is closed, and will be available the next days.
+
+the localStorage property is read-only.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+			<script>
+				//storing data in localStorage
+				localStorage.setItem("Father","Alan");
+				localStorage.setItem("Unit","30");
+				
+				//reading the data from localStorage 
+				var name=localStorage.getItem("Name");
+				var unit=localStorage.getItem("Unit");
+				document.writeln(name+"<br>"+unit);
+				
+			</script>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+			<div id="result"></div>
+			<script>
+				//storing data in localStorage
+				localStorage.setItem("Father","Alan");
+				localStorage.setItem("Unit","30");
+				
+				//reading the data from localStorage 
+				document.getElementById("result").innerHTML=localStorage.getItem("Age");
+
+				
+			</script>
+			
+	</body>
+</html>
+
+To remove items from localStorage we need to use localStorage.removeItem("key")
+method .
+
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+			<div id="result"></div>
+			<script>
+				//storing data in localStorage
+				localStorage.setItem("Father","Alan");
+				localStorage.setItem("Unit","30");
+				
+				//removing the items from localStorage
+				localStorage.removeItem("Father");
+				localStorage.removeItem("Unit");
+				
+				//to clear the localStorage
+				localStorage.clear();
+				
+				//reading the data from localStorage 
+				document.getElementById("result").innerHTML=localStorage.getItem("Age");
+
+				
+			</script>
+			
+	</body>
+</html>
+
+window sessionStorage
+-----------------------
+The sessionStorage properties allows to save key/value pairs in a web browser.
+
+The sessionStorage object stores data for only one session i.e The data will
+be deleted when the browser tab is closed.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+			
+			<script>
+				//storing data in sessionStorage
+				sessionStorage.setItem("Work","Eating");
+				sessionStorage.setItem("Job","Roaming");
+				
+				//fetching the items
+				var work=sessionStorage.getItem("Work");
+				var job=sessionStorage.getItem("Job");
+				
+				document.writeln(work+" <br> "+job);
+				
+			</script>
+			
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+			<div id="result"></div>
+			<script>
+				//storing data in sessionStorage
+				sessionStorage.setItem("Work","Eating");
+				sessionStorage.setItem("Job","Roaming");
+				
+				//fetching the items
+				var work=sessionStorage.getItem("Work");
+				var job=sessionStorage.getItem("Job");
+				var res=work+job;
+				document.getElementById("result").innerHTML=res;
+			</script>
+			
+	</body>
+</html>
+we can clear all the data from storage by using sessionStorage.clear() method.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+
+			<script>
+				//storing data in sessionStorage
+				sessionStorage.setItem("Work","Eating");
+				sessionStorage.setItem("Job","Roaming");
+				
+				//fetching the items
+				var work=sessionStorage.getItem("Work");
+				var job=sessionStorage.getItem("Job");
+				document.writeln(work+"<br> "+job);
+				
+				sessionStorage.clear();
+				
+			</script>
+			
+	</body>
+</html>
+
+Document Object Model (DOM)
+-----------------------------
+The document object represents the whole html document.
+
+diagram: js7.1
+
+when html document is loaded in the browser ,it becomes a document object.
+
+Here complete HTML document represent into a Node Heirarchy.
+
+"document" is the root element that represent the html document.
+
+DOM looks for three primary nodes.
+
+1)Element Node
+2)Attribute Node
+3)Text Node
+
+
+By the help of document object, we can add Dynamic content to our web page.
+
+document object is an object of window .so we can call document object as
+given below.
+ex:
+
+window.document.writeln();
+
+or
+document.writeln();
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+			
+	</head>
+	<body>
+
+			<script>
+				window.document.writeln("Approach1"+"<br>");
+				document.writeln("Approach2"+"<br>");
+			</script>
+			
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

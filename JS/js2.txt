@@ -1,0 +1,661 @@
+Working with Internal JavaScript
+================================
+To write any javascript code we need to use <script> tag.
+We can use <script> tag inside <head> and <body> tag.
+
+approach1
+--------
+<head>
+	<script>
+		javascript code
+	</script>
+</head>
+
+Note:
+----
+User will not see the output untill the execution of both html and js code is 
+finished.
+
+approach2
+----------
+<body>
+	<script>
+		javascript code
+	</script>
+</body>
+
+Note:
+----
+User will see the output immediately after the execution of html code.
+
+Output statements in JavaScript
+===============================
+Output statements are used to display some output values to the user.
+
+console.log() is a output statement in JS.
+document.writeln() is a output statement in JS.
+
+IF we want to see the output on browser window then we need to use 
+document.writeln() function.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				document.writeln("Welcome To GlobalEdx");
+				</script>
+	</body>
+</html>
+If we want to dispaly our output on browser console then we need to use 
+console.log() function.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				console.log("Welcome To GlobalEdx");
+				</script>
+	</body>
+</html>
+To see the output in browser console we need press "F12" function key or 
+right click on browser -->click to inspect Element. 
+
+What is JavaScript Engine
+==========================
+JavaScript Engine is used to execute Scripting language on browser window.
+
+JavaScript engine is a software or a program which is used to convert user
+understandable scripting language to machine understanable scripting language.
+
+Every browser contains JavaScript engine.
+
+ex:
+Name			JS Engine
+-----			------
+Chrome			V8 Engine
+
+Firefox			SpiderMonkey
+
+Safari			Javascriptcore
+
+Edge			Chakra
+
+and etc.
+
+JavaScript comments
+===================
+Javascript comments can be used to explain Javascript code and to make it 
+more readable.
+
+The Javascript comments are ignored by the JavaScript Engine i.e embedded in browser window.
+
+There are two types of comments in JavaScript.
+
+1)Single line comment.
+
+2)Multiple line comment.
+
+1)Single line comment.
+----------------------
+It is represented by double forward slashes(//).
+IT can be used before and after of the statements.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				//Printing output
+				document.writeln("Welcome To GlobalEdx");
+				//printed on browser
+				</script>
+	</body>
+</html>
+
+2)Multiple line comment
+-----------------------
+It can be use to comment single line or multiple lines.so it is more 
+convenient.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				/* This is to print output on browser */
+				document.writeln("<h1>Welcome To JavaScript</h1>");
+				
+				</script>
+	</body>
+</html>
+
+JavaScript variables
+=====================
+A name which is given to a memory location is called variable.
+
+The main objective of variable is used to store the data.
+
+There are two types of variables in JavaScript.
+
+1)Local variables
+
+2)Global Variables
+
+
+There are some rules while declaring a JavaScript variables.
+JavaScript variables are also known as Identifiers.
+
+variable name must and should starts with letters(a-z,A-Z),underscore(_) or
+dollar sign($).
+
+ex:
+		var _=10;
+		var $=20;
+		var i;
+
+After the First letter we can use Digits(0-9).
+ex:
+		var a1234=30;
+		var 1abcd; //invalid
+
+JavaScript variables are case sensitive.
+ex:
+		var i=10;
+		var I=10;
+
+1)Local variables
+------------------
+A javascript local variable is used to declare inside blocks or functions.
+
+It is accessible within that functions or blocks.
+
+ex:1
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				 //callie function
+				 function f1()
+				 {
+					//local variable
+					var i=10;
+					document.writeln(i);
+				 }
+				 
+				 //caller function
+				 f1();
+				
+				</script>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				 //callie function
+				 function f1()
+				 {
+					//local variable
+					var i=10;
+					document.writeln(i);
+				 }
+				 
+				 //callie function
+				 function f2()
+				 {
+					document.writeln(i);
+				 }
+				 
+				 //caller function
+				 f1();
+				 f2();
+				
+				</script>
+	</body>
+</html>
+
+2)Global variables
+------------------
+A variable which is declared outside of the function is known as Global variable.
+A javascript global variable is accessible from any function.
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //global variable
+				 var i=100;
+				 
+				 
+				 //callie function
+				 function f1()
+				 {
+					document.writeln(i);
+				 }
+				 
+				 //caller function
+				 f1();
+				
+				</script>
+	</body>
+</html>
+
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //global variable
+				 var i=100;
+				 
+				 
+				 //callie function
+				 function f1()
+				 {
+					document.writeln(i+"<br>");
+				 }
+				 //callie function
+				 function f2()
+				 {
+					document.writeln(i+"<br>");
+				 }
+				 
+				 //caller function
+				 f1();
+				 f2();
+				
+				</script>
+	</body>
+</html>
+
+A JavaScript global variable is declared outside of the function and 
+inside the function with "window" object.
+
+It can access from any function.
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				  //global variable
+				  window.i=100; // or var i=10;
+					
+				 //callie function
+				 function f1()
+				 {
+					
+					document.writeln(i);
+				 }
+				 //caller function
+				 f1();
+				
+				
+				</script>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+					
+				 //callie function
+				 function f1()
+				 {
+					//global variable
+					window.i=1000; 
+					
+					document.writeln("<br>"+i);
+				 }
+				 function f2()
+				 {
+					document.writeln("<br>"+i);
+				 }
+				 //caller function
+				 f1();
+				 f2();
+				
+				
+				</script>
+	</body>
+</html>
+
+
+
+JavaScript Datatypes
+=====================
+Datatype describes what type of value we want to store inside a variable.
+
+There are two types of Datatypes in JavaScript.
+
+1)Primitive Datatypes.
+
+2)Non-Primitive Datatypes.
+
+Javascript is a dynamic type language it means we don't need to specify type of 
+variable because it is dynamically used by JavaScript Engine.
+
+We need to use "var" to specify the data type.
+var can hold any type of value such as number,float,string,character and etc.
+ex:
+	var a=40;
+	var b=10.56;
+	var c="hi";
+
+1)Primitive Datatypes.
+-------------------
+There are five types of Primitive Datatypes in JavaScript.
+
+Datatypes		Description
+--------		-----------
+String			It is collection of characters. ex: "Hello"
+Number			It is used to represent numeric value. ex: 100
+Boolean			It is used to represent boolean value either true or false
+undefined		represent undefined value
+null			represent null
+
+ex:1
+---
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //callie function
+				 function f1()
+				 {
+					var s="GlobalEdx";
+					document.writeln(s);
+				 }
+				 //caller function
+				 f1();
+				
+				
+				</script>
+	</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //callie function
+				 function f1()
+				 {
+					var i=1000;
+					document.writeln(i);
+				 }
+				 //caller function
+				 f1();
+				
+				
+				</script>
+	</body>
+</html>
+
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //callie function
+				 function f1()
+				 {
+					var b=true;
+					document.writeln(b);
+				 }
+				 //caller function
+				 f1();
+				
+				
+				</script>
+	</body>
+</html>
+ex:4
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //callie function
+				 function f1()
+				 {
+					var b;
+					document.writeln(b);//undefined
+				 }
+				 //caller function
+				 f1();
+				
+				
+				</script>
+	</body>
+</html>
+ex:5
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+				
+				 //callie function
+				 function f1()
+				 {
+					var b=null;
+					document.writeln(b);
+				 }
+				 //caller function
+				 f1();
+				
+				
+				</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

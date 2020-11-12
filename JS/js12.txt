@@ -1,0 +1,519 @@
+Form validation
+===============
+Process of checking format and pattern of form data is called form validation.
+
+We can Perform Form Validation in two ways.
+
+1)Client Side Form validation 
+
+2)Server Side form validation
+
+1)Client Side Form validation 
+-------------------------------
+	Validation which is performed at client side is called client side form validation.
+
+	To perform Client side form validation we will use JavaScript.
+
+2)Server Side form validation
+-----------------------------
+	Validation which is performed at server side is called server side form validation.
+
+	To perform Server side form validation we will use Java,.Net,Python and etc.
+
+
+JavaScript provides facility to validate the form on the client-side so data processing 
+will be faster than server-side validation. 
+
+Most of the web developers prefer JavaScript form validation.
+
+Through JavaScript, we can validate name, password, email, date, mobile numbers and more fields.
+
+JavaScript name validation
+---------------------------
+ex:1
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var name = document.myForm.fname.value;
+			if (name == "") {
+				alert("Name is mandatory");
+				return false;
+			}
+		}	
+</script>
+	
+	<body>	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="fname">
+		<input type="submit" value="Submit">
+	</form>	
+	</body>
+</html>
+
+
+ex:2
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var name = document.myForm.fname.value;
+			if (name == "") {
+				alert("Name is mandatory");
+				document.getElementById('fname').focus();
+				return false;
+			}
+		}	
+</script>
+	
+	<body>	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="fname">
+		<input type="submit" value="Submit">
+	</form>	
+	</body>
+</html>
+
+
+ex:3
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var name = document.forms["myForm"]["fname"].value;
+			if (name == "") {
+				alert("Name is mandatory");
+				document.getElementById('fname').focus();
+				return false;
+			}
+		}	
+	</script>
+	
+	<body>	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="fname">
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+
+ex:4
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var name = document.getElementById('fname').value;
+			if (name == "") {
+				alert("Name is mandatory");
+				document.getElementById('fname').focus();
+				return false;
+			}
+		}	
+	</script>
+	
+	<body>	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" id="fname">
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+Javascript validation using <span> tag
+-----------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var name = document.getElementById('fname').value;
+			if (name == "") {
+				document.getElementById('res').innerHTML="<font color='red'>Name is mandatory </font>";
+				document.getElementById('fname').focus();
+				return false;
+			}
+		}	
+	</script>
+	
+	<body>	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" id="fname"><span id="res"></span>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+JavaScript validation using image
+----------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var name = document.getElementById('fname').value;
+			if (name == "") {
+document.getElementById('res').innerHTML="<img src='wrong.png' width='20px' height='20px'/>";
+				document.getElementById('fname').focus();
+				return false;
+			}
+			else
+			{
+		document.getElementById('res').innerHTML="<img src='right.png' width='20px' height='20px'/>";	
+			return false;
+			}
+			
+		}	
+	</script>
+	
+	<body>	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" id="fname"><span id="res"></span>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+JavaScript Age validation
+--------------------------
+
+ex:5
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var age = document.getElementById('fname').value;
+			if (age == "") {
+				alert("Age is mandatory");
+				document.getElementById('fname').focus();
+				return false;
+			}
+			else
+			{
+				if(isNaN("age"))
+				{
+					alert("Age must be Mandatory ");
+					document.getElementById('fname').value="";
+					document.getElementById('fname').focus();
+					return false;
+				}
+			}
+		}	
+	</script>
+	
+	<body>	
+	<form  onsubmit="return validateForm()" method="post">
+		Age: <input type="text" id="fname">
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+JavaScript Password Validation
+-------------------------------
+ex:6
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var pwd = document.getElementById('t1').value;
+			if (pwd == "") {
+				alert("pwd is mandatory");
+				document.getElementById('t1').focus();
+				return false;
+			}
+			else
+			{
+				if(pwd.length<6)
+				{
+					alert("Password must be have 7 characters ");
+					document.getElementById('t1').value="";
+					document.getElementById('t1').focus();
+					return false;
+				}
+			}
+		}	
+	</script>
+	
+	<body>	
+	<form  onsubmit="return validateForm()" method="post">
+		password: <input type="text" id="t1">
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+JavaScript Retype Password Validation
+--------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<script>
+		function validateForm() {
+			var pwd = document.getElementById('t1').value;
+			var cpwd = document.getElementById('t2').value;
+			
+			if (pwd != cpwd) {
+				alert("Both Password must be same");
+				document.getElementById('t2').value="";
+				document.getElementById('t2').focus();
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}	
+</script>
+	
+	<body>	
+	<form  onsubmit="return validateForm()" method="post">
+		password: <input type="password" id="t1"><br><br>
+		Confirm password: <input type="password" id="t2"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+	
+	</body>
+</html>
+
+
+
+
+JavaScript Email Validation
+---------------------------
+
+indexOf()
+---------
+The indexOf() method returns the position of the first occurrence of a specified value in a string.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<button onclick="f1()">Click Here</button>
+
+		<p id="res"></p>
+
+		<script>
+			function f1() {
+				var str = "Hello world, welcome to the GlobalEdx.";
+				var n = str.indexOf("welcome"); //13
+				document.getElementById("res").innerHTML = n;
+			}
+		</script>
+	
+	</body>
+</html>
+
+If occurrence of a specified value in a string not found then it will return -1.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<button onclick="f1()">Click Here</button>
+
+		<p id="res"></p>
+
+		<script>
+			function f1() {
+				var str = "Hello world, welcome to the GlobalEdx.";
+				var n = str.indexOf("jojo"); //13
+				document.getElementById("res").innerHTML = n;
+			}
+		</script>
+	
+	</body>
+</html>
+
+
+
+lastIndexOf()
+---------------
+The lastIndexOf() method returns the position of the last occurrence of a specified value in a string.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<button onclick="f1()">Click Here</button>
+
+		<p id="res"></p>
+
+		<script>
+			function f1() {
+				var str = "Hello student, you are a great student.";
+				var n = str.lastIndexOf("student"); //31
+				document.getElementById("res").innerHTML = n;
+			}
+		</script>
+	
+	</body>
+</html>
+
+If last occurrence of a specified value in a string not found then it will return -1.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<button onclick="f1()">Click Here</button>
+
+		<p id="res"></p>
+
+		<script>
+			function f1() {
+				var str = "Hello student, you are a great student.";
+				var n = str.lastIndexOf("jojo"); //-1
+				document.getElementById("res").innerHTML = n;
+			}
+		</script>
+	
+	</body>
+</html>
+
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<script>  
+		function validateemail()  
+		{  
+		var x=document.getElementById('email').value;  
+		var atposition=x.indexOf("@");  
+		var dotposition=x.lastIndexOf(".");  
+
+		if (atposition<1 || dotposition<atposition+2 ){  
+				alert("Please enter correct Email");
+				return false;  
+			}  
+		}  
+		</script>  
+	</head>
+	<body>
+		<form name="myform"  method="post" action="#" onsubmit="return validateemail();">  
+			Email: <input type="text" id="email"><br/>  
+			<input type="submit" value="register">  
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

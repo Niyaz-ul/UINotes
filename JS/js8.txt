@@ -1,0 +1,389 @@
+Methods of Document Object
+==========================
+
+1)write("string")
+-------------------
+writes the given string on the document.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<meta name="copyright" content="AllrightReserved by GlobalEdx">
+			
+	</head>
+	<body>
+
+			<script>
+				document.write("Hello World");
+				document.write('Hello GlobalEdx');
+			</script>
+			
+	</body>
+</html>
+
+2)writeln("string")
+----------------------
+It writes the given string on the document with space at the end.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<meta name="copyright" content="AllrightReserved by GlobalEdx">
+			
+	</head>
+	<body>
+
+			<script>
+				document.writeln("Hello World");
+				document.writeln('Hello GlobalEdx');
+			</script>
+			
+	</body>
+</html>
+
+Reading Element Value
+========================
+We can read Element value in javascript by using "name" attribute.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+			<script>
+					function f1()
+					{
+						var name=document.myform.t1.value;
+						alert("Welcome ="+name);
+					}
+			</script>
+			<form name="myform">
+				Name:<input type="text" name="t1" required/>
+				<button onclick="f1()">submit</button>
+			</form>
+			
+	</body>
+</html>
+
+3)getElementById()
+----------------------
+It returns the element having the given ID value.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+			<script>
+					function f1()
+					{
+						var name=document.getElementById('t1').value;
+						alert("Welcome = ="+name);
+					}
+			</script>
+			<form>
+				Name:<input type="text" id="t1" required/>
+				<button onclick="f1()">submit</button>
+			</form>
+			
+	</body>
+</html>
+
+How to calculate two text field values in JavaScript.
+----------------------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+			<center> <h1>Calculate Two TextFields</h1></center>
+			
+				No1:<input type="text" id="t1"/><br><br>
+				No2:<input type="text" id="t2"/><br><br>
+				<button onclick="add()">ADD</button>
+				<button onclick="sub()">SUB</button>
+				<button onclick="mul()">MUL</button>
+				<button onclick="div()">DIV</button>
+				<!-- displaying the final result -->
+				<h1 id="answer"></h1>
+				
+				<script>
+					function add()
+					{
+					var val1=document.getElementById('t1').value;
+					var val2=document.getElementById('t2').value;
+					
+					//converting string value to float
+					var result=parseFloat(val1)+parseFloat(val2);
+					document.getElementById('answer').innerHTML="Addition of two number ="+result;
+					
+					}
+					function sub()
+					{
+					var val1=document.getElementById('t1').value;
+					var val2=document.getElementById('t2').value;
+					
+					//converting string value to float
+					var result=parseFloat(val1)-parseFloat(val2);
+					document.getElementById('answer').innerHTML="Subtraction of two  ="+result;
+					
+					}
+					function mul()
+					{
+					var val1=document.getElementById('t1').value;
+					var val2=document.getElementById('t2').value;
+					
+					//converting string value to float
+					var result=parseFloat(val1)*parseFloat(val2);
+					document.getElementById('answer').innerHTML="Multiplication of two number  ="+result;
+					
+					}
+					function div()
+					{
+					var val1=document.getElementById('t1').value;
+					var val2=document.getElementById('t2').value;
+					
+					//converting string value to float
+					var result=parseFloat(val1)/parseFloat(val2);
+					document.getElementById('answer').innerHTML="Division of Two number  ="+result;
+					
+					}	
+					
+			</script>
+			
+	</body>
+</html>
+
+How to Dispaly selected HTML table rows values into textfield.
+-----------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				table tr
+				{
+					transition: all .5s ease-in-out;
+					cursor: pointer;
+				}
+				table tr:hover
+				{
+					background-color: #c7ecee;
+				}
+				table tr th
+				{
+					background-color:#7ed6df;
+				}
+			</style>
+	</head>
+	<body>
+			No:<input type="text" id="t1"/><br><br>
+			Name:<input type="text" id="t2"/><br><br>
+			Designation:<input type="text" id="t3"/><br><br>
+			
+			<table id="table" border="1" width="100%">
+					<tr>
+						<th>ENO</th>
+						<th>ENAME</th>
+						<th>DESIGNATION</th>
+					</tr>
+					<tr>
+						<td>111</td>
+						<td>Alan</td>
+						<td>Manager</td>
+					</tr>
+					<tr>
+						<td>222</td>
+						<td>Jose</td>
+						<td>CEO</td>
+					</tr>
+					
+					<tr>	
+						<td>333</td>
+						<td>Jessica</td>
+						<td>HR</td>
+						
+					</tr>
+					<tr>	
+						<td>444</td>
+						<td>Erick</td>
+						<td>Clerk</td>
+						
+					</tr>
+					
+			</table>
+			<script>
+					var table=document.getElementById('table');
+					
+					for(var i=1;i<table.rows.length;i++)
+					{
+						//if we click any row
+						table.rows[i].onclick= function()
+						{
+							//strong column data to textfields
+							document.getElementById('t1').value=this.cells[0].innerHTML;
+							document.getElementById('t2').value=this.cells[1].innerHTML;
+							document.getElementById('t3').value=this.cells[2].innerHTML;
+						};
+					}
+					
+			</script>
+	</body>
+</html>
+
+JavaScript Hide and Show portion of a form
+---------------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<script>	
+				function hide()
+				{
+					//checking check box selected or not
+					if(document.getElementById('box').checked)
+					{
+			document.getElementById('par_add').style.display='none';		
+					}
+					else
+					{
+			document.getElementById('par_add').style.display='block';		
+					}
+				}
+			</script>
+			
+	</head>
+	<body>
+		<fieldset id="cur_add">
+		<legend>Current Address</legend>
+		No:<input type="text" id="t1"/><br>
+		Name:<input type="text" id="t2"/><br>
+		Address:<input type="text" id="t3"/><br>
+		</fieldset>
+		<br>
+		<input type="checkbox" id="box" onclick="hide()">Parmanent Address is Current Address</input>
+		<br><br>
+		<fieldset id="par_add">
+		<legend>Parmanent Address</legend>
+		No:<input type="text" id="t1"/><br>
+		Name:<input type="text" id="t2"/><br>
+		Address:<input type="text" id="t3"/><br>
+		</fieldset>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

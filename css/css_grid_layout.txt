@@ -1,0 +1,636 @@
+CSS Grid layout
+==================
+The CSS grid layout Module offers a grid-based layout system with 
+rows and columns.
+
+Grid layout makes easier to design web pages without having a use of 
+floats and positioning tag.
+
+A grid layout consists of  a parent element,with one or more child elements.
+
+
+ex:1
+-----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:2
+----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:3
+-----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*3 columns with 150px width */
+			grid-template-columns: 150px 150px 150px;
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:4
+----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*3 columns with 150px width  and 1fr will take remaining space*/
+			grid-template-columns: 150px 150px 1fr;
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:5
+----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*all columns with equal width */
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:6
+----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*all columns with equal width */
+			grid-template-columns: 1fr 1fr 1fr;
+
+			/*rows gaps */
+			grid-row-gap: 20px;
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:7
+------
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*all columns with equal width */
+			grid-template-columns: 1fr 1fr 1fr;
+
+			/*rows gaps */
+			grid-row-gap: 20px;
+
+			/*column gaps */
+			grid-column-gap: 20px;
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:8
+---
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*all columns with equal width */
+			grid-template-columns: 1fr 1fr 1fr;
+
+			/* gap for rows and columns */
+			grid-gap: 10px;
+
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:9
+----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows: 150px  150px ;	
+
+			/*3 columns with 1fr */
+			grid-template-columns: repeat(3,1fr);
+
+			/* gap for rows and columns */
+			grid-gap: 10px;
+
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+
+ex:10
+-----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows:repeat(2,150px); ;	
+
+			/*3 columns with 1fr */
+			grid-template-columns: repeat(3,1fr);
+
+			/* gap for rows and columns */
+			grid-gap: 10px;
+
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:11
+-----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows:repeat(2,150px); ;	
+
+			/*3 columns with 1fr */
+			grid-template-columns: repeat(3,1fr);
+
+			/* gap for rows and columns */
+			grid-gap: 10px;
+
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;
+				grid-row-start: 1;
+				grid-row-end: 2;
+		      }
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+ex:12
+----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			/* two rows with 150px height */
+			grid-template-rows:repeat(2,150px); ;	
+
+			/*3 columns with 1fr */
+			grid-template-columns: repeat(3,1fr);
+
+			/* gap for rows and columns */
+			grid-gap: 10px;
+
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		.div4{background-color: yellow;}
+		.div5{background-color: orange;}
+		.div6{background-color: violet;
+		    
+				/* it will bring in first row */
+		        grid-row-start: 1;
+			
+				/* it will bring in second column */
+				grid-column-start: 2;
+				
+			}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>
+				<div class="div5">div5</div>
+				<div class="div6">div6</div>
+		</main>
+  </body>
+</html>
+
+
+Simple design for header and footer
+=======================================
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		main
+		{
+			width:90%;
+			margin:50px auto;
+			border:2px solid black;
+			color:white;
+			display: grid;
+			grid-template-rows: 50px 300px 30px;
+			grid-template-columns: repeat(1,1fr) ;
+
+		}
+		.div1{background-color: red;}
+		.div2{background-color: blue;}
+		.div3{background-color: green;}
+		 	
+			}
+
+	</style>
+  </head>
+  <body>
+		<main>
+				<div class="div1">div1</div>
+				<div class="div2">div2</div>
+				<div class="div3">div3</div>
+				
+		</main>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

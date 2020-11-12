@@ -1,0 +1,1195 @@
+Bootstrap Form layouts
+========================
+using html we can create below HTML form.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+          <form>
+               <div>
+                  <label for="t1">UserName:</label>
+                  <input type="text" id="t1"/>
+               </div> 
+               <div>
+                  <label for="t2">Password:</label>
+                  <input type="password" id="t2"/>
+               </div>
+               <button type="submit">Login</button>
+          </form>
+  </body>
+</html>
+
+Bootstrap provides three types of form layouts.
+
+1)Vertical Form( default layout)
+
+2)Horizontal Form
+
+3)Inline Form
+
+
+Vertical Form
+------------
+Add "form-control" class to all textual element like <input> , <textarea>
+ and etc.
+
+wrap labels and form controls in "form-group" class.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+         <div class="container">
+            <form>
+                  <div class="form-group">
+                    <label for="t1">UserName :</label>
+                <input class="form-control" type="text" id="t1"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="t2">Password :</label>
+                <input class="form-control" type="text" id="t2"/>
+                  </div>
+
+                  <button type="submit">Login</button>
+            </form>
+          </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+         <div class="container">
+            <form>
+                  <div class="form-group">
+                    <label for="t1">UserName :</label>
+                <input class="form-control" type="text" id="t1"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="t2">Password :</label>
+                <input class="form-control" type="text" id="t2"/>
+                  </div>
+
+                  <button class="btn btn-default" type="submit">Login</button>
+            </form>
+          </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+         <div class="container">
+            <form>
+                  <div class="form-group">
+                    <label for="t1">UserName :</label>
+                <input class="form-control" type="text" id="t1" placeholder="username" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="t2">Password :</label>
+                <input class="form-control" type="text" id="t2" placeholder="password" />
+                  </div>
+
+                  <button class="btn btn-default" type="submit">Login</button>
+            </form>
+          </div>
+  </body>
+</html>
+
+Note
+-----
+This form-group spanning accross entire width of a parent element.
+
+There are many ways to decrease the width of a form groups.
+
+1)grid system
+---------------
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+         <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+            <form>
+                  <div class="form-group">
+                    <label for="t1">UserName :</label>
+                <input class="form-control" type="text" id="t1" placeholder="username" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="t2">Password :</label>
+                <input class="form-control" type="text" id="t2" placeholder="password" />
+                  </div>
+
+                  <button class="btn btn-default" type="submit">Login</button>
+            </form>
+          </div>
+          </div>
+          </div>
+  </body>
+</html>
+
+
+
+2)Inline Form
+===============
+In an inline form , all of the elements are inline,left aligned and the 
+labels are alongside.
+
+we need to add "form-inline" class to the <form> element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+         <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+            <form  class="form-inline">
+                  <div class="form-group">
+                    <label for="t1">UserName :</label>
+                <input class="form-control" type="text" id="t1" placeholder="username" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="t2">Password :</label>
+                <input class="form-control" type="text" id="t2" placeholder="password" />
+                  </div>
+
+                  <button class="btn btn-default" type="submit">Login</button>
+            </form>
+          </div>
+          </div>
+          </div>
+  </body>
+</html>
+
+In above example changes will not be effected because for inline form viewport
+must be 768px wide.
+
+We need to change col-xs-3 to col-lg-3 to make view port large.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+         <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+            <form  class="form-inline">
+                  <div class="form-group">
+                    <label for="t1">UserName :</label>
+                <input class="form-control" type="text" id="t1" placeholder="username" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="t2">Password :</label>
+                <input class="form-control" type="text" id="t2" placeholder="password" />
+                  </div>
+
+                  <button class="btn btn-default" type="submit">Login</button>
+            </form>
+          </div>
+          </div>
+          </div>
+  </body>
+</html>
+
+
+3)Horizontal form
+----------------
+
+A horizontal form means that the labels are aligned next to the input field
+(horizontal) on large and medium screen.
+
+To create a horizontal form we need to use "form-horizontal" class.
+
+Use "control-label" class for all the labels present in "form-horizontal" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+          <div class="row">
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <label for="t1" class="control-label col-sm-2">UserName:</label>
+                  <div class="col-sm-10">
+                    <input class="from-control" type="text" placeholder="username" />
+                  </div>
+                </div> 
+
+                <div class="form-group">
+                  <label for="t1" class="control-label col-sm-2">Password:</label>
+                  <div class="col-sm-10">
+                    <input class="from-control" type="password" placeholder="password" />
+                  </div>
+                </div> 
+                <button type="submit" class="btn btn-default">Login</button>  
+              </div>
+          </div>
+        </div>
+  </body>
+</html>
+
+Alignment of button
+---------------------
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+          <div class="row">
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <label for="t1" class="control-label col-sm-2">UserName:</label>
+                  <div class="col-sm-10">
+                    <input class="from-control" type="text" placeholder="username" />
+                  </div>
+                </div> 
+
+                <div class="form-group">
+                  <label for="t1" class="control-label col-sm-2">Password:</label>
+                  <div class="col-sm-10">
+                    <input class="from-control" type="password" placeholder="password" />
+                  </div>
+                </div> 
+       <div class="form-group">
+       <div class="col-sm-10 col-sm-offset-2">           
+      <button type="submit" class="btn btn-default">Login</button> </div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </body>
+</html>
+
+To work on small devices we can change Grid classes like "col-sm" to "col-xs".
+ex:
+ 
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+          <div class="row">
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <label for="t1" class="control-label col-xs-2">UserName:</label>
+                  <div class="col-xs-10">
+                    <input class="from-control" type="text" placeholder="username" />
+                  </div>
+                </div> 
+
+                <div class="form-group">
+                  <label for="t1" class="control-label col-xs-2">Password:</label>
+                  <div class="col-xs-10">
+                    <input class="from-control" type="password" placeholder="password" />
+                  </div>
+                </div> 
+       <div class="form-group">
+       <div class="col-xs-10 col-xs-offset-2">           
+      <button type="submit" class="btn btn-default">Login</button> </div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </body>
+</html>
+
+Bootstrap input groups
+=====================
+Bootstrap input groups extends <input> element/tag by adding text,icon and button
+before or after or both the sides of <input> element.
+
+to create a input groups we need to use "input-group " class inside the <div> tag.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Amount"/>
+         </div>
+        </div>
+  </body>
+</html>
+
+To add any text, icon and button to input element we need to use 
+"input-group-addon" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <!-- add dollar symbol -->
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+         </div>
+        </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+
+            <input type="text" class="form-control" placeholder="Amount"/>
+            <!-- adding text after -->
+            <span class="input-group-addon">.00</span>
+         </div>
+        </div>
+  </body>
+</html>
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <!-- add dollar before -->
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+            <!-- adding text after -->
+            <span class="input-group-addon">.00</span>
+         </div>
+        </div>
+  </body>
+</html>
+
+Adding glyphicons to the input element
+--------------------------------------
+glyphicons link
+--------------
+	http://getbootstrap.com/docs/3.3/components/
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope">
+                </span>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+            
+         </div>
+        </div>
+  </body>
+</html>
+
+Adding buttons to input element
+-------------------------------
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <span class="input-group-addon">
+               <input type="checkbox"/>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+            
+         </div>
+        </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <span class="input-group-addon">
+               <input type="radio"/>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+            
+         </div>
+        </div>
+  </body>
+</html>
+
+For sizing the elements in input group we can use 
+
+1)input-group-lg
+
+2)input-group-sm
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <span class="input-group-addon">
+               <input type="radio"/>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+         </div>
+
+         <div class="input-group input-group-sm">
+            <span class="input-group-addon">
+               <input type="radio"/>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+         </div>
+
+         <div class="input-group input-group-lg">
+            <span class="input-group-addon">
+               <input type="radio"/>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+         </div>
+        </div>
+  </body>
+</html>
+
+Boostrap buttons in input groups
+----------------------------------
+To add boostrap buttons in input groups we need to use "input-group-btn" 
+class instead "input-group-addon" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-default">Search</button>
+            </span>
+            <input type="text" class="form-control" placeholder="Amount"/>
+         </div>
+        </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+           
+            <input type="text" class="form-control" placeholder="Amount"/>
+             <span class="input-group-btn">
+              <button class="btn btn-default">Search</button>
+            </span>
+         </div>
+        </div>
+  </body>
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Amount"/>
+             <!-- addng dropdown button last --> 
+            <span class="input-group-btn">
+
+              <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              dropdown<span class="caret"></span>
+            </button>
+            <!-- items -->
+            <ul class="dropdown-menu">
+                <li><a href="#">Action1</a></li>
+                 <li><a href="#">Action2</a></li>
+                  <li><a href="#">Action3</a></li>
+            </ul>
+
+            </span>
+
+         </div>
+        </div>
+  </body>
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <input type="text"  class="form-control" placeholder="Amount"/>
+            <div class="input-group-btn">
+            <button class="btn btn-default">cut</button>
+            <button class="btn btn-default">copy</button>
+            <button class="btn btn-default">paste</button>
+          </div>
+         </div>
+        </div>
+  </body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+         <div class="input-group">
+            <input type="text"  class="form-control" placeholder="Amount"/>
+            <div class="input-group-btn">
+            <button class="btn btn-default">
+              <span class="glyphicon glyphicon-align-left"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="glyphicon glyphicon-align-center"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="glyphicon glyphicon-align-right"></span>
+            </button>
+          </div>
+         </div>
+        </div>
+  </body>
+</html>
+
+
+Boostrap media object
+=====================
+Bootstrap media object is used to place media objects like images or 
+videos  on left and right hand side aligned with the content such as tweets,
+comments and etc.
+
+
+To create a media object we need to use "media" class.
+
+To align the media we can use "media-left" or "media-right" class.
+
+To write text in media we can use "media-body" class.
+
+To write heading in the media we can use "media-heading" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+        <div class="media">
+           <div class="media-left">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+           </div>
+        </div>
+        </div>
+  </body>
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+        <div class="media">
+          
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+           </div>
+
+            <div class="media-right">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+        </div>
+        </div>
+  </body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+        <div class="media">
+          
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+           </div>
+
+            <div class="media-right">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+        </div>
+
+          <div class="media">
+          
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+           </div>
+
+            <div class="media-right media-middle">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+        </div>
+
+         <div class="media">
+          
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+           </div>
+
+            <div class="media-right media-bottom">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+        </div> 
+
+        </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body >
+        <div class="container">
+        <div class="media">
+          <div class="media-left">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+                
+                <!-- nested media -->
+                <div class="media">
+          <div class="media-left">
+              <a href="#">
+                <img src="rock.jpg" width="100px" height="100px"/>
+              </a>
+           </div> 
+           <!-- body -->
+           <div class="media-body">
+              <h4 class="media-heading"> GlobalEdx</h4>
+              <p>This is Bootstrap 4 classes from GlobalEdx to design responsive web sites.</p>
+            </div>
+             <!-- end of nested media --> 
+
+           </div>
+
+            
+        </div>
+
+         
+
+        </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,460 @@
+CSS transform
+===============
+CSS transform property allows you to move ,rotate ,scale ,and skew elements.
+
+CSS tranform property contains following Tranformation method.
+
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+
+
+translate()
+-----------
+	The translate() method moves an element from its current 
+position to the parameters given by the X-axis and the Y-axis.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				/* 50 x-axis and 100 y-axis */
+				transform: translate(50px,100px);
+			}
+		</style>		
+	</head>
+	<body>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+
+rotate()
+-----------
+The rotate() method rotates an element clockwise or counter-clockwise
+according to a given degree.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				transform: rotate(90deg);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+Use negative values will ratate an element counter-clockwise.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				transform: rotate(-20deg);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+scale() method
+--------------
+The scale() method increases and decreases the size of an element(
+according to the parameters given for the width and height).
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				transform: scale(3,3);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+scaleX()
+--------
+The scaleX() method increase and decreases the width of an element.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				/* width */
+				transform: scaleX(3);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+scaleY() method
+-----------------
+The scaleY() method increases and decreases the height of an element.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				/* width */
+				transform: scaleY(3);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+screwX() method
+------------------
+The screwX() method skews an element along the X-axis by the given angle.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				
+				transform: skewX(50deg);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+skewY() method
+----------------
+The skewY() method skews an element along the Y-axis by the given angle.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				
+				transform: skewY(50deg);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+skew() method
+---------------
+The skew() method skews an element along the X and Y-axis by the given angles.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				
+				transform: skew(20deg,10deg);	
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+Transform property with animation using transition
+===================================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:100px;
+				background-color:yellow;
+				border:1px solid black;
+				transition: all 1s ease;	
+			}
+			div:hover
+			{
+				transform: rotate(20deg);
+			}
+		</style>		
+	</head>
+	<body>
+			<h1>This is Rotate method </h1>
+			<div>
+				This div working form transformation.This div working form transformation.This div working form transformation.This div working form transformation.
+			</div>
+	</body>	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

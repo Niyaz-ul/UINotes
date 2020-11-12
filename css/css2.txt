@@ -1,0 +1,871 @@
+CSS Background
+-------------------
+The CSS background property is used to set the background in a web page.
+
+The background is defined in the body tag/element which applies to 
+our entire web page.
+
+If we want ,we can also set the background to any particular html element.
+like <h1>,<i>,<p>,<div> and etc.
+
+The list of following background properties are.
+
+1)background-color
+
+2)background-image
+
+3)background-repeat
+
+4)background-size
+
+5)background-position
+
+6)background-attachment
+
+7)background-shorthand
+
+8)background-blend-mode
+
+9)background-origin
+
+10)background-clip
+
+1)background-color
+--------------------
+The background-color property specifies the background color of an 
+element.
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body
+			{
+				background-color:red;
+			}
+		</style>
+   </head>  
+    <body>  
+	
+	
+	</body>
+</html>
+	
+In CSS, A color is mostly specifies by 
+
+1)A valid color Name like "red".
+
+2)A HEX value like "#FF0000".
+
+3)A RGB value like rgb(255,0,0).
+
+
+We can set the background color to any html element/tag.
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			h1{
+					background-color:violet;
+			}
+			div{
+					background-color:#FFFF00;
+			}
+			p{
+					background-color:rgb(255,0,0);
+			}
+		</style>
+   </head>  
+    <body>  
+		<h1>This is heading tag</h1>
+		<div>This is division tag</div>
+		<p>This is  paragraph tag</p>
+	
+	</body>
+</html>
+	
+CSS Opacity(Transparency) property
+---------------------------------
+The Opacity property specifies transparency of an element/tag.
+
+It takes values from 0.0 to 1.0.
+
+Default opacity value is 1.
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			h1{
+					background-color:red;
+					opacity:1;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		<h1>This is heading tag</h1>
+		
+	
+	</body>
+</html>
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			h1{
+					background-color:red;
+					opacity:0.1;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		<h1>This is heading tag</h1>
+		
+	
+	</body>
+</html>
+	
+2)background-image	
+---------------------
+The background-image property specifies an image to use as background
+of an element.
+
+We can set background image to any html element/tag.
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			h1{
+					background-image:url(bg1.jpg);
+					color:white;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		<h1>This is heading tag</h1>
+		
+	
+	</body>
+</html>
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+
+To overcome this limitation we need to use background-repeat property or
+we need to adjust the image size with the help of photoshop.
+	
+	
+3)background-repeat
+---------------------
+Bydefault background-image property repeats an image horizontally and 
+vertically.	
+	
+The list of background-repeat values are.
+
+1)background-repeat: repeat;
+
+2)background-repeat: repeat-x;
+
+3)backgrond-repeat: repeat-y;
+
+4)background-repeat: no-repeat;
+
+1)background-repeat: repeat;
+--------------------------
+It is a default value for background-repeat property.
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:repeat;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+
+2)background-repeat: repeat-x;
+------------------------------
+If we want to repeat background image horizontally then we need to 
+use background-repeat property.
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:repeat-x;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+3)backgrond-repeat: repeat-y;
+-----------------------------
+If we want to repeat background image vertically then we need to use 
+background-repeat:repeat-y.
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:repeat-y;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+4)background-repeat: no-repeat;
+-------------------------------
+IT is used to set the background image with no repeat i.e only one.
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+Note:
+-----
+	Suppose if we want to adjust the size of background image 
+	manually then we need to use "background-size" property.
+
+4)background-size
+---------------------
+It is used to adjust the background image size i.e width and height.
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				
+				/* width and height are same */
+				background-size: 900px;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+ex:2
+----
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				
+				/* width is 500 and height is 900 */
+				background-size: 500px 900px;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				
+				/*covering complete web page */
+				background-size: cover;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				
+				/*default */
+				background-size: auto;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+
+5)background-position
+---------------------
+It is used to set the image on a given position.
+
+The list of background-position values are.
+
+1)background-position:left
+2)background-position:right
+3)background-position:center
+4)background-position:0px 100px;
+5)background-position:left top;
+6)background-position:left center;
+7)background-position:left bottom;
+8)background-position:right top;
+9)background-position:right center;
+10)background-position:right bottom
+11)background-position:center center;
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				background-size:300px;
+				/* left and right =200 and top-bottom: 100*/
+				background-position: 200px 100px;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				background-size:300px;
+				/* left and right =200 and top-bottom: 100*/
+				background-position: center 0px;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				background-size:300px;
+				/* left and right =200 and top-bottom: 100*/
+				background-position: right 0px;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+	
+	
+6)background-attachment
+-------------------------
+The background-attachment property specifies wheather background image 
+should scroll or to be fixed.
+
+The list of background-attachment values are 
+
+1)background-attachment:fixed;
+2)background-attachment:scroll;	
+
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				background-size:300px;
+				/* left and right =200 and top-bottom: 100*/
+				background-position: right 0px;
+				background-attachment: scroll;
+				color:red;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		<h1>This is background-attachment property</h1>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+	</body>
+</html>
+	
+ex:2
+----
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body{
+				background-image:url(bg1.jpg);
+				background-repeat:no-repeat;
+				background-size:300px;
+				/* left and right =200 and top-bottom: 100*/
+				background-position: right 0px;
+				background-attachment: fixed;
+				color:red;
+			}
+			
+		</style>
+   </head>  
+    <body>  
+		<h1>This is background-attachment property</h1>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+	</body>
+</html>
+
+7)background-shorthand
+----------------------
+This property is used to shorthand the code.
+
+It is possible to specify all the background properties in one single
+property using "background-shorthand" property.
+
+ex:
+Instead of writing
+------------------
+background-color: lightgray;
+background-image: url("bg2.png");
+background-repeat:no-repeat;
+background-position:right 0px;	
+	
+we can use shorthand property
+---------------------------
+body
+{
+	background: lightgray url("bg2.png") no-repeat right 0px;
+}	
+
+Note:
+-----
+	It does not matter if one of the property value is missing
+	as long as others are in the order.	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body
+			{
+	background: lightgray url("bg2.png") no-repeat right 0px;
+	
+			}
+		</style>
+   </head>  
+    <body>  
+		<h1>This is background-attachment property</h1>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+	</body>
+</html>
+	
+ex:
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body
+			{
+	background: lightgray url("bg2.png") no-repeat fixed right 0px;
+	
+			}
+		</style>
+   </head>  
+    <body>  
+		<h1>This is background-attachment property</h1>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+		<p>
+		Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.Web technologies are the various tools and techniques that are utilised in the process of communication between different types of devices over the internet.
+		</p>
+	</body>
+</html>
+	
+
+8)background-blend-mode
+------------------------
+The background-blend-node property defines mode of each background layer.
+
+ex:
+
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+		<title>MyPage</title>
+		<style>
+			body
+			{
+				background-image: url("bg1.jpg"), url("bg3.png");
+				background-repeat: no-repeat,no-repeat;
+				background-size: 900px,auto;
+				background-position: 0px 0px,450px 0px;
+				background-blend-mode: lighten;
+				
+					
+			}
+		</style>
+   </head>  
+    <body>  
+		
+	</body>
+</html>
+
+9)background-origin
+--------------------
+background-origin property specifies the origin position (background
+position area) of a background image.	
+	
+10)background-clip
+------------------
+background-clip property specifies how far the background color or image
+should be extended within an element.
+
+Assignment
+-----------
+diagram: css2.1
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	
+	
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

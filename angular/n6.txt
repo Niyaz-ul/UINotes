@@ -1,0 +1,348 @@
+get() method of HttpClient
+==========================
+step1:
+-----
+	create a CustomerService project.
+	ex:
+	D/Dummy>ng new CustomerService
+step2:
+-----		
+	Arrange REST API to write service.
+	ex:
+	https://www.w3schools.com/angular/customers.php
+
+Project structure
+-----------------
+CustomerService
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html   (default component)
+		|----app.component.spec.ts
+		|----app.component.ts
+		|----app.component.css
+		|
+		|----services (custom folder)
+		|	|
+			|-----customers.service.ts
+		|
+		|----components(custom folder)
+		|	|
+			|-----customers.component.ts
+			|-----customers.component.html
+
+		|----app.module.ts (configuration file)
+	|
+	|------index.html (main template)
+	|
+	|------package.json (to check versions)	
+
+
+customers.service.ts
+---------------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+
+@Injectable()
+
+export class CustomersService
+{
+    //dependency injection 
+    constructor(private http:HttpClient){}
+
+    public getCustomers():any{
+        return this.http.get("https://www.w3schools.com/angular/customers.php");
+    }
+}
+
+customers.component.ts
+------------------------
+import {Component} from "@angular/core";
+import {HttpErrorResponse} from "@angular/common/http";
+import { CustomersService } from '../services/customers.service';
+@Component({
+    selector:"customers",
+    templateUrl:"./customers.component.html"
+})
+export class CustomersComponent
+{
+    //variable
+    public  result:any;
+
+    //dependency injection for Service
+    constructor(private service:CustomersService){}
+
+    //call the method of service
+    ngOnInit()
+    {
+        this.service.getCustomers().subscribe(res=>
+            {
+                //store in result variable
+                this.result=res;
+            },(err:HttpErrorResponse)=>
+            {
+                if(err.error instanceof Error)
+                {
+                    console.log("Client Side Error");
+                }
+                else
+                {
+                    console.log("Server Side Error");
+                }
+            });
+    }
+}
+
+
+
+
+
+customers.component.html
+------------------------
+<h1 style="color:blue">{{ result | json}}</h1>
+
+
+app.module.ts
+------------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { CustomersComponent } from './components/customers.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomersService } from './services/customers.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CustomersComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [CustomersService],
+  bootstrap: [CustomersComponent]
+})
+export class AppModule { }
+
+index.html
+-----------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CustomerService</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <customers></customers>
+</body>
+</html>
+
+
+Run the project
+-------------------
+	D/Dummy> cd  CustomersService
+
+	D/Dummy/CustomersService> npm start
+
+
+Test the application
+----------------
+	http://localhost:4200
+
+
+
+
+
+
+post() method of HttpClient
+============================
+step1:
+-------
+	create "UppercaseService" project.
+	ex:
+	D:/Dummy> ng new UppercaseService
+
+step2:
+------
+	Arrange REST API to write service.
+	ex:
+	https://test-routes.herokuapp.com/test/uppercase
+
+Project structure
+-----------------
+UppercaseService
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html   (default component)
+		|----app.component.spec.ts
+		|----app.component.ts
+		|----app.component.css
+		|
+		|----services (custom folder)
+		|	|
+			|-----uppercase.service.ts
+		|
+		|----components(custom folder)
+		|	|
+			|-----uppercase.component.ts
+			|-----uppercase.component.html
+
+		|----app.module.ts (configuration file)
+	|
+	|------index.html (main template)
+	|
+	|------package.json (to check versions)	
+
+uppercase.service.ts
+---------------------------
+import {Injectable} from "@angular/core";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+@Injectable()
+export class UppercaseService
+{
+    //dependency inject for HttpClient
+    constructor(private http:HttpClient){}
+    
+    //create a method
+    public convertToUppercase(data):any{
+        return this.http.post("https://test-routes.herokuapp.com/test/uppercase",data);
+    }
+}
+
+uppercase.component.ts
+-----------------------
+import {Component} from "@angular/core";
+import {HttpErrorResponse} from "@angular/common/http";
+import { UppercaseService } from '../services/uppercase.service';
+
+@Component({
+    selector:"uppercase",
+    templateUrl:"./uppercase.component.html"
+})
+export class UppercaseComponent
+{
+    //varaible
+    public uname:any;
+
+    //dependency injection for Service
+    constructor(private service:UppercaseService){}
+
+    //when button clicked
+    public clickMe(data:any):any{
+
+        //post the data to service method
+        this.service.convertToUppercase(data).subscribe(res=>
+            {
+                this.uname=res;
+            },(err:HttpErrorResponse)=>
+            {
+                if(err.error instanceof Error)
+                {
+                    console.log("Client Side Error ");
+                }
+                else{
+                    console.log("Server Side Error");
+                }
+            })
+    }
+
+}
+
+uppercase.component.html
+------------------------
+<input type="text" name="uname" [(ngModel)]="uname">
+
+<button type="button" (click)="clickMe({'message':uname})">SEND</button>
+
+<br>
+<br>
+{{result.message}}
+
+Note:
+-----
+(click) is a button event.
+[(ngModel)] is a directive and it supports two way Data binding.
+
+app.module.ts
+--------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { UppercaseComponent } from './components/uppercase.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { UppercaseService } from './services/uppercase.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UppercaseComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [UppercaseService],
+  bootstrap: [UppercaseComponent]
+})
+export class AppModule { }
+
+index.html
+-------------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UppercaseService</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <uppercase></uppercase>
+</body>
+</html>
+
+Run the project
+-------------------
+	D/Dummy> cd  UppercaseService
+
+	D/Dummy/UppercaseService> npm start
+
+
+Test the application
+----------------
+	http://localhost:4200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

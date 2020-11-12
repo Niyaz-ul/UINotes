@@ -1,0 +1,111 @@
+HTML-5
+==========
+HTML stands for Hyper Text Markup Language and It is Easy to learn and Easy to use.
+
+HTML is a case insensitive  language.
+
+HTML is used for Client Side programming. 
+
+HTML is widely used language on web to develop web pages and web application.
+
+HTML is created by "Berners Lee" in late 1991.
+
+HTML elements are represented by tags so it is also known as Tag based language.
+ex:
+	<html>   
+	<> - tag
+	html - element
+
+In Html Every tag contains Opening Tag and Closing Tag.
+ex:
+	<html> -> root tag
+
+	</html>
+
+In HTML we can't declare any Custom Tags/Userdefine Tags.
+ex:
+	<anil>   // invalid 
+	<balaji> // invalid
+
+We can develop HTML documents/programs in various Editors.
+ex:
+	Visual Studio Code (VSC),
+	Sublime,
+	DreamViewer,
+	edit++,
+	nodepad++,
+	Notepad (default editor).
+
+All HTML files/documents must and should save with either ".html" or ".htm" extension only.
+
+ex:	
+	anil.html
+	balaji.htm
+
+All HTML programs/documents executed on "Browser window".
+ex:
+	Chrome,
+	Morzilla (preferable),
+	Edge,
+	IE (default),
+	Opera,
+	Chromium and etc.
+
+A simple HTML document is called component.
+
+HTML is also considers as Client side component.
+
+HTML 2.0 Specifications was released in 1995.
+
+HTML 4.0 specifications was released in 1999.
+
+HTML 5 version which is extension of HTML 4 was published in 2012.
+
+HTML 5 is also known as Advanced Hypertext Markup Language.
+
+The main goal behind HTML5 is to implement Light Weight Component at client side.
+
+Every HTML page considers as HTML document.
+
+
+Disadvantages of HTML
+--------------------
+1) HTML is used to create Static web pages but not Dynamic web pages.
+
+2) Need to write lot of code for making simple web page.
+
+3)Security features are not good in HTML.
+
+4)IF code is increases then it produces some complexity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+

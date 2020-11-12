@@ -1,0 +1,180 @@
+How to calculate two text fields values in javascript
+=============================================
+
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>
+		<h1>Calculate Two fields</h1>
+		
+		<form>
+		
+			No1:<input type="text" id="t1"/><br>
+			No2:<input type="text" id="t2"/><br>
+			<input type="button" value="calculate" onclick="calcu()"/>	
+			
+			<h1 id="answer"></h1>
+		</form>
+
+		<script>
+			function calcu()
+			{
+				var val1=document.getElementById("t1").value;
+				var val2=document.getElementById("t2").value;
+				var result=parseFloat(val1)+parseFloat(val2);
+			
+				if(!isNaN(result))
+				{
+			document.getElementById("answer").innerHTML="The Result is :"+result;
+				}
+			}   
+    </script>  
+		
+	</body>
+	
+</html>
+
+
+
+How to display selected html table rows values into input field
+=====================================================
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+			<style>
+					table tr{
+						cursor: pointer;transition: all .25s ease-in-out;
+					}
+					table tr:hover{
+					background-color:gray;
+					}
+			</style>
+	</head>
+	<body>
+		
+			No:<input type="text" id="t1"/><br>
+			Name:<input type="text" id="t2"/><br>
+			Address:<input type="text" id="t3"/><br>
+			<br>
+			<br>
+			<table id="table" border="1" width="100%">
+				<tr>
+					<th>SNO</th>
+					<th>SNAME</th>
+					<th>SADD</th>
+				</tr>
+				<tr>
+					<td>111</td>
+					<td>Alan</td>
+					<td>USA</td>
+				</tr>
+				<tr>
+					<td>222</td>
+					<td>Jose</td>
+					<td>UK</td>
+				</tr>
+				<tr>
+					<td>333</td>
+					<td>Kelvin</td>
+					<td>UAE</td>
+				</tr>
+				<tr>
+					<td>444</td>
+					<td>Nelson</td>
+					<td>Australia</td>
+				</tr>
+
+			</table>
+			<script>
+				var table=document.getElementById('table'),rIndex;
+				for(var i=0;i<table.rows.length;i++)
+				{
+						table.rows[i].onclick = function()
+						{
+								rIndex=this.rowsIndex;
+							document.getElementById("t1").value = this.cells[0].innerHTML;
+
+							document.getElementById("t2").value = this.cells[1].innerHTML;
+
+							document.getElementById("t3").value = this.cells[2].innerHTML;
+						};
+				}
+   
+		</script>  
+
+		
+		
+	</body>
+	
+</html>
+
+
+JavaScript Hide and Show a portion of a form
+========================================
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<script>
+					function hide()
+					{
+							if(document.getElementById('box').checked)
+							{
+								document.getElementById('shopinfo').style.display='none';
+							}
+							else
+							{
+								document.getElementById('shopinfo').style.display='block';
+							}
+					}
+
+			</script>
+			
+	</head>
+	<body>
+			<fieldset id="billinfo">
+			<legend>Address</legend>
+			No:<input type="text" id="t1"/><br>
+			Name:<input type="text" id="t2"/><br>
+			Address:<input type="text" id="t3"/><br>
+			</fieldset>
+			<input type="checkbox" id="box" name="t4" onclick="hide()">Please click</input>
+			<fieldset id="shopinfo">
+			<legend>Address</legend>
+			No:<input type="text" id="t1"/><br>
+			Name:<input type="text" id="t2"/><br>
+			Address:<input type="text" id="t3"/><br>
+			</fieldset>
+			
+
+		
+		
+	</body>
+	
+</html>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

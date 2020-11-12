@@ -1,0 +1,358 @@
+Basic commands of Angular
+===========================
+Q)How to create a Angular project?
+   
+	ng new FirstProject
+
+Q)How to switch from one folder to another folder?
+
+	cd folder_name
+
+Q)How to start the server in Angular?
+	
+	ng serve --open 
+	or
+	npm start 
+
+Developing the Component
+===============================
+A simple Typescript program is called a Component.
+
+Component acting as a interface between view and services.
+
+diagram: n3.1
+
+We can create more then one component is a single class.
+
+We can also provide communication between the components.
+
+Angular 2,4,5,6 and 7 are component based Applications.
+
+
+Every component contains minimum 2 files 
+
+1)Typescript file
+
+2)html file
+
+Development of First Project
+===============================
+step1:
+-----
+	create a "Dummy" folder on a "D" drive and drop that folder
+	to VSC.
+
+step2:
+------
+	Open a command prompt from Dummy folder location.
+
+step3:
+------
+	create a "FirstProj" inside "Dummy" folder
+	ex:
+		ng new FirstProj
+
+Angular Project Structure
+-------------------------
+FirstProj
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html (template file)(default component)
+		|----app.component.spec.ts (unit testing file)
+		|----app.component.ts (typescript file)
+		|----app.component.css (css file)
+
+		|----app.module.ts (configuration file)
+		|
+	|------index.html (main template)
+	|
+|------package.json (to check versions)
+
+
+step4:
+-----
+	switch to Angular project.
+	ex:
+	cmd/Dummy>cd FirstProj
+
+
+step5:
+------
+	Run the Angular Project.
+	
+	D/Dummy/FirstProj> ng serve --open
+	or 
+	D/Dummy/FirstProj> npm start
+
+	Note:
+	----
+	Angular application run under light weight  server.
+	Bydefault Angular application runs on 4200 port no.
+
+step6:
+------
+	Test the Angular application by using below Request url
+	in browser address bar.
+	ex:
+		http://localhost:4200
+	
+Angular Application 2
+=============================
+step1:
+-----
+	create a "FirstProj" inside "Dummy" folder.
+	ex:
+	Dummy>ng new FirstProj
+
+step2:
+------
+	create a component inside "src/app" folder 
+
+Project Structure
+------------------
+FirstProj
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html (template file)(default component)
+		|----app.component.spec.ts (unit testing file)
+		|----app.component.ts (typescript file)
+		|----app.component.css (css file)
+
+		|--first.component.ts  (custom component)
+		|--first.component.html (custom component)
+
+		|----app.module.ts (configuration file)
+		|
+	|------index.html (main template)
+	|
+|------package.json (to check versions)
+
+To create any component in Angular,we should following things.
+----------------------------------------------------------------
+1)import {Component} from "@angular/core" package.
+
+	It is used to understand typescript code by html.
+	This class converts Typescript program equivalent to html standards.
+
+2)@Component
+	After importing we have to use the class,for that we need to use 
+	@Component.
+
+3)selector:"first";
+	
+	It i used to create custome html tag.
+
+4)templateUrl:"./first.component.html"
+	
+	It is used to link the html file.
+
+step3:
+---------
+Develop "first.component.ts" file.
+
+first.component.ts
+---------------------
+import { Component} from "@angular/core";
+
+@Component({
+        selector:"first",
+        templateUrl:"./first.component.html"
+})
+export class FirstComponent
+{
+    private var_one:String;
+    private var_two:String;
+    private var_three:String;
+    constructor(){
+            this.var_one="Angular7";
+            this.var_two="MongoDB";
+            this.var_three="ReactJs";
+    }
+    public getVarOne():String{
+        return this.var_one;
+    }
+    public getVarTwo():String{
+        return this.var_two;
+    }
+    public getVarThree():String{
+        return this.var_three;
+    }
+}
+
+
+step4:
+------
+	create a "first.component.html" file to call functions.
+
+first.component.html
+-----------------------
+<h1 style="color:red">{{ getVarOne() }}</h1>
+
+<h1 style="color:blue">{{ getVarTwo() }}</h1>
+
+<h1 style="color:green">{{ getVarThree() }}</h1>
+
+step5:
+--------
+	Register component class inside the "app.modules.ts" file 
+	(configuration file).
+
+app.modules.ts
+----------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { FirstComponent } from './first.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FirstComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [FirstComponent]
+})
+export class AppModule { }
+
+
+step6:
+-------
+	call FirstComponent selector in index.html file.
+
+index.html
+----------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FirstProj</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <first></first>
+</body>
+</html>
+
+step7:
+-------
+	Run the Angular project.
+	ex:
+	Dummy/FirstProj> ng serve --open
+	or
+	Dummy/FirstProj> npm start
+
+
+step8:
+------
+	Test the Applicationn by typing below request url in 
+	browser address bar.
+
+	ex:
+	http://localhost:4200
+
+Notes 
+----
+import { BrowserModule}  from "@angular/platform-browser" package.
+	
+	It helps to execute the project in Browsers.
+
+import { NgModule} from "@angular/core" package.
+
+	It helps to create modules in project.
+
+"BrowserModule" and "NgModule" comes bydefault during the project creation.
+
+import { AppComponent } from './app.component';
+
+	It is a default component class name.
+
+@NgModule({declaration:[]}) : It is used to register components,pipes ,
+				directives and etc.
+
+@NgModule({imports:[]}) :  It is used to register modules .
+
+@NgModule({providers:[]}) : It is used to register services.
+
+@NgModule({bootstrap:[]}) : It is used to indicate component to be executed
+			    on browser window.
+
+			   It will take application name which we developed.
+
+"Component" is a predefine class in Angular.
+
+It is used to convert the Typescript stands to equivalent html standards.
+
+It is available in "@angular/core" package.
+
+we will use predefine class with '@' symbol.
+
+Using the predefine class with '@' symbol is called as Decorator.
+
+Decorators are used to defined the MetaData to the class.
+
+"selector" is a json key used to define custom html element.
+
+"templateUrl" is a json key used to define the external templates.
+
+"index.html" is called main template in angular application.
+
+We must call selector of a component in body section of "index.html" file.
+
+Expression "{{ }}" are used to display the result on template.
+
+Expressions are also known as "interpolation" in Angular.
+
+
+As a Angular developer we can't create the objects in Angular application.
+ex:
+	Components,
+	services,
+	directives,
+	pipes and etc.
+
+Angular Framework will create an objects to Angular application with the
+help of configuration file.
+
+"app.module.ts" file called as configuration file.
+
+As a Angular developer ,we must register angular application in app.module.ts.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

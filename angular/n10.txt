@@ -1,0 +1,372 @@
+step1:
+-------
+	create a Angular Project.
+	ex:
+	d:/Dummy>ng new MysqlProj
+
+step2:
+--------
+	Download the following modules.
+	1)express module
+	2)mysql module  and 
+	3)body-parser module	
+	
+Express module is used to develop REST API's.
+mysql module is used to interfact with mysql database.
+body-parser module is used to read the post parameters and set the MIME 
+types.
+ex:
+	D:/Dummy>yarn add express --save
+	D:/Dummy>yarn add mysql --save
+	D:/Dummy>yarn add body-parser --save
+
+
+step3:
+----
+	Deploying the REST API's by using Node.
+
+Project structure
+---------------
+MysqlProj
+|
+|----server(folder)
+	|
+	|-----config(folder)
+	|	|
+	|	|----db_connection.js
+	|		
+	|-------fetch(folder)
+	|	|
+	|	|----fetch.js
+	|
+	|---server.js(It is used to collaborate all the above files)
+
+
+
+db_connection.js
+------------------
+//import mysql module
+var mysql=require("mysql");
+
+//export json object
+module.exports={
+	getConnection :function()
+	{
+		return mysql.createConnection(
+		{
+			host:'localhost',
+			user:'root',
+			password:'root',
+			database:'ui2pm'
+		});
+	}
+}
+fetch.js
+--------
+//import database Connection
+var conn=require("../config/db_connection");
+
+//get the Connection object
+var connection=conn.getConnection();
+
+//connect the database
+connection.connect();
+
+
+//import express module
+var express=require("express");
+
+//create a Router instance automatically this file becomes module.
+var router=express.Router();
+
+//create the Rest API
+router.get("/",function(req,res){
+	connection.query("select * from products",
+	function(err,recordsArray,fields){
+			res.send(recordsArray);
+	});
+});
+
+
+module.exports = router;
+
+
+server.js
+---------
+//import modules
+var express=require("express");
+
+//import body-parser
+
+var bodyparser=require("body-parser");
+
+//create the Rest object
+var app=express();
+
+
+//Enables the CORS
+//Enable the CORS(https://enable-cors.org/server_expressjs.html)
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+//set the json as MIME type
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended:false}));
+
+
+//import fetch module
+//Here "/fetch" is a folder and "fetch" is a js file
+var fetch=require("./fetch/fetch");
+
+//use fetch module
+//Here "/fetch" is a url pattern and "fetch" is a module
+app.use("/fetch",fetch);
+
+//Assign the port number
+app.listen(9191);
+console.log('server listening the port no 9191');
+
+step4:
+-----
+	start the node server.
+	ex:
+	d:/Dummy>cd MysqlProj
+	d:/Dummy/MysqlProj>cd server
+	d:/Dummy/MysqlProj/serve>node server
+
+step5
+-----
+	Test the following rest api using POSTMAN.
+	ex:
+	Method : GET 
+	url    : http://localhost:9191/fetch
+
+
+step6:
+------
+	create a Custom Service for mysql db.
+
+Mysqlproj
+|
+|------src
+|	|
+	|------app
+		|
+		|----------services
+				|
+				|---fetch.service.ts
+
+fetch.service.ts
+-------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+export class FetchService
+{
+    constructor(private http:HttpClient){}
+
+    public getProducts():any{
+        return this.http.get("http://localhost:9191/fetch");
+    }
+}
+
+step7:
+--------
+	create a custom component.
+
+Mysqlproj
+|
+|------src
+|	|
+	|------app
+		|
+		|----------components
+				|
+				|---fetch.component.ts
+				|---fetch.component.html 
+
+
+fetch.component.ts
+------------------
+import { Component} from "@angular/core";
+import {HttpErrorResponse } from "@angular/common/http";
+import { FetchService } from '../services/fetch.service';
+@Component({
+    selector:"mysql",
+    templateUrl:"./fetch.component.html"
+})
+export class FetchComponent
+{
+    //variable 
+    public result:any;
+
+    constructor(private service:FetchService){}
+
+    ngOnInit(){
+        this.service.getProducts().subscribe(res=>
+            {
+                this.result=res;
+            },(err:HttpErrorResponse)=>
+            {
+                if(err.error instanceof Error)
+                {
+                    console.log("Client Side Error");
+                }
+                else{
+                    console.log("Server side Error");
+                }
+            })
+    }
+
+}
+
+fetch.component.html
+-----------------------
+<table border="1"
+        align="center"
+        cellpadding="10px"
+        cellspacing="10px"
+        style="font-size:30px;text-align: center;">
+    <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+            </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let x of result">
+                <td>{{x.p_id}}</td>
+                <td>{{x.p_name}}</td>
+                <td>{{x.p_cost}}</td>
+            </tr>
+    </tbody>
+    </table>
+
+
+step8:
+------
+Register component and services inside app.module.ts file.
+
+app.module.ts
+---------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FetchComponent } from './components/fetch.component';
+import { FetchService } from './services/fetch.service';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FetchComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  providers: [FetchService],
+  bootstrap: [FetchComponent]
+})
+export class AppModule { }
+
+
+step:10:
+--------
+	Add component selector in index.html file.
+index.html
+---------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MysqlProj</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <mysql></mysql>
+</body>
+</html>
+
+step11:
+--------
+Run the Angular project in another command prompt.
+ex:
+	D:/Dummy>cd MysqlProj
+	d:/Dummy/MysqlProj>npm start
+
+step12:
+------
+Test the angular project
+ex:
+	http://localhost:4200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

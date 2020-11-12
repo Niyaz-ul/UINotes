@@ -1,0 +1,755 @@
+How HTML document executed on browser window
+----------------------------------------------
+HTML parser is used to parse html document/program.
+
+HTML parsed data will be handover to DOM object.
+
+DOM stands for Document Object Model.
+
+DOM is responsible to represent our html document into tree node structure.
+
+Later this tree node structure executed on browser window.
+
+
+Diagram: wt9.1
+
+ex:
+Java 	---> 	JVM(Execute)
+
+Python  --->    PVM(Execute)
+
+Android --->    DVM(Execute)
+
+HTML    --->    DOM(Execute)
+
+Graphics in html
+-----------------
+We can draw graphics in html by using two ways.
+
+1)SVG
+
+2)CANVAS
+
+1)SVG
+------
+HTML5 provides SVG technology to define graphics in a web page.
+
+The full name of SVG is "Scalable Vector Graphics".
+
+SVG is used to draw two-Dimensional vector based graphics in a web page.
+
+World wide web consortium(w3c) recommanded SVG technology only to draw 
+graphics in a web page.
+
+The html  <svg> tag/element is a container for svg graphics.
+
+SVG has several methods for drawing the path,boxes ,circles, rectangles and 
+graphic images and etc.
+
+
+ex:1
+-----
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg>
+		</svg>
+	</body>
+</html>
+
+In above example ,we can't see svg container.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+		</svg>
+	</body>
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!-- Circle -->
+				<circle cx="100" cy="100" r="80"/>
+		</svg>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!-- Circle -->
+				<circle cx="100" cy="100" r="80" fill="#FFFF00"/>
+		</svg>
+	</body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!-- Circle -->
+				<circle cx="100" cy="100" r="80" fill="#FFFF00" stroke="#FF0000"/>
+		</svg>
+	</body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!-- Circle -->
+				<circle cx="100" cy="100" r="80" fill="#FFFF00" stroke="#FF0000" stroke-width="5"/>
+		</svg>
+	</body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!--  Rectangle -->
+				<rect width="100" height="80" fill="#f3F200" stroke="#262626"/>
+		</svg>
+	</body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!--  Rectangle -->
+				<rect width="100" height="80" fill="#f3F200" stroke="#262626" stroke-width="5"/>
+		</svg>
+	</body>
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!--  Rectangle -->
+				<rect x="40" width="100" height="80" fill="#f3F200" stroke="#262626" stroke-width="5"/>
+		</svg>
+	</body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!--  Rectangle -->
+				<rect x="40" y="40" width="100" height="80" fill="#f3F200" stroke="#262626" stroke-width="5"/>
+		</svg>
+	</body>
+</html>
+
+
+ex:
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- svg container -->
+		<svg width="200" height="200" style="border:2px solid black">
+				<!--  Polygon -->
+				<polygon points="100,10 48,198 190,78 10,78 160,198" fill="#F40000" stroke="#C35000" stroke-width="5">
+		</svg>
+	</body>
+</html>
+
+2)CANVAS
+----------
+The html <canvas> element/tag is used to draw graphics via JavaScript.
+
+The <canvas> element/tag is only a container for graphics.
+
+Canvas has serveral methods for drawing paths,boxes, circles ,text and graphic images.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- canvas container -->
+		<canvas>
+			
+		</canvas>
+	</body>
+</html>
+
+ex:
+---
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- canvas container -->
+		<canvas width="400" height="200" style="border:1px solid black">
+			
+		</canvas>
+	</body>
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- canvas container -->
+		<canvas id="mycanvas"  width="400" height="200" style="border:1px solid black">
+		</canvas>
+		
+		<!-- javascript code -->
+		<script>
+				<!-- line -->
+				var c=document.getElementById('mycanvas');
+				var ctx=c.getContext("2d");
+				ctx.moveTo(0,0);
+				ctx.lineTo(400,200);
+				ctx.stroke();
+				
+		</script>
+		
+	</body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- canvas container -->
+		<canvas id="mycanvas"  width="400" height="200" style="border:1px solid black">
+		</canvas>
+		
+		<!-- javascript code -->
+		<script>
+				<!-- circle -->
+				var c=document.getElementById('mycanvas');
+				var ctx=c.getContext("2d");
+				ctx.beginPath();
+				ctx.arc(200,100,50,0,2*Math.PI);
+				ctx.stroke();
+				
+		</script>
+		
+	</body>
+</html>
+
+from left : 200
+from top : 100
+radius: 50
+complete circle : 2*Math.PI
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- canvas container -->
+		<canvas id="mycanvas"  width="400" height="200" style="border:1px solid black">
+		</canvas>
+		
+		<!-- javascript code -->
+		<script>
+				<!-- text -->
+				var c=document.getElementById('mycanvas');
+				var ctx=c.getContext("2d");
+				
+				ctx.font="50px Arial";
+				ctx.fillText("Hello World",40,50);
+				ctx.stroke();
+				
+		</script>
+		
+	</body>
+</html>
+
+40 is a x - axis and 50 is a y- axis.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<!-- canvas container -->
+		<canvas id="mycanvas"  width="400" height="200" style="border:1px solid black">
+		</canvas>
+		
+		<!-- javascript code -->
+		<script>
+				<!-- Linear Gradient -->
+				var c=document.getElementById('mycanvas');
+				var ctx=c.getContext("2d");
+				
+				var grd=ctx.createLinearGradient(0,0,200,0);
+				grd.addColorStop(0,"blue");
+				grd.addColorStop(1,"green");
+				ctx.fillStyle=grd;
+				ctx.fillRect(50,50,150,80);
+				ctx.stroke();
+				
+		</script>
+		
+	</body>
+</html>
+
+Note:
+----
+SVG is a language for describing 2D graphics in XML.
+Canvas draws 2D graphics in javascript.
+
+
+How to add image in a background by using HTML
+--------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body background="bg.jpg">
+		
+		
+	</body>
+</html>
+
+HTML "required" attribute
+-------------------------
+In html, required attribute is used to perform validation.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<form>
+				<table align="center">
+					<caption>Login Form </caption>
+					<tr>
+						<td>UserName:</td>
+						<td><input type="text" name="t1" required/></td>
+					</tr>
+					<tr>
+						<td>Password: </td>
+						<td><input type="password" name="t2" required/></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="reset"/></td>
+						<td><input type="submit" value="submit"/></td>
+					</tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+
+
+HTML Design
+===========
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body background="bg2.jpg"  link="#1a0000" alink="#FF0000" vlink="#1a0000">
+		<br>
+		<br>
+
+		&nbsp; &nbsp;&nbsp;<font face="Lato" size="6">LOGO</font>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		
+		<font face="cinzel">
+			<a  href="#">HOME</a>&nbsp;&nbsp;&nbsp;
+			<a  href="#">ABOUTUS</a>&nbsp;&nbsp;&nbsp;
+			<a href="#">PORTFOLIO</a>&nbsp;&nbsp;&nbsp;
+			<a  href="#">BLOG</a>&nbsp;&nbsp;&nbsp;
+			<a  href="#">CONTACTUS</a>
+		</font>
+		
+	</body>
+</html>
+
+
+Html Layouts/Elements
+---------------------
+HTML has serveral elements that defines the different parts of a web page.
+
+Diagram: wt9.1
+
+
+1)<header> : It Defines a header for a document or a section.
+
+2)<nav>    : It defines a set of navigation links.
+
+3)<section> : It defines  a section in a document.
+
+4)<article> : It defines an independent .self contained content.
+
+5)<aside>   : It defines content a side from the content like a slidebar.
+
+6)<footer> : It defines a footer for a document or a section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

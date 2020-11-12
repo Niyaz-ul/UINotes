@@ -1,0 +1,387 @@
+JavaScript Date Object
+=====================
+The JavaScript date object can be used to get year, month and day.
+ we can display a timer on the webpage by the help of JavaScript date object.
+
+ex:1
+------
+
+    Current Date and Time: <span id="txt"></span>  
+    <script>  
+    var today=new Date();  
+    document.getElementById('txt').innerHTML=today;  
+    </script>  
+
+
+ex:2
+----
+Program to display Date .
+
+    <script>  
+    var date=new Date();  
+    var day=date.getDate();  
+    var month=date.getMonth()+1;  
+    var year=date.getFullYear();  
+    document.write("<br>Date is: "+day+"/"+month+"/"+year);  
+    </script>  
+
+
+ex:3
+-----
+Program to Display time.
+
+Current Time: <span id="txt"></span>  
+<script>  
+var today=new Date();  
+var h=today.getHours();  
+var m=today.getMinutes();  
+var s=today.getSeconds();  
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;  
+</script> 
+
+ex:4
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+				span{
+					background:#B33771;
+					padding:10px;
+					color: #FFF;
+					font-style:italic;
+					
+				}
+		</style>
+	</head>
+	<body> 
+			Current Time: <span id="txt"></span>  
+<script>  
+window.onload=function(){getTime();}
+function getTime(){  
+var today=new Date();  
+var h=today.getHours();  
+var m=today.getMinutes();  
+var s=today.getSeconds();  
+// add a zero in front of numbers<10  
+m=checkTime(m);  
+s=checkTime(s);  
+document.getElementById('txt').innerHTML=h+" : "+m+" : "+s;  
+setTimeout(function(){getTime()},1000);  
+}  
+//setInterval("getTime()",1000);//another way  
+function checkTime(i){  
+if (i<10){  
+  i="0" + i;  
+ }  
+return i;  
+}  
+</script>  
+			
+	</body> 
+</html>
+
+How to display selected item in select box
+===================================
+
+<!DOCTYPE html>
+<html>
+	<head>	
+		<script>
+				function f1()
+				{
+					var city=document.getElementById("city");
+	document.getElementById("id1").innerHTML=city.options[city.selectedIndex].text;
+				}
+		</script>
+	</head>
+	<body>
+	Select The City : <br>
+		<select  id="city"  onchange="f1()">
+			
+			<option>HYDERABAD</option>
+			<option>ADILABAD</option>
+			<option>NIZAMBAD</option>
+		</select>
+		<br>
+		<br>
+		The selected City is =<span id="id1"/>
+		
+	</body>
+</html>
+
+
+
+JavaScript form select change option
+====================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>	
+			//function carrying two ids of select box
+				function populate(s1,s2)
+				{
+					var s1=document.getElementById(s1);
+					var s2=document.getElementById(s2);
+					s2.innerHTML="";
+					if(s1.value == "Telangana")
+					{
+var optionArray =["|none","hyderabad|Hyderabad","adilabad|Adilabad","nizambad|Nizambad"];
+
+					//running for loop for 4 options 1 by 1
+						for(var option in optionArray)
+						{
+							var pair = optionArray[option].split("|");
+							//here pair will hold  value and option like array.
+							
+							
+							//now create <option> tag
+							var newOption = document.createElement("option");
+							
+							newOption.value =pair[0];
+							newOption.innerHTML=pair[1];
+							s2.options.add(newOption);
+						}
+					}
+				}
+		</script>
+	</head>
+	<body>
+				<h2>Choose Your State </h2>
+				<hr/>
+			<select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+			
+					<option value="">none</option>
+					<option value="Telangana">Telangana</option>
+					<option value="maha">Maharashtra</option>
+					<option value="up">UP</option>
+			</select>
+			<br>
+			<br>
+			<h2>Choose your city</h2>
+			<select id="slct2" name="slct2">
+				
+			</select>
+	</body>
+	
+</html>
+
+
+Money Conversion Application
+=============================
+<!DOCTYPE html>
+<html>
+	<head>	
+		
+	</head>
+	<body>
+		<u><h1><b><i><center>Money Converter Application</u> </center></i></b></h1>
+	Enter USD :<input type="text" id="moneyInput" />
+	<br><br>
+	<h1>Indian currency=<span id="inr"/></h1>
+	<script>
+					document.getElementById("moneyInput").addEventListener('input',function(e){
+					
+					var usdamt=document.getElementById("moneyInput").value;
+					var usdtoinr=(usdamt * 69.5);
+					let usd=e.target.value;
+					document.getElementById("inr").innerHTML=usdtoinr;
+					})
+	</script>
+		
+	</body>
+</html>
+
+
+Working with Visual Studio Code
+=============================
+step1:
+--------
+	Download and install visual Studio Code.
+
+  	website: https://code.visualstudio.com/docs/?dv=win
+	file : VSCodeSetup-Note-1.25.1.exe
+
+step2:
+-------
+	Open visual Studio Code.
+
+step3:
+--------
+	create a folder on a desktop .drag and drop that folder to visual studio code.
+
+step4:
+--------
+	create a form.html file inside "dummy" folder.
+
+
+innerHTML
+==========
+innerHTML property is used to add dynamic html to html document.
+ex:
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyPage!!!</title>
+</head>
+<body>
+
+            Dynamic Content :<span id="msg"/>
+            <script>
+                document.getElementById('msg').innerHTML="Welcome to GlobalEdx";
+            </script>
+</body>
+</html>
+
+ex:2
+====
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                       function validate()
+                       {
+                             var cform="<br/>Name:<input type='text' name='t1'/><br/>
+		                      Email:<input type='text' name='t2'/><br/>
+			  Enter Comment:<textarea name='t3' cols='10' rows='10'>   					</textarea><br/>
+			<input type='submit' value='post'/>";   
+
+                             document.getElementById("comm_id").innerHTML=cform;   
+                       }
+               </script> 
+        </head>
+        <body>
+               
+           <input type="submit" value="comment" onclick="validate()"/>
+           <span id="comm_id"/>
+        </body>
+</html>
+
+
+ex:3
+=====
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                       var flag=true;
+                       function validate()
+                       {
+                              var cform="<br/>Name:<input type='text' name='t1'/><br/>
+		                      Email:<input type='text' name='t2'/><br/>
+			  Enter Comment:<textarea name='t3' cols='10' rows='10'>   					</textarea><br/>
+			<input type='submit' value='post'/>";   
+                            if(flag)
+                            {
+                             document.getElementById("comm_id").innerHTML=cform;
+                             flag=false;
+                            }
+                            else{
+                                document.getElementById("comm_id").innerHTML="";
+                                 flag=true;
+                            }   
+                       }
+               </script> 
+        </head>
+        <body>
+           <input type="submit" value="comment" onclick="validate()"/>
+           <span id="comm_id"/>
+        </body>
+</html>
+
+ex:4
+====
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                        function myFunction()
+                        {
+                                var table=document.getElementById("table");
+                                
+                                var row=table.insertRow();
+                                var cell1=row.insertCell();
+                                var cell2=row.insertCell();
+                                var cell3=row.insertCell();
+
+                                cell1.innerHTML=102;
+                                cell2.innerHTML="Erick Nelson";
+                                cell3.innerHTML="UAE";
+
+                        }
+               </script> 
+        </head>
+        <body>
+               
+          <input type="submit" value="add" onclick="myFunction()"/>
+          <br>
+          <hr/>
+          <table id="table" border="1" cellpadding="10px">
+                        <tr>
+
+                                <th>SNO</th>
+                                <th>SNAME</th>
+                                <th>SADD</th>
+                        </tr>
+
+          </table>              
+        </body>
+</html>
+
+
+innerText
+=========
+	It is used to add dynamic text in html document.
+	Here text will interpetered as normal text but not html text.
+ex:
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                        function validate()
+                        {
+                              var txt;
+                              if(document.myform.t1.value.length>5)
+                              {
+                                      txt="strong";
+                              }
+                              else
+                              {
+                                      txt="poor";
+                              }
+                              document.getElementById("pid").innerText=txt;
+                        }
+               </script> 
+        </head>
+        <body>
+               
+                <form name="myform">
+                Password : <input type="password" name="t1" onkeyup="validate()"/>Strength:<span id="pid"/>
+                </form>                
+        
+        </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

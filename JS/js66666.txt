@@ -1,0 +1,782 @@
+Browser Object Model
+===================
+The Browser Object Model (BOM) is used to interact with the browser.
+
+The default object of browser is window means you can call all the functions of window by specifying 
+window or directly. 
+
+example:
+
+    window.alert("hello javatpoint");  
+
+	or
+
+    alert("hello javatpoint"); 
+
+
+Window Object
+------------------
+The window object represents a window in browser. An object of window is created automatically by the browser.
+
+Window is the object of browser, it is not the object of javascript.
+
+The javascript objects are string, array, date etc.
+
+"window" object is used to write browser related programming.
+
+With the help of  window object we can perform following task.
+
+1)Get width and height of Browser Window.
+
+2)Open and close Browser window.
+
+3)Move and resize Browser window.
+
+4)Scroll to Browser window.
+
+5)Get URL,hostname,protocol of Browser window.
+
+6)Get History of Browser window.
+
+Methods of window object
+---------------------------------
+alert()
+======
+It displays alert dialog box. It has message and ok button.
+
+    <script type="text/javascript">  
+    function msg(){  
+     alert("Hello Alert Box");  
+    }  
+    </script>  
+    <input type="button" value="click" onclick="msg()"/>  
+
+confirm()
+=======
+It displays the confirm dialog box. It has message with ok and cancel buttons.
+
+    <script type="text/javascript">  
+    function msg(){  
+    var v= confirm("Are u sure?");  
+    if(v==true){  
+    alert("ok");  
+    }  
+    else{  
+    alert("cancel");  
+    }  
+      
+    }  
+    </script>  
+      
+    <input type="button" value="delete record" onclick="msg()"/>  
+
+prompt()
+---------------
+It displays prompt dialog box for input. It has message and textfield.
+
+    <script type="text/javascript">  
+    function msg(){  
+    var v= prompt("Who are you?");  
+    alert("I am "+v);  
+      
+    }  
+    </script>  
+      
+    <input type="button" value="click" onclick="msg()"/>  
+
+
+innerWidth and innerHeight
+--------------------------
+The innerWidth property returns the width of a window's content area.
+
+The innerHeight property returns the height of a window's content area.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var w = window.innerWidth;
+				 var h = window.innerHeight;
+				 document.writeln(w+"<br>");
+			     	 document.writeln(h+"<br>");
+				</script>
+	</body>
+</html>
+
+open()
+------
+It is used to open a new window.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 function openWindow()
+				 {
+					//window.open("http://www.google.com","_blank");
+					//window.open("http://www.google.com");	
+					//window.open("http://www.google.com","_parent");
+					window.open("http://www.google.com","_blank","width=500px,height=200px");	
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+	</body>
+</html>
+
+close()
+--------
+It is used to close the current window.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var mywindow;
+				 function openWindow()
+				 {
+					mywindow = window.open("http://www.google.com","_blank","width=500px,height=200px");	
+				 }
+				 function closeWindow()
+				 {
+					mywindow.close();
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+				<button onclick="closeWindow()">Close Window</button>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 function openWindow()
+				 {
+					window.open("http://www.google.com","_blank","width=500px,height=200px");	
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+	</body>
+</html>
+
+In this example you can see our new browser will take pusstion from top-left.
+If we want to adjust this browswer then we can use moveBy() or moveTo() methods.
+
+MoveTo()
+--------
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var mywindow;
+				 function openWindow()
+				 {
+					mywindow=window.open("http://www.google.com","","width=500px,height=200px");	
+				 }
+				 function moveWindow()
+				 {
+					mywindow.moveTo(100,100);
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+				<button onclick="moveWindow()">move Window</button>
+	</body>
+</html>
+
+We can't move window because we will get one error in console page.
+To overcome this problem we can use our own window not predefine window (google).
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var mywindow;
+				 function openWindow()
+				 {
+					mywindow=window.open("http://www.google.com","","width=500px,height=200px");	
+					mywindow.document.write("<p>This is MyWindow </p>");
+				 }
+				 function moveWindow()
+				 {
+					mywindow.moveTo(100,100);
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+				<button onclick="moveWindow()">move Window</button>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var mywindow;
+				 function openWindow()
+				 {
+					mywindow=window.open("http://www.google.com","","width=500px,height=200px");	
+					mywindow.document.write("<p>This is MyWindow </p>");
+				 }
+				 function moveWindow()
+				 {
+					mywindow.moveTo(100,100);
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+				<button onclick="moveWindow()">move Window</button>
+	</body>
+</html>
+
+In the above example a newly opened browser window does not have any focus.
+To get focus on browser window we need to use focus() method.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var mywindow;
+				 function openWindow()
+				 {
+					mywindow=window.open("http://www.google.com","","width=500px,height=200px");	
+					mywindow.document.write("<p>This is MyWindow </p>");
+				 }
+				 function moveWindow()
+				 {
+					mywindow.moveTo(100,100);
+					mywindow.focus();
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+				<button onclick="moveWindow()">move Window</button>
+	</body>
+</html>
+moveTo() method will move the browser window by using absolute position i.e screen level.
+moveBy() method will move the browser window by using relative position i.e content level .
+
+moveBy()
+--------
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				 var mywindow;
+				 function openWindow()
+				 {
+					mywindow=window.open("http://www.google.com","","width=500px,height=200px,left=100px,top=100px");	
+					mywindow.document.write("<p>This is MyWindow </p>");
+				 }
+				 function moveWindow()
+				 {
+					mywindow.moveBy(200,200);
+					mywindow.focus();
+				 }
+				</script>
+				
+				<button onclick="openWindow()">Open Window</button>
+				<button onclick="moveWindow()">move Window</button>
+	</body>
+</html>
+
+ex:
+setTimeOut() function
+----------------------
+It performs its task after the given milliseconds.
+
+ex:
+ <script type="text/javascript">  
+    function msg(){  
+    setTimeout(  
+    function(){  
+    		alert("Welcome to GlobalEdx")  
+    	      },2000
+              );  
+      
+    }  
+    </script>  
+      
+    <input type="button" value="click" onclick="msg()"/>  
+   
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+			div{
+					width:150px;
+					height:150px;
+					background: red;
+			}
+			</style>
+	</head>
+	<body>
+				<script>
+					var id=setTimeout(Anim,3000);
+					//here Anim is a function name and 3000 is 3 seconds
+					
+					function Anim()
+					{
+							console.log("Hello");
+					}
+				</script>
+	
+				<div id="test"></div>
+	</body>
+</html>
+
+Let see the example to increase the width of the div.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+			div{
+					width:150px;
+					height:150px;
+					background: red;
+			}
+			</style>
+	</head>
+	<body>
+				<script>
+					var id=setTimeout(Anim,3000);
+					//here Anim is a function name and 3000 is 3 seconds
+					
+					function Anim()
+					{
+							//target the div
+							var target=document.getElementById("test");
+							target.style.width= "500px";
+					}
+				</script>
+	
+				<div id="test"></div>
+	</body>
+</html>
+
+If we want to stop the Animation in  between then we can use clearTimeout() method.
+ 
+clearTimeout() 
+----------------
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+			div{
+					width:150px;
+					height:150px;
+					background: red;
+			}
+			</style>
+	</head>
+	<body>
+				<script>
+					var id=setTimeout(Anim,5000);
+					//here Anim is a function name and 3000 is 3 seconds
+					
+					function Anim()
+					{
+							//target the div
+							var target=document.getElementById("test");
+							target.style.width= "500px";
+					}
+					function stopAnimation()
+					{
+						    clearTimeout(id); 
+					}
+				</script>
+				
+				<div id="test"></div>
+				<button onclick="stopAnimation()">Stop Animation</button>
+	</body>
+</html>
+
+setInterval()
+----------------
+
+The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+
+The setInterval() method will continue calling the function until clearInterval() is called,
+ or the window is closed.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div{
+					width: 150px;
+					height: 150px;
+					background: red;
+				}
+			</style>
+	</head>
+	<body>
+				<script>
+					var a=0;
+					setInterval(Anim,1000);
+					
+					function Anim()
+					{
+						a= a + 10;
+						var target= document.getElementById("test");
+						target.style.marginLeft=a + 'px';
+						
+					}
+				</script>
+				<div id="test"></div>
+
+	</body>
+</html>
+
+clearInterval()
+------------------
+The clearInterval() method clears a timer set with the setInterval() method.
+The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<style>
+				div{
+					width: 150px;
+					height: 150px;
+					background: red;
+				}
+			</style>
+	</head>
+	<body>
+				<script>
+					var a=0;
+					var id=setInterval(Anim,1000);
+					
+					function Anim()
+					{
+						
+						a= a + 10;
+						if(a==200)
+						{
+							clearInterval(id);
+						}
+						else
+						{
+						var target= document.getElementById("test");
+						target.style.marginLeft=a + 'px';
+						}
+					}
+				</script>
+				<div id="test"></div>
+
+	</body>
+</html>
+
+Window History
+------------------
+Using javascript we can achieve Browser history also.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				<a href="javascript:history.back();">
+						<p style="color:orange">Backward</p>
+				</a>
+				
+				<a href="javascript:history.forward();">
+						<p style="color:orange">Forward</p>
+				</a>
+	</body>
+</html>
+
+
+window localStorage 
+----------------
+The localStorage  properties allow to save key/value pairs in a web browser.
+
+The localStorage object stores data with no expiration date. The data will not be deleted when
+ the browser is closed, and will be available the next day, week, or year.
+
+The localStorage property is read-only.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				<div id="result"></div>
+
+				<script>
+					// Check browser support
+					if (typeof(Storage) !== "undefined") {
+				
+					// Storing data 
+					localStorage.setItem("name", "Alan");
+  
+					// Retrieving and storing in result id.
+  document.getElementById("result").innerHTML = localStorage.getItem("name");
+					} 
+					else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+				</script>
+
+	</body>
+</html>
+
+Note:
+----
+	To remove items from local storage then we need to use localStorage.removeItem("key") method.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				<div id="result"></div>
+
+				<script>
+					// Check browser support
+					if (typeof(Storage) !== "undefined") {
+				
+					// Storing data 
+					localStorage.setItem("name", "Alan");
+					localStorage.setItem("age","34");
+					localStorage.removeItem("age");
+					// Retrieving and storing in result id.
+  document.getElementById("result").innerHTML = localStorage.getItem("name");
+					} 
+					else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+				</script>
+
+	</body>
+</html>
+
+window sessionStorage
+---------------------------
+The sessionStorage properties allow to save key/value pairs in a web browser.
+
+The sessionStorage object stores data for only one session (the data is deleted when the browser 
+tab is closed).
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				<div id="result"></div>
+
+				<script>
+					// Check browser support
+					if (typeof(Storage) !== "undefined") {
+				
+					// Storing data 
+					sessionStorage.setItem("name", "Alan");
+  
+					// Retrieving and storing in result id.
+  document.getElementById("result").innerHTML = sessionStorage.getItem("name");
+					} 
+					else {
+  document.getElementById("result").innerHTML = "Sorry, browser does not support Web Storage...";
+			}
+				</script>
+
+	</body>
+</html>
+
+Note:
+-----
+we can clear all the data from storage by using sessionStorage.clear() method.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				<div id="result"></div>
+
+				<script>
+					// Check browser support
+					if (typeof(Storage) !== "undefined") {
+				
+					// Storing data 
+					sessionStorage.setItem("name", "Alan");
+  
+					// Retrieving and storing in result id.
+  document.getElementById("result").innerHTML = sessionStorage.getItem("name");
+					sessionStorage.clear();
+					} 
+					else {
+  document.getElementById("result").innerHTML = "Sorry, browser does not support Web Storage...";
+}
+				</script>
+
+	</body>
+</html>
+
+
+Document Object Model
+----------------------------------
+The document object represents the whole html document.
+
+Diagram: js1
+
+When html document is loaded in the browser, it becomes a document object. 
+
+Here complete Html document represent into a Node Hierarchy.
+
+document is the root element that represents the html document.
+ 
+DOM looks for three primary nodes.
+
+1)Element Node
+2)Attribute Node
+3)Text Node
+
+By the help of document object, we can add dynamic content to our web page.
+
+document object is an  object of window So we can use document object as given below
+	ex:
+		 window.document  
+		 or
+		 document  
+
+Methods of document object
+---------------------------------------
+Method				Description
+--------			--------------
+write("string")			writes the given string on the doucment.
+writeln("string")		writes the given string on the doucment with newline character at 			the end.
+getElementById()		returns the element having the given id value.
+getElementsByName()		returns all the elements having the given name value.
+getElementsByTagName()		returns all the elements having the given tag name.
+getElementsByClassName()	returns all the elements having the given class name.
+
+
+
+ex:
+    <script type="text/javascript">  
+    function printvalue(){  
+    var name=document.form1.name.value;  
+    alert("Welcome: "+name);  
+    }  
+    </script>  
+      
+    <form name="form1">  
+    Enter Name:<input type="text" name="name"/>  
+    <input type="button" onclick="printvalue()" value="print name"/>  
+    </form>  
+
+document.getElementById() method
+-------------------------------------------
+    <script type="text/javascript">  
+    function getcube(){  
+    var number=document.getElementById("number").value;  
+    alert(number*number*number);  
+    }  
+    </script>  
+    <form>  
+    Enter No:<input type="text" id="number" name="number"/><br/>  
+    <input type="button" value="cube" onclick="getcube()"/>  
+    </form>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

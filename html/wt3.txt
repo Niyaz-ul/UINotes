@@ -1,0 +1,342 @@
+Simple HTML skeleton program/document
+--------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		tags related to head
+	</head>
+
+	<body>
+		tags related to body
+	</body>
+</html>
+Note:
+----
+<!DOCTYPE html> belongs to HTML5 document.
+<!DOCTYPE> belongs to HTML document.
+
+<html>
+------
+	It is a root tag/element of HTML page.
+
+<head>
+------
+	Head tag is used to declare following things
+	1)Title of a page
+	2)FavIcon of a page
+	3)MetaData of a document 
+	4)styles and 
+	5)scripts
+	
+<body>
+------
+	It is used for web page content.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+			Welcome to GlobalEdx Html Class
+	</body>
+</html>
+Above example show a web page without title.
+
+q)How to add Title in a web page?
+ans)
+We can add Title in a web page by using <title> tag inside <head> tag.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GlobalEdx</title>
+	</head>
+	<body>
+			Welcome to GlobalEdx Html Class
+	</body>
+</html>
+
+Q)How to add FavIcon to a web page?
+
+ans)
+ we can add favicon to a web page by using <link rel="shortcut icon"> tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GlobalEdx</title>
+		<link rel="shortcut icon" href="mask.png"/>
+	</head>
+	<body>
+			Welcome to GlobalEdx Html Class
+	</body>
+</html>
+
+
+Note:
+-----
+rel and href are attributes of link tag and each attribute should be 
+seperated by space.
+
+Q)How to use Comments In HTML?
+-------------------------------
+Comments are introduced for documentation purpose.
+
+Comments are used to improve readability of our code.
+
+We can declare HTML comment as follow.
+
+syntax
+-----
+	<!--	comment here 	-->
+
+comments are not displayed on a web pages.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Title of  page -->
+		<title>GlobalEdx</title>
+
+		<!-- adding favicon to a page --> 
+		<link rel="shortcut icon" href="mask.png"/>
+	</head>
+	<body>
+			<!-- Simple Text to Display --> 
+			Welcome to GlobalEdx Html Class
+	</body>
+</html>
+
+
+Q)How to change backgournd color of a web page?
+ans) 
+we can use "bgcolor" attribute of <body> tag to change the background color of a 
+web page.
+
+The default color for every webpage is white.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Title of  page -->
+		<title>GlobalEdx</title>
+
+		<!-- adding favicon to a page --> 
+		<link rel="shortcut icon" href="mask.png"/>
+	</head>
+	<body bgcolor="yellow">
+			<!-- Simple Text to Display --> 
+			Welcome to GlobalEdx Html Class
+	</body>
+</html>
+
+Q)can we execute below program?
+
+globaledx.html
+--------------
+Welcome to GlobalEdx
+
+
+Here it is valid document because <!DOCTYPE html>,<HTML>,<Head> and  <body> 
+tags are optional.
+
+HTML Meta Tag
+--------------
+The <meta> tag/element are used to specify 
+
+1)Page Description
+
+2)Keywords.
+
+3)Author
+
+4)portview and 
+
+5)Other MetaData
+
+<meta> tag must be used inside <head> tag.
+
+Data of a Data is called MetaData.
+
+MetaData is used by Browser window ,by Search Engine and other web services.
+
+
+1)Page Description
+-------------------
+It defines the page description of your web page.
+syntax
+------
+	<meta name="description" content="Online Class For UI">
+ex:
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>MyPage</title>
+		<meta name="description" content="Online Class For UI">
+	</head>
+	<body>
+		This is GlobalEdx Html classes.
+	</body>
+</html>
+
+Note:
+-----
+To see the Description of a web page we need to enable "Developer Option" by 
+pressing "F12" Function key.
+
+2)Keywords.
+-----------
+It defines keywords for Search Engine.
+syntax
+-----
+	<meta name="keywords" content="HTML,CSS,JS,BOOTSTRAP">
+
+	Here keywords are used for Search Engine Optimization(SEO).
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>MyPage</title>
+		<meta name="keywords" content="HTML,CSS,JS,BOOTSTRAP">
+	</head>
+	<body>
+		This is GlobalEdx Html classes.
+	</body>
+</html>
+
+Note:
+-----
+To see the keywords of a web page we need to enable "Developer Option" by 
+pressing "F12" Function key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

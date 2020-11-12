@@ -1,0 +1,799 @@
+JavaScript closure
+===============
+A closure gives you access to an outer function's scope from an inner function. 
+
+In JavaScript, closures are created every time a function is created, at function creation time.
+
+The inner function will have access to the variables in the outer function scope, 
+even after the outer function has returned.
+
+
+ex:1
+===
+<!doctype html> 
+<html> 
+  <head> 
+	<title>MyPage</title>   
+  </head> 
+  <body> 
+   	 <script> 
+     		var x=10;
+	 	function f1()
+	 	{
+			var y=20;
+			function f2()
+			{
+				var z=30;
+				alert(x+y+z);
+			
+			}
+			f2();
+		 }
+		 f1();
+	 
+    	</script> 
+  </body> 
+</html> 
+
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage</title>
+</head>
+<body>
+
+<h2>JavaScript Closures</h2>
+<p>Counting with a local variable.</p>
+
+<button type="button" onclick="myFunction()">Count</button>
+
+<p id="demo">0</p>
+
+<script>
+var add = (function () {
+  var counter = 0;
+  return function () {
+		counter += 1; 
+		return counter;
+		   }
+            })();
+
+function myFunction(){
+  document.getElementById("demo").innerHTML = add();
+}
+</script>
+
+</body>
+</html>
+
+What is the difference between var and let
+=======================================
+
+var and let are both used for function declaration and to hold values in javascript
+ but the difference between them is that var is function scoped and let is block scoped.
+
+ex:
+	
+<!doctype html> 
+<html> 
+  <head> 
+   
+  </head> 
+  <body> 
+    <script> 
+    console.log(x);
+	let x=10;
+	console.log(x);
+
+	 
+    </script> 
+  </body> 
+</html> 
+
+
+ex:
+<!doctype html> 
+<html> 
+  <head> 
+   
+  </head> 
+  <body> 
+    <script> 
+    console.log(x);
+	var x=10;
+	console.log(x);
+
+	 
+    </script> 
+  </body> 
+</html> 
+
+
+JavaScript Regular Expression
+-------------------------------
+Regular expressions are patterns used to match character combinations in strings. 
+
+In JavaScript, regular expressions are also objects.
+
+These patterns are used with the exec() and test() methods of RegExp .
+
+Regular expressions can be used to perform all types of text search and text replace operations.
+
+Syntax
+--------
+var variable_nmae=/pattern/modifiers;
+
+
+In JavaScript, regular expressions are often used with the two string methods: search() and replace().
+
+1)string search()
+---------
+The search() method uses an expression to search for a match, and returns the position of the match.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<script>
+			var str = "Visit GlobalEdx"; 
+			var n = str.search("GlobalEdx");
+			document.writeln(n);
+		</script>
+
+		
+	</body>
+</html>
+
+string search() with regular expression
+-----------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<script>
+			var str = "Visit GlobalEdx"; 
+			var n = str.search(/GlobalEdx/i);
+			document.writeln(n);
+		</script>
+
+		
+	</body>
+</html>
+
+Here 'i'  is a modifier (modifies the search to be case-insensitive).
+
+
+2)String replace() 
+------------------
+The replace() method returns a modified string where the pattern is replaced.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<script>
+			var str = "Visit GlobalFedex"; 
+			var n = str.replace("GlobalFedex","GlobalEdx");
+			document.writeln(n);
+		</script>
+
+		
+	</body>
+</html>
+
+String replace() with regular expression
+-----------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<script>
+			var str = "Visit GlobalFedex"; 
+			var n = str.replace(/GlobalFedex/i,"GlobalEdx");
+			document.writeln(n);
+		</script>
+
+		
+	</body>
+</html>
+
+g modifier
+------------
+Perform a global match (find all matches rather than stopping after the first match)
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<script>
+			 var str = "Is this all is there is?";
+			 //it is case insensitive
+			 var patt1 = /is/g;
+             var result = str.match(patt1);
+			 document.writeln(result);//3 is
+		</script>
+
+		
+	</body>
+</html>
+
+m modifier
+------------
+Perform multiline matching
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+		<script>
+			 var str = "\nIs th\nis it\nIs it?";
+			 var patt1 = /is/m;
+			 var result = str.match(patt1);
+			 document.writeln(result);//3 is
+		</script>
+
+		
+	</body>
+</html>
+
+
+
+JavaScript Form validation using RegularExpression
+=====================================================
+
+To generate proper regular expression we can login below url.
+
+ex:
+	https://regex101.com/
+
+
+name validation
+-----------------
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<script>
+			function validate()
+			{
+				var name=document.getElementById('t1').value;
+				var namecheck=/[A-Za-z. ]{3,30}$/;
+				if(namecheck.test(name))
+				{
+				document.getElementById('res').innerHTML="";
+				}
+				else
+				{
+				document.getElementById('res').innerHTML="Name is mandatory";
+				return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return validate()">
+				<table align="center">
+					
+					<tr>
+						<td>UserName:</td>
+						<td><input type="text" id="t1"/><span id="res"></span></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="reset"/></td>
+						<td><input type="submit" value="submit"/></td>
+					</tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+
+
+Password validation
+-------------------
+ex:2
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<script>
+			function validate()
+			{
+				var pwd=document.getElementById('t1').value;
+				var pwdcheck=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+				if(pwdcheck.test(pwd))
+				{
+				document.getElementById('res').innerHTML="";
+				}
+				else
+				{
+				document.getElementById('res').innerHTML="Password is mandatory";
+				return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return validate()">
+				<table align="center">
+					
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" id="t1"/><span id="res"></span></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="reset"/></td>
+						<td><input type="submit" value="submit"/></td>
+					</tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+
+
+Phone number validation
+--------------------------
+ex:3
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<script>
+			function validate()
+			{
+				var phone=document.getElementById('t1').value;
+				var phonecheck=/^[0-9]{10}$/;
+				if(phonecheck.test(phone))
+				{
+				document.getElementById('res').innerHTML="";
+				}
+				else
+				{
+				document.getElementById('res').innerHTML="Please enter phone";
+				return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return validate()">
+				<table align="center">
+					
+					<tr>
+						<td>Phone:</td>
+						<td><input type="text" id="t1"/><span id="res"></span></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="reset"/></td>
+						<td><input type="submit" value="submit"/></td>
+					</tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+
+ex:4
+-----
+Internation number
+--------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<script>
+			function validate()
+			{
+				var phone=document.getElementById('t1').value;
+				var phonecheck=/^[789][0-9]{10}$/;
+				if(phonecheck.test(phone))
+				{
+				document.getElementById('res').innerHTML="";
+				}
+				else
+				{
+				document.getElementById('res').innerHTML="Please enter phone";
+				return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return validate()">
+				<table align="center">
+					
+					<tr>
+						<td>Phone:</td>
+						<td><input type="text" id="t1"/><span id="res"></span></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="reset"/></td>
+						<td><input type="submit" value="submit"/></td>
+					</tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+
+Email validation
+-------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<script>
+			function validate()
+			{
+				var email=document.getElementById('t1').value;
+				var emailcheck=/^[A-Za-z.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z. ]{2,6}$/;
+				if(emailcheck.test(email))
+				{
+				document.getElementById('res').innerHTML="";
+				}
+				else
+				{
+				document.getElementById('res').innerHTML="Please enter EmailId";
+				return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return validate()">
+				<table align="center">
+					
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" id="t1"/><span id="res"></span></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="reset"/></td>
+						<td><input type="submit" value="submit"/></td>
+					</tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+
+
+solution
+--------
+/ delimeter at starting
+
+/gm at end
+
+globaledx
+
+GlobalEdx
+
+Dr. GlobalEdx
+
+GlobalEdx1
+
+GlobalEdx@
+
+ex:
+name
+-----
+/[A-Za-z. ]/
+
+/ ^[A-Za-z. ]{3,30}$/
+
+
+password:
+-------
+/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/
+
+Password should have 1 number and 1 character.
+
+
+email
+-----
+/ ^[A-Za-z.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z. ]{2,6}$/
+raja@gmail.com
+raja@gmail.com.in
+@globaledx.com
+
+Phone:
+----
+/^[0-9]{10}$/
+
+10 digits exactly
+
+for internal 7,8,9
+--------------------
+/^[789][0-9]{10}$/
+
+
+
+
+JavaScript Object Constructors
+===============================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+	<div id="demo"></div>
+		<script>
+// Constructor function for Person objects
+	function Person(first, last, age, eye) {
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+		this.eyeColor = eye;
+	}
+
+// Create a Person object
+var myFather = new Person("John", "Doe", 50, "blue");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age + "."; 
+</script>
+
+		
+	</body>
+</html>
+
+The JavaScript prototype property allows you to add new properties to object constructors:
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+	<div id="demo"></div>
+		<script>
+// Constructor function for Person objects
+	function Person(first, last, age, eye) {
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+		this.eyeColor = eye;
+	}
+	//adding property
+	Person.prototype.nationality = "Indian";
+
+// Create a Person object
+var myFather = new Person("John", "Doe", 50, "blue");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.nationality + "."; 
+</script>
+
+		
+	</body>
+</html>
+
+The JavaScript prototype property also allows you to add new methods to objects constructors:
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		
+	</head>
+	<body>
+	<div id="demo"></div>
+		<script>
+// Constructor function for Person objects
+	function Person(first, last, age, eye) {
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+		this.eyeColor = eye;
+	}
+	Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName
+};
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name(); 
+</script>
+
+		
+	</body>
+</html>
+
+
+
+JavaScript OOPS
+===================
+class
+-----
+A class can be defined by using a class declaration. A class keyword is used to declare 
+a class with any particular name.
+
+ According to JavaScript naming conventions, the name of the class always starts with an uppercase letter.
+
+ex:
+<script>  
+	//Declaring class  
+  class Class_name  
+  {  
+	//constructor
+	//Declaring method  
+    
+  }  
+
+constructor
+-------------
+A JavaScript constructor method is a special type of method which is used to initialize and create an object.
+
+It is called when memory is allocated for an object.
+
+The constructor keyword is used to declare a constructor method.
+The class can contain one constructor method only.
+JavaScript allows us to use parent class constructor through super keyword.
+
+ex:
+class Demo
+{
+	constructor()
+	{
+	-	
+	-//some code
+	-
+	}
+}
+
+
+Object
+------
+A javaScript object is an entity having state and behavior (properties and method).
+
+syntax
+------
+var objectname=new Object();  
+
+ex:
+<script>  
+//Declaring class  
+class Employee  
+  {  
+//Initializing an object  
+    constructor(id,name)  
+    {  
+      this.id=id;  
+      this.name=name;  
+    }  
+//Declaring method  
+    detail()  
+    {  
+  document.writeln(this.id+" "+this.name+"<br>")  
+    }  
+  }  
+//passing object to a variable   
+var e1=new Employee(101,"Martin Roy");  
+var e2=new Employee(102,"Duke William");  
+e1.detail(); //calling method  
+e2.detail();  
+</script>  
+
+
+
+JavaScript Inheritence
+------------------------
+The JavaScript inheritance is a mechanism that allows us to create new classes on the 
+basis of already existing classes.
+
+ It provides flexibility to the child class to reuse the methods and variables of a parent class.
+
+The JavaScript extends keyword is used to create a child class on the basis of a parent class.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+class Bike
+{
+  constructor()
+  {
+    this.company="Honda";
+  }
+}
+class Vehicle extends Bike {
+  constructor(name,price) {
+   super();
+    this.name=name;
+    this.price=price;
+  } 
+}
+var v = new Vehicle("Shine","70000");
+document.writeln(v.company+" "+v.name+" "+v.price);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

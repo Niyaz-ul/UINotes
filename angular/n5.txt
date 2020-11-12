@@ -1,0 +1,426 @@
+Services
+==========
+Services in Angular are used to share the common bussiness logic to 
+Multiple components.
+
+Using service we can reuse the bussiness logic.
+
+We have two types of services.
+
+1)Predefine services
+
+2)Userdefine services.
+
+1)Predefine services
+----------------------
+Services provided by Angular Framework are called Predefine services.
+
+2)Userdefine services
+----------------------
+Services which are created by the user based on the application 
+requirement are called userdefine services.
+
+"Injectable" is a predefine class used to create custom services.
+
+In general we will register the services under "providers" in
+app.modules.ts file.
+
+Project structure
+===================
+ServiceProj1
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html   (default component)
+		|----app.component.spec.ts
+		|----app.component.ts
+		|----app.component.css
+		|
+		|----first.component.ts     (custom component)
+		|----first.component.html
+		|
+		|----second.component.ts    (custom component) 
+		|----second.component.html
+		|
+		|----my.service.ts
+
+		|----app.module.ts (configuration file)
+	|
+	|------index.html (main template)
+	|
+	|------package.json (to check versions)
+
+
+step1:
+-----
+	D\Dummy> ng new ServiceProj1
+
+
+my.service.ts
+-------------
+import {Injectable} from "@angular/core";
+
+@Injectable()
+
+export class MyService
+{
+	public getCourseDetails():String
+	{
+		return "Angular7 with NodeJS Integration";
+	}
+}
+
+first.component.ts
+---------------------
+import {Component} from "@angular/core";
+import { MyService } from './my.service';
+@Component({
+    selector:"first",
+    templateUrl:"./first.component.html"
+})
+export class FirstComponent
+{
+    //variable
+    public result:String;
+
+    constructor(private obj:MyService){  }   
+    
+    //life cycle method of angular
+    ngOnInit()
+    {
+            this.result=this.obj.getCourseDetails();
+    }   
+}
+
+
+Note:
+-----
+ngOnInit()
+---------
+	It is a life cycle method of Angular.
+
+	It is always recommanded to call service methods from this metho
+	but not perform constructor.
+
+constructor(private obj:MyService)
+-------------------------------
+	It is called dependency injection using constructor.
+
+
+
+
+first.component.html
+------------------------
+<h1 style="color:red">{{ result }}</h1>
+
+<second></second>
+
+
+second.component.ts
+------------------
+import { templateJitUrl } from '@angular/compiler';
+import {Component} from "@angular/core";
+import { MyService } from './my.service';
+@Component({
+    selector:"second",
+    templateUrl:"./second.component.html"
+})
+export class SecondComponent
+{
+        //variable
+        public result:String;
+
+        //dependency injection
+        constructor(private obj:MyService){}
+
+        //life cycle method
+        ngOnInit()
+       {
+            this.result=this.obj.getCourseDetails();
+        }       
+}
+
+
+second.component.html
+-------------------------
+<h1 style="color:blue">{{ result }}</h1>
+
+
+Register Components and Services in app.module.ts file.
+
+app.module.ts
+-----------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { FirstComponent } from './first.component';
+import { SecondComponent } from './second.component';
+import { MyService } from './my.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FirstComponent,
+    SecondComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [MyService],
+  bootstrap: [FirstComponent]
+})
+export class AppModule { }
+
+
+
+index.html
+-----------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ServiceProj1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+ <first></first>
+</body>
+</html>
+
+
+Run the Angular project
+-----------------------
+	D/Dummy> cd ServiceProj1
+	D/Dummy/ServiceProj1> npm start
+
+Test the application by using below url
+	ex:
+	http://localhost:4200
+
+2)Predefine services
+=====================
+Services which are provided by the Angular Framework are called
+Predefine Services.
+
+"HttpClient" is  a prefined service used to connect with server via HTTP
+protocol.
+
+"HttpClient" is a predefined class introduced in Angular4.
+
+"HttpClient" is available in "@angular/common/http" package.
+
+"HttpClient" is available in "HttpClientModule".
+
+"HttpClientModule" is available in "@angular/common/http" package.
+
+"HttpErrorResponse" class available in "@angular/common/http" package.
+
+"HttpErrorResponse" is introduced in Angular4.
+
+"subscribe()" function is used to grap the dynamic response from  function.
+
+"subscribe()" function contains +ve as well as error response.
+
+"HttpErrorResponse" class is used to categories the errors 
+ex:
+	Client Side Error
+	Server side Error.
+
+REST API:
+--------
+	http://restcountries.eu/rest/v2/all
+
+example
+-------
+step1: 
+	create a "CountriesService" project.
+	ex:
+	d/Dummy>ng new CountriesService
+
+Project structure
+-------------------
+CountriesService
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html   (default component)
+		|----app.component.spec.ts
+		|----app.component.ts
+		|----app.component.css
+		|
+		|----services (custom folder)
+		|	|
+			|-----countries.service.ts
+		|
+		|----components (custom folder)
+		|	|
+			|-----countries.component.ts
+			|-----countries.component.html
+
+		|----app.module.ts (configuration file)
+	|
+	|------index.html (main template)
+	|
+	|------package.json (to check versions)	
+
+
+
+countries.service.ts
+--------------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+export class CountriesService
+{
+    //dependency injection
+    constructor(private http:HttpClient){}
+
+    //userdefine function
+    public getCountries():any{
+            return this.http.get("http://restcountries.eu/rest/v2/all");      
+    }
+}
+
+countries.component.ts
+-------------------------
+
+
+countries.component.html
+------------------------
+import {Component} from "@angular/core";
+import {HttpErrorResponse} from "@angular/common/http";
+import { CountriesService } from '../services/countries.service';
+@Component({
+    selector:"countries",
+    templateUrl:"./countries.component.html"
+})
+export class CountriesComponent
+{
+        //local variable
+        public result:any;
+        
+       //dependency injection
+        constructor(private service:CountriesService){}
+
+        //calling the service method
+        ngOnInit()
+        {
+            this.service.getCountries().subscribe(res=>{
+                //store the res in result variable
+                this.result=res;
+            }, (err:HttpErrorResponse)=>{
+                //categories the error
+                if(err.error instanceof Error)
+                {
+                    console.log("Client Side Error");
+                }
+                else
+                {
+                    console.log("Server Side Error");
+                }
+            });
+        }
+}
+
+
+countries.component.html
+------------------------
+<h1 style="color:red">{{ result | json}}</h1>
+
+app.module.ts
+----------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { CountriesComponent } from './components/countries.component';
+import { CountriesService } from './services/countries.service';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CountriesComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [CountriesService],
+  bootstrap: [CountriesComponent]
+})
+export class AppModule { }
+
+
+index.html
+---------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CountriesService</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+ <countries></countries>
+</body>
+</html>
+
+
+Run the Angular project
+-----------------------
+D:/Dummy> cd CountriesService
+
+D/Dummy/CountriesService> npm start
+
+
+Test the Application by using below url
+-----------------------------------
+ex:
+	http://localhost:4200
+
+
+To read the json object  keys we will use below code.
+
+countries.component.html
+-----------------------
+<table border="1" 
+        align="center" 
+        cellpadding="10px" 
+        cellspacing="10px" 
+        style="font-size:30px;text-align: center;">
+<thead>
+        <tr>
+            <th>Name</th>
+            <th>Capital</th>
+            <th>Flag</th>
+        </tr>
+</thead>
+<tbody>
+        <tr *ngFor="let x of result">
+            <td>{{ x.name}}</td>
+            <td>{{ x.capital}}</td>
+            <td><img src="{{x.flag}}" width="100px" height="100px"/></td>    
+        </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+

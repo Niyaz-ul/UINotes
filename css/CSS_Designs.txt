@@ -1,0 +1,497 @@
+How add image inside textfield
+===============================
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<style>
+			#id1
+			{
+				background-image: url("user.png");
+				background-position: left;
+				background-repeat: no-repeat;
+				background-size: 10px;
+
+			}
+			input[placeholder]
+			{
+				text-align: center;
+				padding-left:15px;	
+			}
+		</style>		
+	</head>
+	<body>
+			<input id="id1" type="text" name="t1" placeholder="username" />
+			
+	</body>	
+</html>
+
+Image Gallery
+===========
+<html>
+  <head>
+		<title>MyPage</title>
+		<!-- fontawesome for icons -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- goog font is for fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+		
+		<style type="text/css">
+			body
+			{
+				font-family: sans-serif;
+			}
+			h1
+			{
+				text-align:center;
+				color:forestgreen;
+				margin: 30px 0 50px;
+			}
+			.gallery
+			{
+				margin : 10px  50px;
+			}
+			.gallery img
+			{
+				width:230px;
+				padding: 10px;
+				/* it makes gray collor effects (black and white image)*/
+				filter: grayscale(100%);
+				/* animation */
+				transition: 1s;
+			}
+			.gallery img:hover
+			{
+				filter : grayscale(0);
+				transform:scale(1.1);
+			}
+			
+		</style>
+		
+  </head>
+  <body>
+				<h1>CSS Image Gallery Design </h1>
+				<div class="gallery">
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+						<img src="nature.jpg"/>
+				
+				</div>
+  </body>
+</html>
+
+Non-Rectangle Header
+====================
+<html>
+  <head>
+		<title>MyPage</title>
+		<style type="text/css">
+			*
+			{
+				margin:0;
+				padding:0;
+			
+			}
+			body
+			{
+				min-width: 150vh;
+
+			}
+			section
+			{
+				position: relative;
+				width:100%;
+				height:120vh;
+				background-image: url(nature.jpg);
+				background-size: cover;
+				background-attachment: fixed;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				clip-path: circle(160vh at 50% -80vh);
+			}
+			section .content
+			{
+				max-width: 800px;
+				text-align: center;
+			}
+			section .content h2
+			{
+				font-size: 5em;
+				color:#fff;
+				font-weight: 700;
+			}
+		</style>
+		
+  </head>
+  <body>
+			<section>
+					<div class="content">
+						<h2>Non-Rectangle Header</h2>
+					</div>
+			</section>	
+  </body>
+</html>
+
+
+Content Box using Hover Effect
+===============================
+<html>
+  <head>
+	<title>MyPage</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<style>
+			body
+			{
+				margin:0;
+				padding:0;
+				font-family: 'Poppins', sans-serif;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+			.container
+			{
+					/* display all boxes in 1 place */
+					display: flex;
+			}
+			.container .box
+			{
+				position: relative;
+				width:350px;
+				padding: 30px;
+				background-color: #ffffff;
+				box-shadow: 2px 5px 15px rgba(0,0,0,.2);
+				border-radius: 4px;
+				overflow: hidden;
+				box-sizing: border-box;
+				/* space between box */
+				margin:0 20px;
+			}
+			.container .box .icon
+			{
+				position: relative;
+				width: 80px;
+				height: 60px;
+				color:white;
+				background-color: black;
+				border-radius: 50%;
+				margin: 0 auto;
+				font-weight: 700;
+				transition: 1s;
+			}
+			.container .box:nth-child(1) .icon
+			{
+				box-shadow: 0 0 0 0 #e91e63;
+				background: #e91e63;
+			}
+			.container .box:nth-child(1):hover .icon
+			{
+				box-shadow: 0 0 0 400px #e91e63;
+				
+			}
+
+
+			.container .box:nth-child(2) .icon
+			{
+				box-shadow: 0 0 0 0 #23e629;
+				background: #23e629;
+			}
+			.container .box:nth-child(2):hover .icon
+			{
+				box-shadow: 0 0 0 400px #23e629;
+				
+			}	
+
+			.container .box:nth-child(3) .icon
+			{
+				box-shadow: 0 0 0 0 #2196f3;
+				background: #2196f3;
+			}
+			.container .box:nth-child(3):hover .icon
+			{
+				box-shadow: 0 0 0 400px #2196f3;
+				
+			}	
+
+			.container .box .icon i
+			{
+				margin-left: 30px;
+				line-height: 55px;
+				font-size: 20px;
+			}
+			.container .box .content h3
+			{
+				font-size: 20px;
+				margin:10px 0;
+				padding:0;
+			}
+			.container .box .content
+			{
+				/* we can see the content after shadow */
+				position: relative;
+			}
+
+			a
+			{
+				display: inline-block;
+				padding:10px 20px;
+				background-color: white;
+				border-radius: 4px;
+				text-decoration: none;
+				color:black;
+				font-weight: 800;
+				border:2px solid black;
+				margin-top: 10px;
+			}
+	</style>
+  </head>
+  <body>
+			<div class="container">
+				
+				<!-- box1 -->
+				<div class="box">
+					<div class="icon"><i>01</i></div>
+					<div class="content">
+						<h3>Service Name</h3>
+						<p>
+								Web technology refers to the means by which computers communicate with each other using markup languages and multimedia packages. It gives us a way to interact with hosted information, like websites. Web technology involves the use of hypertext markup language (HTML) and cascading style sheets (CSS).
+						</p>	
+						<a href="#">Readmore</a>
+					</div>
+				</div>
+
+				<!-- box2 -->
+				<div class="box">
+					<div class="icon"><i>02</i></div>
+					<div class="content">
+						<h3>Service Name</h3>
+						<p>
+								Web technology refers to the means by which computers communicate with each other using markup languages and multimedia packages. It gives us a way to interact with hosted information, like websites. Web technology involves the use of hypertext markup language (HTML) and cascading style sheets (CSS).
+						</p>	
+						<a href="#">Readmore</a>
+					</div>
+				</div>
+
+				<!-- box3 -->
+				<div class="box">
+					<div class="icon"><i>03</i></div>
+					<div class="content">
+						<h3>Service Name</h3>
+						<p>
+								Web technology refers to the means by which computers communicate with each other using markup languages and multimedia packages. It gives us a way to interact with hosted information, like websites. Web technology involves the use of hypertext markup language (HTML) and cascading style sheets (CSS).
+						</p>	
+						<a href="#">Readmore</a>
+					</div>
+				</div>	
+
+			</div>
+  </body>
+</html>
+
+CSS pagination
+================
+If we have website with lots of pages.You may wish to add some
+sort of pagination to each page.
+
+ex:
+	<  1     2      3    4     5    6    .   .   >
+
+	Previous  1   2   3   4    5   6   .   .    Next
+
+ex:
+ex:1
+---
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+			.pagination
+			{
+				display: inline-block;
+			}
+			.pagination a
+			{
+				color:black;
+				float:left;
+				padding: 8px 16px;
+				text-decoration: none;
+			}
+			.pagination a.active
+			{
+				background-color: red;
+				color:white;
+			}
+			.pagination a:hover:not(.acitve)
+			{
+				background-color: #dddddd;
+			}
+	</style>
+  </head>
+  <body>
+			
+					<h2>Simple Pagination </h2>
+					<div class="pagination">
+							<a href="#">&laquo</a>
+							<a href="#" class="active">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">&raquo</a>
+					</div>
+			
+  </body>
+</html>
+
+ex:2
+-----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+			.pagination
+			{
+				display: inline-block;
+			}
+			.pagination a
+			{
+				color:black;
+				float:left;
+				padding: 8px 16px;
+				text-decoration: none;
+				border-radius: 50px;
+			}
+			.pagination a.active
+			{
+				background-color: red;
+				color:white;
+			}
+			.pagination a:hover:not(.acitve)
+			{
+				background-color: #dddddd;
+			}
+	</style>
+  </head>
+  <body>
+			
+					<h2>Simple Pagination </h2>
+					<div class="pagination">
+							<a href="#">&laquo</a>
+							<a href="#" class="active">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">&raquo</a>
+					</div>
+			
+  </body>
+</html>
+
+ex:3
+-----
+<html>
+  <head>
+	<title>MyPage</title>
+	<style>
+			.pagination
+			{
+				display: inline-block;
+			}
+			.pagination a
+			{
+				color:black;
+				float:left;
+				padding: 8px 16px;
+				text-decoration: none;
+				border-radius: 50px;
+				transition: background-color .3s;
+			}
+			.pagination a.active
+			{
+				background-color: red;
+				color:white;
+			}
+			.pagination a:hover:not(.acitve)
+			{
+				background-color: #dddddd;
+			}
+	</style>
+  </head>
+  <body>
+			
+					<h2>Simple Pagination </h2>
+					<div class="pagination">
+							<a href="#">&laquo</a>
+							<a href="#" class="active">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">&raquo</a>
+					</div>
+			
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

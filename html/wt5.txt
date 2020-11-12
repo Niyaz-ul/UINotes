@@ -1,0 +1,475 @@
+Phrase Tags
+------------
+The HTML phrase tags are special purpose tags which defines the structural
+meaning of a block of text.
+
+ex:
+Abbreviation 	- <abbr>
+Definition	- <dfn>
+short quote tag	- <q>
+code tag	- <code>
+keyboard tag	- <kbd>
+Address Tag	- <address>
+and etc.
+
+Abbreviation 	- <abbr>
+--------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<abbr title="HyperText Markup Language">HTML</abbr>
+	</body>
+</html>
+
+Definition	- <dfn>
+-------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<dfn>HTML</dfn>Stands for HyperText Markup Language
+	</body>
+</html>
+
+short quote tag	- <q>
+----------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<q>This is Html class </q>
+	</body>
+</html>
+
+code tag	- <code>
+------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<code>
+			main()
+			{
+				clrscr();
+				printf("\nHello  World");
+				getch();
+			}
+		</code>
+	</body>
+</html>
+
+keyboard tag	- <kbd>
+-----------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		Please Enter <kbd>CTRL+F12</kbd>
+	</body>
+</html>
+
+Address Tag	- <address>
+----------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<address>
+				1-5-32/1/A Ammerpet,Hyderabad,Telangana-500036.
+		</address>
+	</body>
+</html>
+
+
+HTML Colors
+=============
+HTML colors are specified with 
+
+1)Predefine color Names.
+
+2)RGB
+
+3)HEX
+
+4)HSL
+
+5)RGBA
+
+6)HSLA
+
+color Names
+-------------
+In HTML color names can be specified by using color name.
+ex:
+	green
+	blue
+	red
+	yellow
+
+color values
+---------------
+In HTML colors can be also specified by using RGB value,HEX value ,HSL
+value and etc.
+ex:
+	rgb(255,99,71)	
+
+	#FF6347
+
+	hsl(9,100%,64%)
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<!-- color Name -->
+		<p>
+			<h1>
+				<font color="violet">HTML</font>
+			</h1>
+		</p>
+
+		<!-- RGB value -->
+		<p>
+			<h1>
+				<font color="rgb(255,0,71)">HTML</font>
+			</h1>
+		</p>
+
+		<!-- HEX value -->
+		<p>
+			<h1>
+				<font color="#FFFF00">HTML</font>
+			</h1>
+		</p>
+
+		<!-- HSL value  -->
+		<p>
+			<h1>
+				<font color="hsl(30,100%,50%)">HTML</font>
+			</h1>
+		</p>
+	</body>
+</html>
+
+Note:
+------
+	To get list of values for colors we can use below link.
+
+	ex:
+	https://www.w3schools.com/colors/colors_picker.asp
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body bgcolor="rgb(0, 255, 128)">
+		<!-- color Name -->
+		<p>
+			<h1>
+				<font color="violet">HTML</font>
+			</h1>
+		</p>
+
+		<!-- RGB value -->
+		<p>
+			<h1>
+				<font color="rgb(255,0,71)">HTML</font>
+			</h1>
+		</p>
+
+		<!-- HEX value -->
+		<p>
+			<h1>
+				<font color="#80ff00">HTML</font>
+			</h1>
+		</p>
+
+		<!-- HSL value  -->
+		<p>
+			<h1>
+				<font color="hsl(30,100%,50%)">HTML</font>
+			</h1>
+		</p>
+	</body>
+</html>
+
+HTML image
+------------
+The HTML <img> tag is used to defined an image in a web page.
+
+The <img> tag is empty ,it contains attributes only and does not have 
+any closing tag.
+
+The <img> tag has following required attributes.
+
+1)src     = It specifies path/location of the image.
+
+2)alt	  = It specifies an alternate text for the image.
+
+3)width   = It specifies width of an image.
+
+4)height  = It specifies height of an image.
+
+Abbrevation		File Format
+-----------		------------
+GIF			Graphic Interchange Format
+
+JPEG			Joint Photographic ExperGroup
+
+PNG			Portable Network Graphics
+
+SVG			Scalable Vector Graphics 
+
+and etc.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+<img src="ironman1.jpg" width="600px" height="400px" alt="img not Found"/>
+	</body>
+</html>
+
+
+ex:2
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<img src="tony.gif" alt="img not Found"/>
+	</body>
+</html>
+
+HTML hyper links 
+==================================
+By using <a> tag we can use hyperlinks in html.
+
+<a> tag contains one attribute called "href".It is used to navigate 
+to other resources.
+
+syntax
+------
+	<a href="#">Click Me</a>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<a href="#">ClickMe</a>	
+
+		<br>
+
+		<!-- navigating to google -->
+		<a href="http://www.google.com">ClickMe</a>		
+	</body>
+</html>
+
+Html links using target attribute
+---------------------------------
+Bydefault,the linked page will be displayed to the current browser window.
+
+To change this we must specify another "target" attribute  for the link.
+
+The "target" attribute specifies where to open the linked document.
+
+the "target" attribute can have one of the following values.
+
+1)_self  : It will open document in a same window.
+
+2)_blank : opens a document in a new window or tab.
+
+3)_parent: Opens the document in a parent frame.
+
+4)_top    : It will open the document in the full body of the window.
+
+ex:
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		
+
+		<!-- navigating to google -->
+		<a href="http://www.google.com" target="_self">ClickMe</a>		
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		
+
+		<!-- navigating to google -->
+		<a href="http://www.google.com" target="_blank">ClickMe</a>		
+	</body>
+</html>
+
+ex:
+URL : http://www.w3schools.com/css3/css3_animations.asp
+
+absolute url
+----------
+	http://www.w3schools.com/
+relative url
+-----------
+	css3/css3_animations.asp
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		
+	<h2>Absolute URL</h2>
+	<p>
+		<a href="http://www.w3schools.com/">W3C</a>
+	</p>
+	<h2>Relative URL</h2>
+	<p>	
+		<a href="css3/css3_animations.asp" target="_parent">HTML</a>
+
+	</p>
+				
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+	<a href="http://www.globaledx.com" target="_top">click</a>
+				
+	</body>
+</html>
+
+Assignment 
+--------------
+Assignment2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

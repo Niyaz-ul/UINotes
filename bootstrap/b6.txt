@@ -1,0 +1,986 @@
+Bootstrap List group
+====================
+The most basic list group is an unordered list with list items.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+     Courses
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+  </body>
+</html>
+
+To create a basic list group ,use an <ul> element/tag with class "list-group"
+and <li> tag/element with class "list-group-item".
+
+ex:
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item">HTML</li>
+            <li class="list-group-item">CSS</li>
+            <li class="list-group-item">JavaScript</li>
+        </ul>
+      </div>
+  </body>
+</html>
+
+We can also add badges to a  list group.
+
+To creat a badges ,create a <span> tag/element with class "badge" inside the 
+list item.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item">HTML<span class="badge">new</span></li>
+            <li class="list-group-item">CSS<span class="badge">latest</span></li>
+            <li class="list-group-item">JavaScript<span class="badge">offer</span></li>
+        </ul>
+      </div>
+  </body>
+</html>
+
+List Groups with Hyperlinks
+================================
+To create a List Group with hyperlink use <div> instead of <ul> tag and 
+use <a> tag instead of <li>.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <div class="list-group">
+            <a href="#" class="list-group-item">First Item</a>
+            <a href="#" class="list-group-item">SecondItem</a>
+            <a href="#" class="list-group-item">Third Item</a>
+        </div>
+      </div>
+  </body>
+</html>
+
+we can use ".active" class to hightlights the current item.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">First Item</a>
+            <a href="#" class="list-group-item">SecondItem</a>
+            <a href="#" class="list-group-item">Third Item</a>
+        </div>
+      </div>
+  </body>
+</html>
+
+To disable an item, add the "disabled " class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <div class="list-group">
+            <a href="#" class="list-group-item disabled">First Item</a>
+            <a href="#" class="list-group-item">SecondItem</a>
+            <a href="#" class="list-group-item">Third Item</a>
+        </div>
+      </div>
+  </body>
+</html>
+
+we can add color to the list group by using below classes.
+
+ex:
+list-group-item-success
+
+list-group-item-info
+
+list-group-item-warning and 
+
+list-group-item-danger.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-success">First Item</a>
+            <a href="#" class="list-group-item list-group-item-info">SecondItem</a>
+            <a href="#" class="list-group-item list-group-item-warning">Third Item</a>
+            <a href="#" class="list-group-item list-group-item-danger">four Item</a>
+        </div>
+      </div>
+  </body>
+</html>
+
+
+List Group with custom content
+==============================
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+          <a href="#" class="list-group-item">
+                <!-- heading -->
+          <h4 class="list-group-item-heading">Item1 Heading</h4>
+                <!-- text -->
+          <p class="list-group-item-text">This is First heading</p>
+          </a>
+      </div>
+  </body>
+</html>
+
+
+
+Bootstrap Panels
+===================
+A panel in bootstrap is a bordered box with some padding around its content.
+
+Panels are created with "panel" class.
+
+The "panel-default" class is used to style the color of the panel.
+
+
+we can create content inside the panel by using "panel-body" class.
+
+ex:
+ 
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">A Basic Panel</div>
+            </div>
+      </div>
+  </body>
+</html>
+
+To add heading to the panel we can use "panel-heading" class.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel heading</div>
+                <div class="panel-body">Panel content</div>
+            </div>
+      </div>
+  </body>
+</html>
+
+To add footer to the panel we can use "footer" class.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel heading</div>
+                <div class="panel-body">This is Bootstrap panel component present in Bootstrap4 .This is Bootstrap panel component present in Bootstrap4 .
+                This is Bootstrap panel component present in Bootstrap4 .This is Bootstrap panel component present in Bootstrap4 .</div>
+                <div class="panel-footer">Panel footer</div>
+            </div>
+      </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+            <div class="panel panel-info">
+               <!-- panel heading -->
+               <div class="panel-heading">
+                    <!-- title -->
+                    <div class="panel-title">Bootstrap</div>
+               </div>
+
+               <!-- panel body -->
+               <div class="panel-body">
+                    Bootstrap is a frontend framework developed by twitter for responsive website and to create a look and feel web application with less code and do more features.
+               </div> 
+               <table class="table">
+                <thead>
+                    <tr>
+                        <th>ENO</th>
+                        <th>ENAME</th>
+                        <th>EMAIL</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                      <tr>
+                          <td>111</td>
+                          <td>Alan</td>
+                          <td>alan@gmail.com</td>
+                      </tr>
+                      <tr>
+                          <td>222</td>
+                          <td>Alan</td>
+                          <td>alan@gmail.com</td>
+                      </tr>
+                      <tr>
+                          <td>333</td>
+                          <td>Alan</td>
+                          <td>alan@gmail.com</td>
+                      </tr>
+                 </tbody>
+               </table>
+               <div class="panel-footer">Panel footer</div> 
+
+            </div>
+      </div>
+  </body>
+</html>
+
+To color the panelwe can use contextual classes like 
+
+panel-default
+
+panel-primary
+
+panel-success
+
+panel-info
+
+panel-warning and 
+
+panel-danger 
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+            <div class="panel panel-danger">
+               <!-- panel heading -->
+               <div class="panel-heading">Panel header</div>
+               <!-- panel body -->
+               <div class="panel-body">Panel body</div> 
+              <!-- panel footer -->
+               <div class="panel-footer">Panel footer</div> 
+
+            </div>
+      </div>
+  </body>
+</html>
+
+panel group
+===========
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+    <br>
+      <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-danger">
+               <!-- panel heading -->
+               <div class="panel-heading">Panel header</div>
+               <!-- panel body -->
+               <div class="panel-body">Panel body</div> 
+              <!-- panel footer -->
+               <div class="panel-footer">Panel footer</div> 
+
+            </div>
+
+            <div class="panel panel-info">
+               <!-- panel heading -->
+               <div class="panel-heading">Panel header</div>
+               <!-- panel body -->
+               <div class="panel-body">Panel body</div> 
+              <!-- panel footer -->
+               <div class="panel-footer">Panel footer</div> 
+
+            </div>
+          </div>
+      </div>
+  </body>
+</html>
+
+Bootstrap collapse plugin
+============================
+The collapse plugin is used to show and hide another element on the page.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              
+          </div>
+      </div>
+  </body>
+</html>
+
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+           
+           <div class="row">
+            <!-- create a panel -->
+            <div class="panel panel-default">
+                  <!-- heading -->
+                   <div class="panel-heading">
+                     <a href="" class="btn btn-primary">
+                       Toggle image Gallery
+                     </a> 
+                   </div> 
+                  <!-- body -->
+                  <div class="panel-body">
+           
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+           
+           <div class="row">
+            <!-- create a panel -->
+            <div class="panel panel-default">
+                  <!-- heading -->
+                   <div class="panel-heading">
+                     <a href="#imageGallery" class="btn btn-primary " data-toggle="collapse">
+                       Toggle image Gallery
+                     </a> 
+                   </div> 
+                  <!-- body -->
+                  <div class="panel-body" id="imageGallery">
+           
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+
+Here content will collapse in second click not first click.
+
+To make content collapse in first click we need to use "collapse in" panel body.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+           
+           <div class="row">
+            <!-- create a panel -->
+            <div class="panel panel-default">
+                  <!-- heading -->
+                   <div class="panel-heading">
+                     <a href="#imageGallery" class="btn btn-primary " data-toggle="collapse">
+                       Toggle image Gallery
+                     </a> 
+                   </div> 
+                  <!-- body -->
+                  <div class="panel-body collapse in" id="imageGallery">
+           
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+
+Using collapse in we can see the collapase content directly.
+
+In order to hide the content for first page load we need to use "collapse" 
+class.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+           
+           <div class="row">
+            <!-- create a panel -->
+            <div class="panel panel-default">
+                  <!-- heading -->
+                   <div class="panel-heading">
+                     <a href="#imageGallery" class="btn btn-primary " data-toggle="collapse">
+                       Toggle image Gallery
+                     </a> 
+                   </div> 
+                  <!-- body -->
+                  <div class="panel-body collapse" id="imageGallery">
+           
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+
+
+Using button to toggle in the images.
+
+In button we can use "data-target" target attribute instead of "href" attribute.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+           
+           <div class="row">
+            <!-- create a panel -->
+            <div class="panel panel-default">
+                  <!-- heading -->
+                   <div class="panel-heading">
+                   
+
+          <button class="btn btn-primary" data-target="#imageGallery" data-toggle="collapse">
+            Toggle Gallery image
+          </button>
+
+
+
+                   </div> 
+                  <!-- body -->
+                  <div class="panel-body collapse" id="imageGallery">
+           
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <br>
+      <div class="container">
+           
+           <div class="row">
+            <!-- create a panel -->
+            <div class="panel panel-default">
+                  <!-- heading -->
+                   <div class="panel-heading">
+                   
+     <button id="toggleButton" class="btn btn-primary" data-toggle="collapse">
+      Toggle Image
+    </button> 
+     <button id="showButton" class="btn btn-primary" data-toggle="collapse">
+      Show Image
+    </button>  
+     <button id="hideButton" class="btn btn-primary" data-toggle="collapse">
+      Hide Image
+    </button>  
+    
+
+         
+
+
+
+                   </div> 
+                  <!-- body -->
+                  <div class="panel-body collapse" id="imageGallery">
+           
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+
+              <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <p class="text-center">Tony Stark</p>
+                    <img src="tony.gif"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+            $(document).ready(function(){
+                  $("#toggleButton").click(function(){
+                        $("#imageGallery").collapse('toggle');
+                  });
+                  $("#showButton").click(function(){
+                      $("#imageGallery").collapse('show');
+                  });
+                   $("#hideButton").click(function(){
+                      $("#imageGallery").collapse('hide');
+                  });
+            });
+      </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

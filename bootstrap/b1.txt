@@ -1,0 +1,454 @@
+BOOTSTRAP
+=================================
+Bootstrap is a most popular HHTML,CSS and JAvaScript opensource framework
+developed by Twitter for creating web application.
+
+It is absolutely free to download and use.
+
+Bootstrap is a front-End framework used for easier and faster web application.
+
+It includes HTML and css based design templates for typography(arranging the
+text),forms,buttons , tables , navigations and etc.
+
+It can also just JavaScript Plug-In's.
+
+Bootstrap is developed by Mark Otto and Jacob Thornton at Twitter.
+
+It was release an open source product in August 2011 on GitHUB.
+
+"Bootstrap4" is the latest version introduced in 2015 by Mark Otto.
+
+
+Advantages of Bootstrap
+==========================
+1)It supports Responsive web design
+--------------------------------------
+Responsive web design is about using HTML and CSS to automatically resize,
+hide,shrink or enlarge  a website to make it look good on all devices like
+pc, desktop,phone,tab and etc.
+
+diagram: responsive
+
+
+2)It saves lot of development time
+-----------------------------------
+In bootstrap we are not responsible to write the code from the scratch.
+
+Bootstrap provides readymade classes to customized our application requirement.
+<html>
+-------
+<p>
+	<font color="red">
+		This is Paragraph
+	</font>
+</p>
+
+CSS
+----
+<p style="color:red">This is Paragraph</p>
+
+bootstrap
+---------
+<p class="text-primary">This is paragraph</p>
+
+
+3)consistent Framework
+-------------------------
+It supports major all browsers and css compatability fixes.
+
+
+4)Customizable
+-----------------
+Bootstrap is higly customizable based on the requirement we download and 
+use.
+
+ex:
+	http://getbootstrap.com/docs/3.4/customize	
+	
+5)Good Documentation and Community support
+------------------------------------------
+Documentation is a specification having set of rules and guidelines to use 
+bootstrap.
+
+ex:
+	http://getbootstrap.com/docs/4.5/getting-started/introduction/
+
+6)It supports great Grid System
+-------------------------------
+Grid system builds layouts of all shapes and sizes in a web page.
+
+digram:  bs1.1
+
+
+7)Supports serveral javascript plugins using the jquery.
+---------------------------------------------------------
+Both "boostrap.min.js" and "bootstrap.js" contains all javascript plugins.
+
+
+In Bootstrap program we need to add following plugins to work online
+---------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	-
+	-
+</body>
+</html>
+
+Bootstrap Colors
+=================
+By using utility classes change the color of a text.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+        <p class="text-primary">Text Primary </p>
+        <p class="text-secondary">Text secondary</p>
+        <p class="text-success">Text success </p>
+        <p class="text-danger">Text danger </p>
+        <p class="text-warning">Text warning </p>
+        <p class="text-info">Text info</p>
+        <p class="text-white bg-dark">Text white</p>
+        <p class="text-light bg-dark">Text light</p>
+</html>
+
+It can also be used to links and will darken on hover just like our default
+link styles.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+        <p><a href="" class="text-primary">Text Primary</a></p>
+     <p><a href=""  class="text-secondary">Text secondary</a></p>
+        <p><a href=""  class="text-success">Text success</a> </p>
+        <p><a href=""  class="text-danger">Text danger</a> </p>
+        <p><a href=""  class="text-warning">Text warning</a> </p>
+        <p><a href=""  class="text-info">Text info</a></p>
+     <p><a href=""  class="text-white bg-dark">Text white</a></p>
+      <p><a href=""  class="text-light bg-dark">Text light</a></p>
+   </body>
+</html>
+
+Bootstrap background color
+--------------------------
+In bootstrap background color can be applied to any element/tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+    <div class="bg-primary">bg primary</div>
+    <div class="bg-secondary">bg secondary</div>
+    <div class="bg-warning">bg warning</div>
+     <div class="bg-danger">bg danger</div>
+      <div class="bg-success">bg succes</div>
+       <div class="bg-info">bg info</div>
+        <div class="bg-dark">bg dark</div>
+         <div class="bg-white">bg white</div>
+         <div calss="bg-light">bg light</div>
+         <div class="bg-transparent">bg transparent</div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+    <div class="bg-primary text-white">bg primary</div>
+    <div class="bg-secondary text-light">bg secondary</div>
+    <div class="bg-warning text-success">bg warning</div>
+     <div class="bg-danger text-info">bg danger</div>
+      <div class="bg-success text-dark">bg succes</div>
+       <div class="bg-info text-primary">bg info</div>
+        <div class="bg-dark text-secondary">bg dark</div>
+         <div class="bg-white">bg white</div>
+         <div calss="bg-light">bg light</div>
+         <div class="bg-transparent">bg transparent</div>
+  </body>
+</html>
+
+
+Bootstrap boders
+===================
+Border utility is used to change quickly the border-style and border-radius
+of an element.
+
+It is mainly used for images, buttons  and etc.
+
+we can use border classes to an element to remove all borders or 
+add some borders.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+    <br><br>
+    <span class="border">Globaledx</span>
+    <span class="border-top">Globaledx</span>
+    <span class="border-right">Globaledx</span>
+    <span class="border-bottom">Globaledx</span>
+    <span class="border-left">Globaledx</span>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+    <br><br>
+    <span class="border border-primary">Globaledx</span>
+    <span class="border-top border-info">Globaledx</span>
+    <span class="border-right border-danger">Globaledx</span>
+    <span class="border-bottom border-success">Globaledx</span>
+    <span class="border-left border-warning">Globaledx</span>
+  </body>
+</html>
+
+
+Bootstrap border radius
+-------------------------
+Add classes to an element to easily rounds its corners.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+    <br><br>
+    <img class="rounded" src="thumbnail6.jpg" width="150px" height="150px" alt="No Image"/>
+
+    <img class="rounded-top" src="thumbnail6.jpg" width="150px" height="150px" alt="No Image"/>
+
+    <img class="rounded-right" src="thumbnail6.jpg" width="150px" height="150px" alt="No Image"/>
+
+    <img class="rounded-bottom" src="thumbnail6.jpg" width="150px" height="150px" alt="No Image"/>
+
+    <img class="rounded-left" src="thumbnail6.jpg" width="150px" height="150px" alt="No Image"/>
+  </body>
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+<!-- bootstrap cdn -->
+
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+    <br><br>
+    <span class="text-danger border border-primary rounded bg-warning">This is Span Tag</span>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,411 @@
+Route Guards
+=============
+
+Angular2 provides following Route Guards.
+
+1)CanActivate 
+
+2)CanDeactive
+
+3)CanActiaveChild
+
+1)CanActivate 
+----------------
+It is an interface in Angular2.
+	
+A "canActivate()" method is unimplemented boolean method in
+CanActivate interface.
+
+CanActivate is acting like a screen Activator to enter into main 
+routing of a Single Page Application (SPA).
+
+CanActivate interface present in "@angular/router" package.
+
+
+2)CanDeactivate
+------------------
+It is an interface in Angular2.
+	
+A "canDeactivate()" method is unimplemented boolean method in
+CanDeactivate interface.
+
+CanDeactivate is acting like a screen Activator to leave the main 
+routing of a Single Page Application (SPA).
+
+CanDeactivate interface present in "@angular/router" package.
+
+
+3)CanActivateChild
+----------------------
+It is an interface in Angular2.
+
+A "canActivateChild()" method is a unimplemented method in 
+CanActivateChild interface.
+
+CanActivateChild interface acting like a screen Activator to 
+enter into a child routing in a single page application(SPA).
+
+CanActivateChild interface is also present in "@angular/router"
+package.
+
+
+Note:
+----
+	All the above Screen Activators,we are implementing 
+	by using custom service.
+
+
+step1:
+-------
+	Make sure SPA project is Ready.
+
+step2:
+-----
+	create a custom service.
+
+	SPA
+	|
+	|------src
+	|	|
+	|	|-----app
+			|
+			|----guards (folder)
+			|	|
+				|---route.guards.ts
+				|
+
+route.guards.ts
+-------------------
+import { importExpr } from '@angular/compiler/src/output/output_ast';
+import {Injectable} from "@angular/core";
+import{CanActivate,CanActivateChild,CanDeactivate} from "@angular/router";
+import { PageoneComponent } from '../components/pageone/pageone.component';
+@Injectable()
+export class routeGuards implements CanActivate,CanActivateChild,CanDeactivate<PageoneComponent>
+{
+    canActivate():boolean{
+        return confirm("Do u want to goto page two?");
+    }
+    canActivateChild():boolean{
+        return confirm("Do u want to enter into child one?");
+    }
+    canDeactivate():boolean{
+        return confirm("Do u want to leave page one ?");
+    }
+}
+
+step2:
+-----
+	create a Child compeonnts by using following commands.
+
+	ex:
+	D:/Dummy/SPAProj>ng g  c components/childone
+	D:/Dummy/SPAProj>ng g  c components/childtwo
+	D:/Dummy/SPAProj>ng g  c components/childthree
+
+
+childone.component.ts
+-----------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-childone',
+  templateUrl: './childone.component.html',
+  styleUrls: ['./childone.component.css']
+})
+export class ChildoneComponent implements OnInit {
+  //variable
+  public var_four:any;
+
+  constructor() {
+        //initialization of variable
+        this.var_four="I am from Child one";
+
+   }
+
+  ngOnInit(): void {
+  }
+
+}
+
+
+childone.component.html
+------------------------
+<h1 style="color:indigo">{{ var_four}}</h1>
+
+
+
+
+childtwo.component.ts
+-----------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-childtwo',
+  templateUrl: './childtwo.component.html',
+  styleUrls: ['./childtwo.component.css']
+})
+export class ChildtwoComponent implements OnInit {
+  //variable
+  public var_five:any;
+
+  constructor() { 
+    //initialize a variable
+    this.var_five="I am From Child two";
+  }
+
+  ngOnInit(): void {
+  }
+
+}
+
+childtwo.component.html
+------------------------
+<h1 style="color:indigo">{{ var_five}}</h1>
+
+
+childthree.component.ts
+-----------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-childthree',
+  templateUrl: './childthree.component.html',
+  styleUrls: ['./childthree.component.css']
+})
+export class ChildthreeComponent implements OnInit {
+  //variable
+  public var_six:any;
+
+  constructor() {
+    //initialization of a variable
+    this.var_six="I am from child three";
+   }
+
+  ngOnInit(): void {
+  }
+
+}
+
+childthree.component.html
+------------------------
+<h1 style="color:indigo">{{ var_six}}</h1>
+
+
+step4:
+-----
+	Register The Services and Components in configuration file.
+
+app.module.ts
+--------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { IndexComponent } from './components/index/index.component';
+import { PageoneComponent } from './components/pageone/pageone.component';
+import { PagetwoComponent } from './components/pagetwo/pagetwo.component';
+import { PagethreeComponent } from './components/pagethree/pagethree.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes/app.routes';
+import { ChildoneComponent } from './components/childone/childone.component';
+import { ChildtwoComponent } from './components/childtwo/childtwo.component';
+import { ChildthreeComponent } from './components/childthree/childthree.component';
+import { routeGuards } from './guards/route.guards';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    IndexComponent,
+    PageoneComponent,
+    PagetwoComponent,
+    PagethreeComponent,
+    ChildoneComponent,
+    ChildtwoComponent,
+    ChildthreeComponent
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [routeGuards],
+  bootstrap: [IndexComponent]
+})
+export class AppModule { }
+
+
+step5:
+-----
+	Apply the Screen Activators.
+	
+	CanActivate-->Pagetwo Component
+	CanActivateChild--> Childone Component	
+	CanDeactivate--> Pageone component
+
+	SPAProj	
+	|
+	|-----src
+	|	|
+		|-----app
+			|
+			|----routes
+			|	|
+				|---app.routes.ts
+
+app.routes.ts
+------------
+import {Routes,Route} from "@angular/router";
+import { ChildoneComponent } from '../components/childone/childone.component';
+import { ChildthreeComponent } from '../components/childthree/childthree.component';
+import { ChildtwoComponent } from '../components/childtwo/childtwo.component';
+import { PageoneComponent } from '../components/pageone/pageone.component';
+import { PagethreeComponent } from '../components/pagethree/pagethree.component';
+import { PagetwoComponent } from '../components/pagetwo/pagetwo.component';
+import { routeGuards } from '../guards/route.guards';
+
+export const appRoutes:Routes=[
+    {
+            path:"",
+            component:PageoneComponent,
+            children:[{
+                        path:"child_one",
+                        component:ChildoneComponent
+                     }],
+             canActivateChild:[routeGuards],
+             canDeactivate:[routeGuards]        
+    },
+    {
+            path:"page_two",
+            component:PagetwoComponent,
+            children:[{
+                        path:"child_two",
+                        component:ChildtwoComponent
+                     }],
+            canActivate:[routeGuards]        
+    },
+    {
+            path:"page_three",
+            component:PagethreeComponent,
+            children:[{
+                                path:"child_three",
+                                component:ChildthreeComponent
+                     }]
+    }
+
+]
+step6:
+------
+	Add child components to index.component.html file.
+
+index.component.html
+----------------------
+<a [routerLink]="['/']"><b>page_one</b></a> &nbsp;&nbsp;
+<a [routerLink]="['/page_two']"><b>page_two</b></a> &nbsp;&nbsp;
+<a [routerLink]="['/page_three']"><b>page_three</b></a>
+ <br>
+ <br>
+<router-outlet></router-outlet>
+
+<a [routerLink]="['/child_one']"><b>child_one</b></a>
+
+<a [routerLink]="['/child_two']"><b>child_two</b></a>
+
+<a [routerLink]="['/child_three']"><b>child_three</b></a>
+
+
+
+step7:
+------
+	Execute Angular  project.
+	ex:
+	D:/Dummy/SPAProj> npm start
+	or 
+	D:/Dummy/SPAProj> ng serve --open
+
+step8:
+-----
+	Test the angular application.
+	ex:
+	http://localhost:4200
+
+MySQL Integration
+=================
+step1:
+------
+	Download and Install MYSQL Database software. 
+	
+Download link:https://drive.google.com/file/d/1QQjWTJ9v8xz0nfuSGva1_QQwO6KDf9_c/view?usp=sharing
+
+
+step2:
+-----
+	Open and connect with Mysql Database using password.
+	ex:
+	enter the password:  root
+
+step3:
+-------
+	create a logical Database Name / Schema .
+
+	ex:
+	create schema ui2pm;
+
+step4:
+-----
+	To see the list of Databases/Schema.
+
+	ex:
+	show databases;
+
+step5:
+----
+	switch to ui2pm schema/database.
+	ex:
+	use ui2pm;
+
+step6:
+-------
+	create a Products table inside "ui2pm" database.
+ex:
+create table products(p_id integer,p_name varchar(10),p_cost integer);
+
+insert into products values(111,'sony',10000);	
+insert into products values(222,'LG',20000);
+insert into products values(333,'LAVA',30000);
+commit;
+
+
+step7:
+-------
+	To see the products table details.
+	ex:
+	select * from products;
+
+
+Database Credentials
+======================
+
+host:  localhost
+
+user :  root
+
+password : root
+
+database : ui2pm
+
+table  : products
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

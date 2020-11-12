@@ -1,0 +1,674 @@
+ex:3
+=====
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                       var flag=true;
+                       function validate()
+                       {
+                              var cform="<br/>Name:<input type='text' name='t1'/><br/>
+		                      Email:<input type='text' name='t2'/><br/>
+			  Enter Comment:<textarea name='t3' cols='10' rows='10'>   					</textarea><br/>
+			<input type='submit' value='post'/>";   
+                            if(flag)
+                            {
+                             document.getElementById("comm_id").innerHTML=cform;
+                             flag=false;
+                            }
+                            else{
+                                document.getElementById("comm_id").innerHTML="";
+                                 flag=true;
+                            }   
+                       }
+               </script> 
+        </head>
+        <body>
+           <input type="submit" value="comment" onclick="validate()"/>
+           <span id="comm_id"/>
+        </body>
+</html>
+
+ex:4
+====
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                        function myFunction()
+                        {
+                                var table=document.getElementById("table");
+                                
+                                var row=table.insertRow();
+                                var cell1=row.insertCell();
+                                var cell2=row.insertCell();
+                                var cell3=row.insertCell();
+
+                                cell1.innerHTML=102;
+                                cell2.innerHTML="Erick Nelson";
+                                cell3.innerHTML="UAE";
+
+                        }
+               </script> 
+        </head>
+        <body>
+               
+          <input type="submit" value="add" onclick="myFunction()"/>
+          <br>
+          <hr/>
+          <table id="table" border="1" cellpadding="10px">
+                        <tr>
+
+                                <th>SNO</th>
+                                <th>SNAME</th>
+                                <th>SADD</th>
+                        </tr>
+
+          </table>              
+        </body>
+</html>
+
+
+innerText
+=========
+	It is used to add dynamic text in html document.
+	Here text will interpetered as normal text but not html text.
+ex:
+<!DOCTYPE html>
+<html>
+        <head>
+               <script>
+                        function validate()
+                        {
+                              var txt;
+                              if(document.myform.t1.value.length>5)
+                              {
+                                      txt="strong";
+                              }
+                              else
+                              {
+                                      txt="poor";
+                              }
+                              document.getElementById("pid").innerText=txt;
+                        }
+               </script> 
+        </head>
+        <body>
+               
+                <form name="myform">
+                Password : <input type="password" name="t1" onkeyup="validate()"/>Strength:<span id="pid"/>
+                </form>                
+        
+        </body>
+</html>
+
+
+Working with Visual Studio Code
+=============================
+step1:
+--------
+	Download and install visual Studio Code.
+
+  	website: https://code.visualstudio.com/docs/?dv=win
+	file : VSCodeSetup-Note-1.25.1.exe
+
+	double click on vsc -> I accept aggrement--->next->next->select create desktop icon-->
+	next-->install.
+step2:
+-------
+	Open visual Studio Code.
+
+step3:
+--------
+	create a folder on a desktop .drag and drop that folder to visual studio code.
+
+step4:
+--------
+	create a form.html file inside "dummy" folder.
+
+step5:
+------
+	develop simple program and run on browser window.
+
+JavaScript Events
+===================
+HTML events are "things" that happen to HTML elements.
+
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+JavaScript lets us to execute the code when events are detected.
+
+We have following list of events in javascript.
+
+
+1) onclick events: 
+------------------------
+This is a mouse event and provokes any logic defined if the user clicks on the element it is bound to.
+
+ex:1
+===
+<!DOCTYPE html>
+<html>
+    <head>
+            <script>
+                function f1()
+                {
+                    alert("Welcome to JavaScript");
+                }
+            </script>
+
+    </head>
+    <body>
+        <button onclick="f1()">click</button>
+    </body>
+</html>
+
+ex:2
+====
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="alert('welcome to javascript class')">click</button>
+    </body>
+</html>
+
+ex:3
+=====
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function f1()
+           {
+                document.getElementById("did").innerHTML=Date();
+           }
+        </script>
+
+    </head>
+    <body>
+        <p  id="did">Current Date and Time </p>
+        <button onclick="f1()">click_for_date</button>
+    </body>
+</html>
+
+ex:4
+====
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+            <div id="timeDiv"></div>
+            <br/>
+            <br/>
+            <button onclick="startClock()">start_clock</button>
+            <input type="button" value="stop_clock" onclick="stopClock()"/>
+      <script>
+          var intervalId;
+          function startClock()
+          {
+                intervalId=setInterval(getCurrentDateTime,1000);
+          }
+          function stopClock()
+          {
+                clearInterval(intervalId);
+          }
+         function getCurrentDateTime()
+          {
+              document.getElementById("timeDiv").innerHTML=new Date();
+          }
+          getCurrentDateTime();
+      </script>
+    </body>
+</html>
+
+
+
+2)onsubmit event
+================
+It will Execute a JavaScript when a form is submitted:
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                function f1()
+                {
+                    var name=document.getElementById("t1").value;
+                    document.writeln("Welcome "+name);
+                }
+        </script>
+    </head>
+    <body>
+           <form onsubmit="f1()">
+                Name:<input type="text" id="t1" required/>
+                <input type="submit" value="submit"/>
+
+           </form>
+     
+    </body>
+</html>
+
+ex:2
+====
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                function f1()
+                {
+                    window.print();
+                }
+        </script>
+    </head>
+    <body>
+           <p>Please click the button to give print out</p> 
+          <input type="submit" value="submit" onclick="f1()"/>
+     
+    </body>
+</html>
+
+3)onkeyup
+-----------
+ This event is a keyboard event and executes instructions whenever a key is released after pressing.
+ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                function f1()
+                {
+                
+                  iid.style.background="red";
+                }
+        </script>
+    </head>
+    <body>
+         <input type="text" id="iid" onkeyup="f1()"/>
+     
+    </body>
+</html>
+
+
+
+
+4) onmouseover event: 
+----------------------------
+This event corresponds to hovering the mouse pointer over the element 
+to which it is bound to.
+
+ex:1
+====
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                function f1()
+                {
+                
+                  iid.style.background="red";
+                }
+        </script>
+    </head>
+    <body>
+         <input type="text" id="iid" onmouseover="f1()"/>
+     
+    </body>
+</html>
+
+ex:2
+====
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+                div{
+                    width:200px;
+                    height:200px;
+                    background-color: tomato;
+                }
+        
+        </style>
+        <script>
+                function hov()
+                {
+                    hover.style.display="none";
+                }
+        </script>
+    </head>
+    <body>
+         <div id="hover" onmouseover="hov()">
+     
+    </body>
+</html>
+
+
+
+
+
+5) onmouseout event:
+-----------------------------------
+ Whenever the mouse cursor leaves the element which handles a mouseout event, 
+a function associated with it is executed.
+ex:!
+====
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+                div{
+                    width:200px;
+                    height:200px;
+                    background-color: tomato;
+                }
+        
+        </style>
+        <script>
+                function hov()
+                {
+                    hover.style.display="none";
+                }
+        </script>
+    </head>
+    <body>
+         <div id="hover" onmouseout="hov()">
+    </body>
+</html>
+
+6) onchange event: 
+----------------------------
+This event detects the change in value of any element listing to this event.
+ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script>
+                function f1()
+                {
+                   alert("welcome to javascript event");
+                }
+        </script>
+    </head>
+    <body>
+        <input type="text" onchange="f1()">
+     
+    </body>
+</html>
+
+
+7)onblur event
+==========
+IT is a form event. 
+onblur will fires when element losses focus. 
+ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script>
+                function f1()
+                {
+                   alert("welcome to javascript event");
+                }
+        </script>
+    </head>
+    <body>
+        <input type="text" onblur="f1()">
+     
+    </body>
+</html>
+
+
+8)onselect event
+====================
+The onselect event occurs after some text has been selected in an element.
+ex:
+----
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script>
+                function f1()
+                {
+                  var text=document.getElementById("iid").value;
+                   document.getElementById("msg").innerHTML=text;     
+                }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="iid" onselect="f1()"/>
+        <br/>
+        <div id="msg"></div>
+     
+    </body>
+</html>
+
+
+ex: Event Listener
+==================
+<!DOCTYPE html>
+<html>
+    <head>
+        
+       <style>
+           body{
+               margin:0;
+               padding:0;
+               background-color: #262626;
+           }
+           button{
+               height:60px;
+               width:200px;
+               margin-top:250px;
+               margin-left:400px;
+               background: transparent;
+               border-radius: 10px;
+               border-style: 2px solid white;
+               color:#fff;
+               font-size:30px;
+           }
+        </style>
+         <script>
+             function cli()
+             {
+                var btn=document.getElementById("button");
+                btn.addEventListener("click",f1());
+      
+                function f1()
+                {
+                    document.body.style.background="red";
+                }
+             }
+            </script>
+    </head>
+    <body>
+      <button id="button" onclick="cli()">click me</button>
+     
+    </body>
+</html>
+
+
+
+onload event
+=============
+	This event will be execute automatically whenever elmenent is loaded in the web page.
+ex:
+
+<!DOCTYPE html>
+<html>
+<body onload="myFunction()">
+
+<h1>Hello World!</h1>
+
+<script>
+function myFunction() {
+  alert("Page is loaded");
+}
+</script>
+
+</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body onload="alert('body is loaded')">
+            <p>This is javascript event class</p>
+    </body>
+</html>
+
+
+ex:2
+=====
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+            <p>This is javascript event class</p>
+            <img src="w.jpg" onload="alert('image is loaded')"/>
+    </body>
+</html>
+
+JavaScript closure
+===============
+
+A closure gives you access to an outer function's scope from an inner function. 
+
+In JavaScript, closures are created every time a function is created, at function creation time.
+
+The inner function will have access to the variables in the outer function scope, 
+even after the outer function has returned.
+
+
+ex:1
+===
+
+<!doctype html> 
+<html> 
+  <head> 
+   
+  </head> 
+  <body> 
+    <script> 
+     var x=10;
+	 function f1()
+	 {
+		var y=20;
+		function f2()
+		{
+			var z=30;
+			alert(x+y+z);
+			
+		}
+		f2();
+	 }
+	 f1();
+	 
+    </script> 
+  </body> 
+</html> 
+
+
+ex:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Closures</h2>
+
+<p>Counting with a local variable.</p>
+
+<button type="button" onclick="myFunction()">Count!</button>
+
+<p id="demo">0</p>
+
+<script>
+var add = (function () {
+  var counter = 0;
+  return function () {counter += 1; return counter;}
+})();
+
+function myFunction(){
+  document.getElementById("demo").innerHTML = add();
+}
+</script>
+
+</body>
+</html>
+
+What is the difference between var and let
+=======================================
+
+var and let are both used for function declaration and to hold values in javascript but the difference between 
+them is that var is function scoped and let is block scoped.
+
+ex:
+	
+<!doctype html> 
+<html> 
+  <head> 
+   
+  </head> 
+  <body> 
+    <script> 
+    console.log(x);
+	let x=10;
+	console.log(x);
+
+	 
+    </script> 
+  </body> 
+</html> 
+
+
+ex:
+<!doctype html> 
+<html> 
+  <head> 
+   
+  </head> 
+  <body> 
+    <script> 
+    console.log(x);
+	var x=10;
+	console.log(x);
+
+	 
+    </script> 
+  </body> 
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

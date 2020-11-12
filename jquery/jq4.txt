@@ -1,0 +1,1073 @@
+Jquery Events
+================
+Jquery events are the actions that can be detected by our web application.
+
+Jquery events are used to create dynamic web pages.
+
+An event shows the exact moment when something happens.
+
+These are some examples of events.
+
+A mouse event
+
+AN html form submission
+
+A web page loading
+
+A keystroke on the keyboard.
+
+Scrolling of the web pages etc.
+
+These events can be categorized on the basis of their types.
+
+
+mouse events
+--------------
+click
+dblclick
+mouseenter
+mouseleave
+
+Keyboard events
+-------------
+keyup
+keydown
+keypress
+
+form events
+------------
+submit
+change
+blur
+focus
+
+Document/Window Events
+-----------------------
+load
+unload
+scroll
+resize
+
+syntax for event methods
+---------------------------
+$("tag_name").click(function(){
+	//action goes here	
+});
+
+Jquery click() 
+------------------
+When you click on an element ,the click event occurs and once the click
+event is occured it executes the click() method or attaches a function to
+run.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+       <p>This is paragraph</p>
+       
+       <script>
+        $(document).ready(function(){
+          $("p").click(function(){
+            alert("This is pargraph click");
+          })
+        })
+       </script>
+  </body>
+
+</html>
+
+Jquery bind()
+-----------------
+The Jquery bind() event is used to attach one or more event handlers for
+selected elements from a set of elements. It specifies a function to run 
+when the event occurs.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+       <p>This is paragraph</p>
+
+       <script>
+        $(document).ready(function(){
+          $("p").bind("click",function(){
+            alert("It is bind event");
+          });
+        });
+
+       </script>
+  </body>
+
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+       <p>This is paragraph</p>
+
+       <script>
+        $(document).ready(function(){
+          $("p").bind("dblclick",function(){
+            alert("It is bind event");
+          });
+        });
+
+       </script>
+  </body>
+
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+       <p>This is paragraph</p>
+
+       <script>
+        $(document).ready(function(){
+          $("p").bind("mouseover",function(){
+            alert("It is bind event");
+          });
+        });
+
+       </script>
+  </body>
+
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+       <p>This is paragraph</p>
+
+       <script>
+        $(document).ready(function(){
+          $("p").bind("mouseout",function(){
+            alert("It is bind event");
+          });
+        });
+
+       </script>
+  </body>
+
+</html>
+
+
+JQuery blur()
+------------------
+The Jquery blur() event occurs when element loses focus.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+       
+      Name:<input type="text" name="t1"/>
+
+       <script>
+        $(document).ready(function(){
+           $("input").blur(function(){
+            alert("we lost the focus");
+           }) 
+        });
+      </script>
+  </body>
+
+</html>
+
+JQuery focus()
+---------------
+The Jquery focus() event occurs when an element gains focus.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+      span
+      {
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+       
+      <p>
+        <input type="text"/><span>Focus start: Enter Name</span>
+      </p>
+      <p>
+      <input type="password"/><span>Focus start: Enter Pwd</span> 
+      </p>
+
+
+       <script>
+       $("input").focus(function(){
+        $(this).next("span").css("display","inline");
+       })
+      </script>
+  </body>
+
+</html>
+
+JQuery select()
+---------------------
+JQuery select() event occurs when a text is marked or selected in 
+textarea or textfield.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+      span
+      {
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Please select text</h2>
+    <input type="text" value="GlobalEdx"/><br><br>
+    <input type="text" value="institute"/><br><br>
+    <div style="color:blue"></div>
+
+    <script>
+          $("input").select(function(){
+            $("div").text("some text selected").show().fadeOut(1000);
+          })
+    </script>
+  </body>
+
+</html>
+
+Jquery submit()
+---------------
+JQuery submit method is sent to the element when the user attempts to 
+submit a form.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    
+  </head>
+  <body>
+   <form action="#">
+    <div>
+          <input type="text"/>
+          <input type="submit" value="submit"/>
+    </div>
+    </form>
+    <span></span>
+
+    <script>
+          $("form").submit(function(event){
+              if($("input:first").val() == "globaledx"){
+                $("span").text("submitted successfully").show();
+                return;
+              }
+              $("span").text("Not valid").show().fadeOut(2000);
+              event.preventDefault;
+          })
+    </script>    
+  </body>
+
+</html>
+
+JQuery keydown()
+---------------
+When you press a key on the keyboard, the keydown() event is occurred and
+once the keydown() event is occurred, it executes the function associated
+ with keydown() method to run.
+
+The keydown() event is generally used with two other events.
+
+Keypress() event: It specifies that the key is pressed down.
+Keyup() event: It specifies that the key is released.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+      <input type="text"/>
+
+      <script>
+          $(document).ready(function(){
+            $("input").keydown(function(){
+              $("input").css("background-color","green");
+            })
+          })
+      </script>  
+    
+  </body>
+
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+      <input type="text"/>
+
+      <script>
+          $(document).ready(function(){
+            $("input").keyup(function(){
+              $("input").css("background-color","green");
+            })
+          })
+      </script>  
+    
+  </body>
+
+</html>
+
+Note:
+-------
+	Pess TAB button and see the differences between keydown and keyup.
+
+JQuery keypress()
+-------------------
+The jQuery keypress () event is occurred when a keyboard button is pressed
+ down. This event is similar to keydown() event.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+      <input type="text"/>
+
+      <script>
+          $(document).ready(function(){
+            $("input").keypress(function(){
+              $("input").css("background-color","green");
+            })
+          })
+      </script>  
+    
+  </body>
+
+</html>
+
+
+Jquery mouseenter
+------------------
+The mouseenter() method adds an event handler function to an HTML element. 
+
+This function is executed, when the mouse pointer enters the HTML element.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+     <h1>Enter the heading </h1>
+     <div></div>
+    
+    <script>
+          $(document).ready(function(){
+            $("h1").mouseenter(function(){
+                $("div").text("mouse enter on heading").show().fadeOut(2000);
+            })
+          })
+    </script>
+  </body>
+
+</html>
+
+jquery mouseleave()
+----------------------
+The mouseleave() method adds an event handler function to an HTML element. 
+This function is executed, when the mouse pointer leaves the HTML element.
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+     <h1>Enter the heading </h1>
+     <div></div>
+    
+    <script>
+          $(document).ready(function(){
+            $("h1").mouseleave(function(){
+                $("div").text("mouse leaving on heading").show().fadeOut(2000);
+            })
+          })
+    </script>
+  </body>
+
+</html>
+
+
+JQuery hover()
+--------------
+The jQuery hover() method executes two functions when you roam the mouse
+ pointer over the selected element. The hover() method triggers both the mouseenter
+ and mouseleave events.
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+     <h1>Enter the heading </h1>
+     <div></div>
+    
+    <script>
+          $(document).ready(function(){
+            $("h1").hover(function(){
+                $("div").text("mouse entering on heading").show().css("background-color","violet").fadeOut(2000);
+            },function(){
+              $("div").text("mouse entering on heading").show().css("background-color","yellow").fadeOut(2000);
+            })
+          })
+    </script>
+  </body>
+
+</html>
+
+JQuery mousedown() 
+------------------
+The mousedown() method adds an event handler function to an HTML element.
+ This function is executed, when the left mouse button is pressed down, 
+at the time while the mouse is over the HTML element.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+     <h1>Enter the heading </h1>
+     <div></div>
+    
+    <script>
+          $(document).ready(function(){
+            $("h1").mousedown(function(){
+                $("div").text("mouse down event").show().fadeOut(2000);
+            })
+          })
+    </script>
+  </body>
+
+</html>
+
+JQuery mouseup()
+-----------------
+The mouseup() method adds an event handler function to an HTML element. 
+This function is executed, when the left mouse button is released 
+after pressing mouse button on the HTML element.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+     <h1>Enter the heading </h1>
+     <div></div>
+    
+    <script>
+          $(document).ready(function(){
+            $("h1").mouseup(function(){
+                $("div").text("mouse up event").show().fadeOut(2000);
+            })
+          })
+    </script>
+  </body>
+
+</html>
+
+Jquery mouseover
+--------------------
+The mouseover event is occurred when you put your mouse cursor over the 
+selected element .Once the mouseover event is occurred, it executes the 
+mouseover () method or attach a function to run.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+  
+     <h1>Enter the heading </h1>
+    
+    <script>
+          $(document).ready(function(){
+            $("h1").mouseover(function(){
+                $("h1").css("background-color","lightgray");
+            })
+          })
+    </script>
+  </body>
+
+</html>
+
+Jquery load()
+---------------
+The load event occurs when a specific element is loaded. It is generally 
+used with a URL (image, script, frame, iframe), and the window object.
+
+It was deprecated in jQuery 1.8 version of jQuery library.
+
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  
+  </head>
+  <body>
+  
+   
+
+    <img src="rock.jpg"  alt="Image not Found"/>
+ 
+     <script>
+          $(document).ready(function(){
+            $("img").load(function(){
+              alert("image is loaded");
+            });
+          });
+    </script>
+
+
+  </body>
+
+</html>
+
+
+Note:
+----
+In some browsers ,the load event did not trigger if the image is 
+cached
+
+
+
+
+
+
+Jquery Form validation
+------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <form action="#">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"  autocomplete="off" >
+       <div id="showError"></div>
+
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd"  autocomplete="off">
+       <div id="showError1"></div>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default" id="submit">Submit</button>
+  </form>
+</div>
+<script>
+      $(document).ready(function()
+      {
+          $("#submit").click(function(){
+            //reading email value
+            var email=$("#email").val();
+            var pass=$("#pwd").val();
+
+            if(email== "")
+            {
+              $("#showError").text("Email is mandatory");
+              $("#showError").css("color","red");
+              $("#showError").fadeOut(2000);
+              return false;    
+            }
+            if(pass== "")
+            {
+              $("#showError1").text("Password is mandatory").css("color","red").fadeOut(2000);
+              return false;
+            }
+            })
+      })
+</script>
+</body>
+</html>
+
+
+ex:2
+------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <center><h2>JQuery Form Validation</h2></center>
+  <form action="#">
+    
+    <div class="form-group">
+      <label for="name">UserName:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="off">
+      <div id="showError"></div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" autocomplete="off">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default" id="submit">Submit</button>
+  </form>
+</div>
+<script>
+	$(document).ready(function(){
+			//if we click submit button
+			$("#submit").click(function(){
+
+				//reding value from text field
+				var user=$("#name").val();
+
+				if(user == ""){
+					//displaying error
+					$("#showError").text("Username is mandatory");
+					$("#showError").css("color","red");
+					$("#showError").fadeOut(2000);
+					return false;
+				}
+
+				if((user.length<=2) || (user.length>=10))
+				{
+					//displaying error
+			$("#showError").text("Name must have 2 to 10 range");
+					$("#showError").css("color","red");
+					$("#showError").fadeOut(2000);
+					return false;
+				}
+			})
+	})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,642 @@
+getElementsByName()
+--------------------
+It returns all the elements having the given name value.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+	
+			First Name: <input name="fname" type="text" value="Alan"><br>
+			<button onclick="myFunction()">Click</button>
+
+			<p id="demo"></p>
+
+			<script>
+				function myFunction() {
+ 
+					var x = document.getElementsByName("fname")[0].tagName;
+					document.getElementById("demo").innerHTML = x;
+				}
+			</script>
+				
+	</body>
+</html>
+
+The getElementsByName() method returns a collection of all elements in
+ the document with the specified name.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+	
+			First Name: <input name="fname" type="text" value="Alan"><br>
+			Last Name:  <input name="fname" type="text" value="Morries"><br>
+			<button onclick="myFunction()">Click</button>
+
+			<p id="result"></p>
+
+			<script>
+				function myFunction() {
+ 
+					var x = document.getElementsByName("fname")[0].tagName;
+					document.getElementById("result").innerHTML = x;
+				}
+			</script>
+				
+	</body>
+</html>
+
+To know how many elements there are in the document we can use "length" property.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+	
+			First Name: <input name="fname" type="text" value="Alan"><br>
+			Last Name:  <input name="fname" type="text" value="Morries"><br>
+			<button onclick="myFunction()">Click</button>
+
+			<p id="demo"></p>
+
+			<script>
+				function myFunction() {
+ 
+					var x = document.getElementsByName("fname").length;
+					document.getElementById("demo").innerHTML = x;
+				}
+			</script>
+				
+	</body>
+</html>
+
+we can also read element value by using getElementByName() method
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+	
+			First Name: <input name="fname" type="text" value="Alan"><br>
+			<button onclick="myFunction()">Click</button>
+
+			<p id="demo"></p>
+
+			<script>
+				function myFunction() {
+ 
+					var x = document.getElementsByName("fname")[0].value;
+					document.getElementById("demo").innerHTML = x;
+				}
+			</script>
+				
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		<h3>List of Courses you learned</h3>
+		
+		HTML:  <input name="crs" type="checkbox" value="html"/>
+		CSS:  <input name="crs" type="checkbox" value="css"/>
+		JAVASCRIPT:  <input name="crs" type="checkbox" value="js"/>
+		BOOTSTRAP:  <input name="crs" type="checkbox" value="bootstrap"/>
+		<br><br>
+		<button onclick="myFunction()">Select All</button>
+
+		<script>
+			function myFunction() {
+				var x = document.getElementsByName("crs");
+				var i;
+				for (i = 0; i < x.length; i++) {
+					if (x[i].type == "checkbox") {
+							x[i].checked = true;
+					}
+				}
+			}
+		</script>
+			
+				
+	</body>
+</html>
+
+
+
+getElementsByTagName()		
+------------------------
+It returns all the elements having the given tag name.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		Current Courses :
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ul>
+		<br>
+		<button onclick="myFunction()">Click</button>
+
+		<p id="result"></p>
+
+		<script>
+			function myFunction() {
+				var x = document.getElementsByTagName("LI").length;
+				document.getElementById("result").innerHTML=x;
+			}
+		</script>		
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+		Current Courses :
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ul>
+		<br>
+		<button onclick="myFunction()">Click</button>
+
+		<p id="result"></p>
+
+		<script>
+			function myFunction() {
+				var x = document.getElementsByTagName("LI");
+				document.getElementById("result").innerHTML = x[2].innerHTML;
+			}
+		</script>		
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+			<p>Welcome To Global FEDEX.</p>
+
+			<p>This is also a paragraph.</p>
+
+			<button onclick="myFunction()">Twist It</button>
+
+			<script>
+				function myFunction() {
+			document.getElementsByTagName("P")[0].innerHTML = "Welcome to GlobalEdx";
+				}
+			</script>
+	
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+			<p>Welcome To Global FEDEX.</p>
+
+			<p>This is also a paragraph.</p>
+
+			<button onclick="myFunction()">Twist It</button>
+
+			<script>
+				function myFunction() {
+					 var x = document.getElementsByTagName("P");
+					 var i;
+					 for (i = 0; i < x.length; i++) {
+						//x[i].style.backgroundColor = "red";
+						//x[i].style.border = "1px solid black";
+						x[i].style.color = "red";
+						}
+				}
+			</script>
+	
+	</body>
+</html>
+
+getElementsByClassName()	
+-------------------------
+It returns all the elements having the given class name.
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+			<div class="test">Before changing the Text </div>
+			
+			<button onclick="myFunction()">Change Text</button>
+
+			<script>
+				function myFunction() {
+					var x = document.getElementsByClassName("test");
+					x[0].innerHTML = "After Changing the Text";
+				}
+</script>
+			
+	
+	</body>
+</html>
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+			<div class="test">Before changing the Text </div>
+			
+			<div class="test c1">Before changing the Text </div>
+			
+			<div class="test c1">Before changing the Text </div>
+			
+			<button onclick="myFunction()">Change Text</button>
+
+			<script>
+				function myFunction() {
+					var x = document.getElementsByClassName("test c1");
+					// x[0].style.backgroundColor = "red";
+					 // x[0].style.border = "red";
+					 x[0].style.fontSize = "50px";
+				}
+			</script>
+			
+	
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+			<div class="test">Before changing the Text </div>
+			
+			<div class="test c1">Before changing the Text </div>
+			
+			<div class="test c1">Before changing the Text </div>
+			
+			<button onclick="myFunction()">Click</button>
+			
+			<p id="result"></p>
+
+			<script>
+				function myFunction() {
+					var x = document.getElementsByClassName("test c1");
+					 document.getElementById("result").innerHTML = x.length;
+				}
+			</script>
+			
+	
+	</body>
+</html>
+
+
+DOM addEventListener() Method
+--------------------------------
+The document.addEventListener() method attaches an event handler to the 
+document.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+					<h3>Click any where </h3>
+					<p id="result"></p>
+
+					<script>
+						document.addEventListener("click", function(){
+						document.getElementById("result").innerHTML = "GlobalEdx";
+							});
+					</script>
+			
+	
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+					<h3>Click any where </h3>
+					<p id="result"></p>
+
+					<script>
+						document.addEventListener("click", f1);
+						
+						
+						function  f1(){
+						document.getElementById("result").innerHTML = "GlobalEdx";
+							}
+					</script>
+			
+	
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+					
+					<p id="result"></p>
+
+					<script>
+						document.addEventListener("mouseover", myFunction);
+						document.addEventListener("click", mySecondFunction);
+						document.addEventListener("mouseout", myThirdFunction);
+
+					function myFunction() {
+					document.getElementById("result").innerHTML += "Moused over<br>"
+					}
+
+					function mySecondFunction() {
+					document.getElementById("result").innerHTML += "Clicked<br>"
+					}
+
+					function myThirdFunction() {
+		document.getElementById("result").innerHTML += "Moused out<br>"					}
+					</script>
+			
+	
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+					
+					<p id="result"></p>
+
+					<script>
+						var a= 10;
+						var b =20;
+
+						document.addEventListener("click", function() {
+								myFunction(a, b);
+						});
+
+						function myFunction(a, b) {
+						var sum= a + b;
+							document.getElementById("result").innerHTML = sum;
+						}
+					</script>
+			
+	
+	</body>
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>
+					
+					<script>
+						document.addEventListener("click", function(){
+							document.body.style.backgroundColor = "gray";
+					});
+					</script>
+
+			
+	
+	</body>
+</html>
+
+DOM removeEventListener() Method
+------------------------------------
+
+The document.removeEventListener() method removes an event handler that has
+ been attached with the document.addEventListener() method.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+			<h3>Click this button to stop mouseover effect !!</h3> 
+   
+			<button id="clickIt" onclick="RespondClick()">Click here</button> 
+  
+			<h1 id="hoverPara">Mouse Over text shown below !</h1> 
+  
+			<b id="effect"></b> 
+  
+    <script> 
+        const y = document.getElementById("hoverPara"); 
+  
+        y.addEventListener("mouseover", RespondMouseOver); 
+  
+        function RespondMouseOver() { 
+            document.getElementById("effect").innerHTML += 
+                "mouseover Event !!" + "<br>"; 
+        } 
+  
+        function RespondClick() { 
+            y.removeEventListener("mouseover", RespondMouseOver); 
+            document.getElementById("effect").innerHTML += 
+                "Now mouseover event stoped !!" + "<br>" ; 
+        } 
+    </script> 
+</body> 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

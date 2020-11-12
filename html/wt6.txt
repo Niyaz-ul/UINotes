@@ -1,0 +1,873 @@
+Use an Image as  a Hyperlink
+============================
+To use image as a link just put <img> tag inside <a> tag.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<a href="http://www.google.com" target="_blank">
+
+			<img src="mask.png" width="100px" height="100px"/>
+
+		</a>		
+	</body> 
+</html>
+
+Use Button as a Hyperlink
+========================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<a href="http://www.google.com" target="_blank">
+		<input type="button" value="clickMe"/>	
+		</a>
+	</body> 
+</html>
+
+Adding Hyperlink to an Email Address
+====================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<a href="mailto:info@globaledx.com" >
+				info@globaledx.com	
+		</a>
+	</body> 
+</html>
+
+Order list in HTML
+------------------
+The <ol> tag defines an orderlist in html.
+
+An order list can be numerical or alphabetical.
+
+we can use <li> tag  to define each list of items.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- orderlist with numbers -->
+		Courses:
+		<ol>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ol>
+	</body> 
+</html>
+Note:
+----
+	Default, <ol> tag represent list of items in numeric.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- orderlist with numbers -->
+		Courses:
+		<ol start="101">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ol>
+	</body> 
+</html>
+
+For alphabets we can use "type" attribute in <ol> tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- orderlist with alphabets -->
+		Courses:
+		<ol type="i">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ol>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- orderlist with alphabets -->
+		Courses:
+		<ol type="I">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ol>
+	</body> 
+</html>
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- orderlist with alphabets -->
+		Courses:
+		<ol type="a">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ol>
+	</body> 
+</html>
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- orderlist with alphabets -->
+		Courses:
+		<ol type="A">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ol>
+	</body> 
+</html>
+
+
+Unorder list in html
+---------------------
+The <ul> tag defines an unordered list with bullets.
+
+unorder list contains list of items.
+
+we can use <li> tag to represent list of  items.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- unorder list with bullet -->
+		Courses:
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ul>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- unorder list with circle-->
+		Courses:
+		<ul style="list-style-type:circle">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ul>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- unorder list with square-->
+		Courses:
+		<ul style="list-style-type:square">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ul>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- unorder list with bullet format-->
+		Courses:
+		<ul style="list-style-type:disc">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>BOOTSTRAP</li>
+		</ul>
+	</body> 
+</html>
+
+HTML table
+===========
+The <table> tag defines a HTML table.
+
+Table is a collection of rows and columns.
+
+Each table row is defined with <tr> tag.
+
+Each table header is defined with  <th> tag.
+
+Each table data is defined with <td> tag.
+
+Bydefault, the text in <th> element/tag are bold and centered.
+
+Bydefault, the text in <td> element/tag are regular and left-aligned.
+
+ex
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table>
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+Note:
+-----
+	default border of a table tag is '0'.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="0">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2" cellspacing="15">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2" cellpadding="10px">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2" width="100%">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2" cellspacing="5px" cellpadding="10px" align="center">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2" cellspacing="5px" cellpadding="10px" align="right">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table border="2" cellspacing="5px" cellpadding="10px" align="left">
+			<tr>
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<table bgcolor="#ecf0f1" border="2" cellspacing="5px" cellpadding="10px" align="right">
+			<tr bgcolor="#FFFF00">
+				<th>SNO</th>
+				<th>SNAME</th>
+				<th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>Alan</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td>
+				<td>Jose</td>
+				<td>UK</td>
+			</tr>
+			
+		</table>
+	</body> 
+</html>
+
+Note:
+------
+We can get color values by using below link.
+
+ex:
+https://flatuicolors.com/
+
+
+HTML Block and Inline Elements/Tags
+----------------------------------------
+Block Level Elements/Tag
+-----------------------
+A block level elements/tags always starts on a new line and takes up 
+full width available.
+
+we have following list of block level tags/elements
+ex:
+<hr>
+<address>
+<table>
+<ul>
+<h1> to <h6>
+<p>
+<footer>
+<canvas> 
+<section>
+<form>
+<header> 
+and etc.	
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<!-- block level tags/elements -->
+		<p>This is paragraph tag</p>
+		<h1>This is heading 1 tag</h1>
+		<hr>
+		<address>1-4-735 Ammerpet,Hyderabad.</address>
+	</body> 
+</html>
+
+
+The <div> tag is a block level element/tag.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+		<div>This is First Div</div>
+		<div>This is second Div</div>
+	</body> 
+</html>
+
+Note:
+----
+	All block elements/tags contains 100% width of a device.
+
+
+
+Inline Level Elements/Tags
+--------------------------
+An inline elements/tags does not starts on a new line and it takes up as 
+much width as necessary.
+
+we have following list of inline level tags/elements.
+ex:
+<i>
+<b>
+<u>
+<button>
+<q><br>
+<strong>
+and etc.
+
+ex:
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+			<!-- inline tags/elements -->
+			<b>This is bold tag</b>
+			<i>This is italic tag</i>
+			<u>This is underline tag</u>
+			<strong>This is strong tag</strong>
+			<br>
+			
+	</body> 
+</html>
+
+<span> tag is a inline level tag/element.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body> 
+			<span>This is First span</span>
+			<span>This is Second span</span>
+	</body> 
+</html>
+
+HTML forms
+============
+An HTML form is used to collect user data/input.
+
+The user inputs/data will be shared to servers and databases for processing.
+
+The "<form>" tag is used to create an html form for user input.
+
+syntax
+------
+	<form>
+		-
+		-//form components.
+		-
+	</form>
+
+
+Form elements/tags are different type of <input> elements like textfield,
+checkbox, radio ,textarea and etc.
+
+<input> elements/tags
+---------------------
+<input type="text"/> 	- It creates single text field.
+
+<input type="number"/> 	- It creates single text field for numbers.
+
+<input type="password"/>- It creates single text field for password.
+
+<input type="checkbox"/>- It creates checkbox.
+
+<input type="radio"/>	- It creates radio.
+
+<input type="date"/>	- It creates date textfield.
+
+<input type="submit"/>	- It creates submit button .
+
+<input type="reset"/>	- It creates reset button.
+
+<input type="hidden"/>	- It creates hidden textfield.
+
+<input type="color"/>	- It creates color textfield.
+
+<input type="search"/>	- It creates search textfield.
+
+<input type="image"/>	- It creates image.
+
+<input type="file"/>	- It is used to select a file from location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

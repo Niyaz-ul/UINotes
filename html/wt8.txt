@@ -1,0 +1,505 @@
+NotePad++ Editor
+------------------
+download link : http://notepad-plus-plus.org/downloads
+
+HTML datalist tag
+-------------------
+The <datalist> tag specifies a list of predefine options of an <input> tag/element.
+
+The <datalist> tag is used to provide an "autocomplete" features for <input> tags/elements
+
+Uer will see a drop-down list of predefined options as they input data.
+
+The <datalist> element/tag "id" attribute must be equals to the <input> element
+"list" attribute.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body>
+			<label> Browser window </label>
+			<input list="browsers">
+			
+			<datalist id="browsers">
+				<option value="Chrome">
+				<option value="Firefox">
+				<option value="Opera">
+				<option value="Chromium">
+				<option value="Safari">
+			</datalist>
+			
+			
+	</body>
+</html>
+
+strike tag/element
+-----------------
+It is used to strike the text.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body>
+			<!-- strike is a inline tag -->
+			<s>This is .NET CLASS</s>
+			
+			
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body>
+			<!-- strike is a inline tag -->
+			<strike>This is .NET CLASS</strike>
+			
+			
+	</body>
+</html>
+
+<del> and <ins> tag/element
+--------------------------
+<del> tag defines text that has been declared from a document .Browser usually
+strike a line throught deleted text.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body>
+		<p>My Favorite Hero is <del>Allu Arjun</del><ins>Mahesh Babu</ins></p>
+			
+	</body>
+</html>
+
+
+details tag/element
+---------------------
+The <details> tag specifies additional details that the user can open and close 
+demand.
+
+The <details> tag is often used to create a interactive widget that
+the user can open and close.
+
+ Any sort of content can be put inside the <details> tag.
+
+<details> tag contains <summary> tag where we can write our content.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body>
+		<h1>Details about HTML</h1>
+		<details>
+				<summary>HTML5</summary>
+				<p>HTML5 is a Advanced Hypertext Markup Language.</p>
+				<p>It is light weight component. </p>
+		</details>
+	</body>
+</html>
+
+caption tag/element
+-------------------
+The <caption> tag/element defines a table caption heading.
+
+<caption> tag must be inserted immediately after the <table> tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body>
+		<table border="1" align="center">
+			<caption>Student Details</caption>
+			<tr>
+				<th>SNO</th><th>SNAME</th><th>SADD</th>
+			</tr>
+			<tr>
+				<td>111</td><td>Alan</td><td>USA</td>
+			</tr>
+			<tr>
+				<td>222</td><td>Jose</td><td>UK</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+Frames
+------
+To use frames on a web page we need to use <frameset> tag instead of <body> tag.
+
+The <frameset> tag defines how to divide the window into frames.
+
+The "rows" attribute of <frameset> tag defines horizontal frames.
+
+The "cols" attribute of <frameset> tag defines vertical frames.
+
+Each frame is indicated by <frame> tag and it defines which document should 
+be open into that place.
+
+Note:
+----
+The <frame> tag is deprecated in HTML5 so that don't use this tag.
+
+
+globaledx.html
+----------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<frameset cols="33%,*,33%">
+				<frame src="a.html"/>
+				<frame src="b.html"/>
+				<frame src="c.html"/>
+	</frameset>
+</html>
+a.html
+------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body bgcolor="#40ff00">
+		
+	</body>
+</html>
+b.html
+------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body bgcolor="#00ffff">
+		
+	</body>
+</html>
+c.html
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body bgcolor="#bfff00">
+		
+	</body>
+</html>
+
+
+ex:
+globaledx.html
+--------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<frameset rows="33%,*,33%">
+				<frame src="a.html"/>
+				<frame src="b.html"/>
+				<frame src="c.html"/>
+	</frameset>
+</html>
+
+b.html
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<center>
+		<img src="chakra.png" width="200px" height="170px"/>
+		</center>
+	</body>
+</html>
+
+<iframe> tag/element
+-------------------
+The <iframe> tag specifies an inline frame.
+
+All inline frame is used to embed another document within the current html 
+document.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>	
+		<h1>This is GlobalEdx</h1>
+		<p>It is a HTML class for iframe Tag/Element</p>
+		<iframe src="https://www.compumaxllc.com/" width="400px" height="400px">
+			</iframe>
+	</body>
+</html>
+
+How to display map/address on a web page
+========================================
+step1:
+----
+	goto google maps.
+	ex:
+	https://www.google.com/maps
+
+step2:
+-----
+	Type GlobalEdx(name of institute) in search box.
+
+step3:
+-----
+	click to menu option at top-left.
+
+step4:
+-----
+	select "share or embedded map".
+
+step5:
+-----
+	click to "embeded a map" link at top.
+
+step6:
+-----
+	click to "copy html" and paste in notepadd++ program.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>	
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3802733018433!2d78.44495451440062!3d17.441503988046165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c6824a2245%3A0x8c783d09c4432b21!2sGlobalEdx%20Learning%20and%20Technology%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1598694179123!5m2!1sen!2sin" 
+		width="400" height="300" frameborder="0" style="border:0;" 
+		allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</body>
+</html>
+
+
+HTML Audio
+===========
+The HTML <audio> tag/element is used to play an audio file on a web page.
+
+<audio> tag contains "controls" attribute adds audio control like play,pause ,volume and etc.
+
+The <source > tag/element allows us to specify alternate audio file which the
+browser my choose.
+
+HTML audio formats can be MP3,WAV,OGG and etc.
+
+HTML Audio Media types are 
+
+File Formats		Media Type
+------------		----------
+MP3			audio/mpeg
+
+OGG			audio/ogg
+
+WAV			audio/wav
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>	
+		<audio controls>
+			<source src="audioclip.wav" type="audio/wav">
+		</audio>
+	</body>
+</html>
+
+HTML video Tag/Element
+------------------------
+The <video> tag or element is used to embed video content in a document such as
+movie clip,other video streams.
+
+The <video> tag contains one or more <source> tag with different video source.
+
+There are three supported video fromats in html are MP4,webM and OGG.
+
+HTML video media types are 
+
+File format		Media Type
+-----------		-----------
+MP4			video/mp4
+
+OGG			video/ogg
+
+and etc.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>	
+		<video controls >
+			<source src="shakira.mp4" type="video/mp4">
+		</video>
+	</body>
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	</head>
+	<body>	
+		<video controls width="400" height="400">
+			<source src="shakira.mp4" type="video/mp4">
+		</video>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

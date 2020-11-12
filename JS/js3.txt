@@ -1,0 +1,640 @@
+2)Non-Primitive Datatype
+=========================
+We have three types of Non-Primitive Datatypes.
+
+1)Object
+-------
+	It represents instance through which we can access members.
+
+2)Array
+-------
+	It represent group of similar values.
+
+3)RegExp
+-------
+	It represent Regular Expression.	
+
+Q)What is the difference between undefined and null?
+ans)
+A variable is said be a undefined if it has been declared but no value has
+been given to it.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				 //callie function
+				 function f1()
+				 {
+					var i;
+					document.writeln(i);
+				 }
+				
+				 //caller function
+				 f1();
+				</script>
+	</body>
+</html>
+
+A variable is said be a null if we declare value as null.
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				 //callie function
+				 function f1()
+				 {
+					var i=null;
+					document.writeln(i);
+				 }
+				
+				 //caller function
+				 f1();
+				</script>
+	</body>
+</html>
+Note:
+------
+Therefore "undefined" is a variable type whereas "null" is an object value.
+
+
+
+JavaScript Operators
+====================
+Operators are the symbols which is used to perform some operations on operands.
+ex:
+	C=A+B;
+
+	Here A,B,C are operands. 
+             =,+ are operators.
+
+There are following types of Operators in JavaScript.
+
+1)Arithmetic Operators
+
+2)Comparision Operators/Relational Operators
+
+3)Bitwise Operators
+
+4)Logical Operators
+
+5)Assignment Operators
+
+6)Special Operators
+
+1)Arithmetic Operators
+========================
+Operator	Description				
+--------	----------				
++		Addition
+-		Subtraction
+*		Multiplication
+/		Division
+%		Modulus(reminder)
+++		Increment
+--		Decrement
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+			
+					var a=10;
+					var b=5;
+					document.writeln(a+b+"<br>");//10+5
+					document.writeln(a-b+"<br>");//10-5
+					document.writeln(a*b+"<br>");//10*5
+					document.writeln(a/b+"<br>");//10/5
+					document.writeln(a%b+"<br>");//10%5
+				
+				</script>
+	</body>
+</html>
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+			
+					var a=10;
+					a++; // +1
+					document.writeln(a);//11
+					
+					a--; // -1
+					document.writeln(a);//10
+				
+				</script>
+	</body>
+</html>
+
+
+2)Comparision Operators
+------------------------
+Operator			Description
+--------			------------
+==				Equal to
+!=				Not equal to
+>				Greater then
+>=				greater then equal to
+<				less then	
+<=				less then equal to
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+					var a=10;
+					var b=20;
+					document.writeln((a==b)+"<br>");//false
+					document.writeln((a!=b)+"<br>");//true
+					document.writeln((a>b)+"<br>");//false
+					document.writeln((a>=b)+"<br>");//false
+					document.writeln((a<b)+"<br>");//true
+				    document.writeln((a<=b)+"<br>");//true
+				</script>
+	</body>
+</html>
+
+3)Bitwise Operators
+------------------
+Operator		Description
+--------		-----------
+&			Bitwise AND
+|			Bitwise OR
+^			Bitwise XOR
+~			Bitwise NOT
+<<			Bitwise left shift
+>>			Bitwise Right shift
+
+
+& -Truth Table
+--------------
+T	T	= T
+
+T	F	= F
+
+F	T	= F
+
+F	F 	= F
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.write((5 & 10)+"<br>");//
+				/* 
+					5  :  0101
+					10 :  1010 <-
+					-----------
+					&  :  0000
+							  <-
+					0*1  +  0*2   +  0*4   +  0*8	
+							
+					0 + 0 + 0 + 0 
+					= 0
+				*/			
+				</script>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.write((10 & 15)+"<br>");//
+				/* 
+					10 :  1010
+					15 :  1111 <-
+					-----------
+					&  :  1010
+							  <-
+					0*1  +  1*2   +  0*4   +  1*8	
+							
+					0 + 2 + 0 + 8 
+					= 10
+				*/			
+				</script>
+	</body>
+</html>
+
+
+	
+
+
+| - Truth table
+-------------------
+T	T	= T
+T	F	= T
+F	T	= T
+F	F	= F
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.write((10 | 15)+"<br>");//
+				/* 
+					10 :  1010
+					15 :  1111 <-
+					-----------
+					|  :  1111
+							  <-
+					1*1  +  1*2   +  1*4   +  1*8	
+							
+					1 + 2 + 4 + 8 
+					= 15
+				*/			
+				</script>
+	</body>
+</html>
+
+
+
+^ - Truth table
+-----------------
+T	T	= F
+T	F	= T
+F	T	= T
+F	F	= F
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.write((10 ^ 15)+"<br>");//
+				/* 
+					10 :  1010
+					15 :  1111 <-
+					-----------
+					^  :  0101 
+							  <-
+					1*1  +  0*2   +  1*4   +  0*8	
+							
+					1 + 0 + 4 + 0 
+					= 5
+				*/			
+				</script>
+	</body>
+</html>
+
+
+~ - Bitwise NOT
+----------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.writeln((~10)+"<br>");//-11
+				document.writeln((~45)+"<br>");//-46
+				document.writeln((~(-5))+"<br>");//4
+				</script>
+	</body>
+</html>
+
+<< - Bitwise left shift
+-------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.write((10<<1)+"<br>");//10*2
+				document.write((10<<2)+"<br>");//10*4
+				document.write((10<<3)+"<br>");//10*8
+				document.write((10<<4)+"<br>");//10*16
+				
+				</script>
+	</body>
+</html>
+
+>> - Bitwise Right shift
+-------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.write((10>>1)+"<br>");//10/2
+				document.write((10>>2)+"<br>");//10/4
+				document.write((10>>3)+"<br>");//10/8
+				document.write((10>>4)+"<br>");//10/16
+				
+				</script>
+	</body>
+</html>
+
+4)Logical Operators
+--------------------
+Operator		Description
+-------			-------------
+&&			Logical AND
+||			Logical OR
+!			Logical NOT
+
+Logical AND - &&
+-----------------
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.writeln(((10==20) && (20==30))+"<br>");//false
+				document.writeln(((10==10) && (20==20))+"<br>");//true
+				document.writeln(((10==10) && (20==30))+"<br>");//false
+				</script>
+	</body>
+</html>
+
+
+Logical OR - ||
+-----------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.writeln(((10==20) || (20==30))+"<br>");//false
+				document.writeln(((10==10) || (20==20))+"<br>");//true
+				document.writeln(((10==10) || (20==30))+"<br>");//true
+				</script>
+	</body>
+</html>
+
+Logical NOT
+------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				document.writeln((10==20)+"<br>");//false
+				document.writeln(!(10==20)+"<br>");//true
+						
+				</script>
+	</body>
+</html>
+
+5)Assignment Operators
+=======================
+Operator		Description
+--------		-------------
+=			Assignment
++=			Add and Assign
+-=			Subtract and Assign
+*=			Multiply and Assign
+/=			Divide and Assign
+%=			modulus and Assign
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				var i;
+				document.writeln(i+"<br>"); //undefined 
+				i=10;
+				document.writeln(i+"<br>"); // 10
+				i+=10; // i= i+10
+				document.writeln(i+"<br>"); // 20
+				i-=10; // i= i-10
+				document.writeln(i+"<br>"); // 10		
+				</script>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				var i=10;
+				document.writeln(i+"<br>"); // 10
+				i*=2; //i =i*2
+				document.writeln(i+"<br>"); // 20
+						
+				</script>
+	</body>
+</html>
+
+6)Special Operators
+-----------------------
+Operator 		Description
+-------			-----------
+(?:)			condition operator returns value based on the condition.
+
+new 			creates and instance (object).
+
+typeof			It checks the type of an object.
+
+void 			It discards the expression's return value.
+
+?: - Condition operator
+----------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				
+				document.writeln(((1==1)?1:0)+"<br>"); // 1
+				document.writeln(((1==10)?1:0)+"<br>"); // 0	
+				document.writeln(((1==1)?"true":"false")+"<br>"); // true		
+				</script>
+	</body>
+</html>
+
+Q)What is the difference between "==" and "===" equals operator?
+
+ans)
+==
+---
+	It is used to compare two variable values are same or not.
+
+===
+----
+	It is used to compare two variable values as well as it will check
+	type of a value are same or not.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				
+				document.writeln((0==false)+"<br>"); // true
+				document.writeln((0===false)+"<br>"); // false
+				/* == values should match and datatypes */
+					 
+				
+				</script>
+	</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>	
+				
+				document.writeln((10=="10")+"<br>"); // true
+				document.writeln((10==="10")+"<br>"); // false
+					 
+				
+				</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

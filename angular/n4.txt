@@ -1,0 +1,482 @@
+Example Application 3
+=======================
+1)We must call the SecondComponent "selector" in FirstComponent 
+  template file (html file).
+
+2)Bootstrap the FirstComponent.
+
+3)If we bootstrap FirstComponent internally SecondComponent should
+  also execute.
+
+Project Structure
+------------------
+FirstProj
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html (template file)(default component)
+		|----app.component.spec.ts (unit testing file)
+		|----app.component.ts (typescript file)
+		|----app.component.css (css file)
+
+		|--first.component.ts  (custom component)
+		|--first.component.html (custom component)
+
+		|--second.component.ts  (custom component)
+		|--second.component.html (custom component)
+
+		|----app.module.ts (configuration file)
+		|
+	|------index.html (main template)
+	|
+|------package.json (to check versions)
+
+
+first.component.ts
+-----------------------
+import { Component} from "@angular/core";
+
+@Component({
+        selector:"first",
+        templateUrl:"./first.component.html"
+})
+export class FirstComponent
+{
+    private var_one:String;
+    private var_two:String;
+    private var_three:String;
+    constructor(){
+            this.var_one="Angular7";
+            this.var_two="MongoDB";
+            this.var_three="MeanStack";
+    }
+    public getVarOne():String{
+        return this.var_one;
+    }
+    public getVarTwo():String{
+        return this.var_two;
+    }
+    public getVarThree():String{
+        return this.var_three;
+    }
+}
+
+
+
+
+first.component.html
+----------------------
+<h1 style="color:red">{{ getVarOne() }}</h1>
+
+<h1 style="color:blue">{{ getVarTwo() }}</h1>
+
+<h1 style="color:green">{{ getVarThree() }}</h1>
+
+<second></second>
+
+
+
+second.component.ts
+---------------------
+import {Component} from "@angular/core";
+@Component({
+    selector:"second",
+    templateUrl:"./second.component.html"
+})
+export class SecondComponent
+{
+    //variable
+    private var_four:String;
+
+    //constructor
+    constructor(){
+        this.var_four="NodeJS";
+    }
+
+    //methods or functions
+    public getVarFour():String{
+        return this.var_four;
+    }
+}
+
+
+second.component.html
+----------------------
+<h1 style="color:greenyellow">{{ getVarFour() }}</h1>
+
+
+app.module.ts
+--------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { FirstComponent } from './first.component';
+import { SecondComponent } from './second.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FirstComponent,
+    SecondComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [FirstComponent]
+})
+export class AppModule { }
+
+
+
+index.html
+-------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FirstProj</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+ <first></first>
+</body>
+</html>
+
+Angular 7 Pipes(|)
+===================
+In Angular 1, Filters are use to transform the data.
+
+In Angular 2, Filters are also known as Pipes.
+
+In Angular7 , Pipes are used to transform the data.
+
+Pipe is denote by  '|'  symbol.
+
+syntax
+-------
+	{{ var_name | predefine_pipe_name }}
+
+Pipe takes integers , Strings , json , Arrays and date as a input 
+seperated with '|' symbol.
+
+PIPE transform the data in the format as required and display the 
+same output in the browser window.
+
+PIPEs are divided into two types.
+
+1)Predefine pipes
+
+2)Custom Pipes.
+
+
+1)Predefine pipes
+---------------------
+Built-In pipes are called predefine pipes.
+
+
+Project Structure
+------------------
+pipeProj1
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html (template file)(default component)
+		|----app.component.spec.ts (unit testing file)
+		|----app.component.ts (typescript file)
+		|----app.component.css (css file)
+
+		|--pipe.component.ts  (custom component)
+		|--pipe.component.html (custom component)
+
+		|----app.module.ts (configuration file)
+		|
+	|------index.html (main template)
+	|
+|------package.json (to check versions)
+
+
+D/Dummy> ng new pipeProj1
+
+
+pipe.component.ts
+-----------------
+import {Component} from "@angular/core";
+@Component({
+	selector: "pipe",
+	templateUrl :"./pipe.component.html"
+})
+export class PipeComponent
+{
+	//string variables
+	 var_one:String="this is angular7";
+
+	//private modifier is optional
+	var_two:String="This is Pipe Class";
+
+	
+	//json
+	var_three:any={"p_id":111,"p_name":"SONY","p_price":1000};
+
+
+	//Date 
+	d=new Date();
+
+	//arrays
+	months:any=["JAN","FEB","MAR","APR","MAY","JUN","JULY"];
+	
+}
+
+pipe.component.html
+----------------------
+<h1 style="color:red">{{ var_one | uppercase}}</h1>
+
+<h1 style="color:red">{{ var_two | lowercase}}</h1>
+
+<h1 style="color:red">{{ var_three | json}}</h1>
+
+<h1 style="color:red">{{ d | date:'d/M/y'}}</h1>
+
+<h1 style="color:red">{{ d | date:'shortTime'}}</h1>
+
+<h1 style="color:red">{{ months | slice:2:6}}</h1>
+
+<h1 style="color:red">{{ months | slice:4:7}}</h1>
+
+app.module.ts
+---------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { PipeComponent } from './pipe.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    PipeComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [PipeComponent]
+})
+export class AppModule { }
+
+index.html
+------------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PipeProj</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+ <pipe></pipe>
+</body>
+</html>
+
+To Run the project
+-------------------
+	D:\Dummy>cd pipeProj
+	D:\Dummy\pipeProj> npm start
+
+Request url
+-----------
+	http://localhost:4200
+
+
+2)Custom Pipes
+================
+Pipes which are create by the programmer are called Custom Pipes.
+
+To create a Custom Pipe ,create a new ".ts"typescript file and write 
+the code for pipe according to the requirement.
+
+Pipe and PipeTransform are used to create Pipes in Angular and both
+are present in "@angular/core" package.
+
+Pipe is a predefine class and PipeTransform is a predefine interface.
+
+
+PipeTransform interface contains only one abstract method called 
+transform() method. 
+
+Interface is a collection of abstract methods i.e incomplete methods
+(methods with no body).
+
+
+step1:
+------
+	create a Project.
+
+	D:/Dummy> ng new pipeProj2
+
+
+Project Structure
+------------------
+pipeProj2
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html (template file)(default component)
+		|----app.component.spec.ts (unit testing file)
+		|----app.component.ts (typescript file)
+		|----app.component.css (css file)
+
+		|--my.pipe.ts (custom ts file)
+		|
+		|--pipe.component.ts  (custom component)
+		|--pipe.component.html (custom component)
+
+		|----app.module.ts (configuration file)
+		|
+	|------index.html (main template)
+	|
+|------package.json (to check versions)
+
+
+step2:
+-----
+	create "my.app.ts" file for Custom pipe.
+
+my.app.ts
+--------
+import {Pipe , PipeTransform} from "@angular/core";
+@Pipe({
+    name:"sqrt"
+})
+export class SqrtPipe implements PipeTransform
+{
+    transform(val:number):number{
+            return Math.sqrt(val);
+    }
+}
+
+step3:
+------
+	create a custom component "pipe.component.ts" file.
+
+pipe.component.ts
+-----------------
+import {Component} from "@angular/core";
+@Component({
+    selector:"pipe",
+    templateUrl:"./pipe.component.html"
+})
+export class PipeComponent{
+    //keep empty
+}
+
+step4:
+------
+	call custom pipe inside "pipe.component.html" file.
+pipe.component.html
+--------------------
+<h1 style="color:blue">{{ 25 | sqrt}}</h1>
+
+
+step5:
+--------
+	Register Pipe and Component inside "app.module.ts" file.
+app.module.ts
+-------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { SqrtPipe } from './my.pipe';
+import { PipeComponent } from './pipe.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SqrtPipe,
+    PipeComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [PipeComponent]
+})
+export class AppModule { }
+
+step6:
+--------
+	Add "Pipe.component.ts" selector inside main template file.
+
+index.html
+--------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PipeProj2</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <pipe></pipe>
+</body>
+</html>
+
+step7:
+------
+	Run the Angular project.
+
+	D:/Dummy> cd pipeProj2
+
+	D:/Dummy/pipeProj2> npm start
+
+
+step8:
+-----
+	Test the the application .
+	ex:
+	http://localhost:4200
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+

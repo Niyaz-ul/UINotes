@@ -1,0 +1,748 @@
+JavaScript Functions
+=====================
+A JavaScript functions is a block of code designed to perform a perticular task.
+
+A Javascript function is defined with the function keyword,followed by name
+and followed by parentheses().
+
+Function Name can contains letters,digits,underscore and doller symbol i.e same
+rule as variables.
+
+The parentheses may include parameter names seperated with comma.
+ex:
+	function fun_name(parameter1,parameter2,....,parameterN)
+	{
+	//	logic to evaluate
+	}
+
+A JavaScript function is executed when something invokes/calls it.
+
+1)When an event occurs.(When user clicks a button).
+
+2)When it is invoked from javascript code.
+
+3)Automatically (self invoked)
+
+
+2)When it is invoked from javascript code.
+-----------------------------------------
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+					//callie function
+					function f1()
+					{
+						
+							document.writeln("Hello World");
+						
+					}
+					//caller function
+					f1();
+				</script>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+					//callie function
+					function f1()
+					{
+						
+							document.bgColor="#FF0000";
+						
+					}
+					//caller function
+					f1();
+				</script>
+	</body>
+</html>
+
+1)When an event occurs.
+-------------------------
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+	</head>
+	<body>
+				<script>
+					//callie function
+					function f1()
+					{
+						document.writeln("This is JavaSCript Function");
+						
+					}
+				</script>
+				<button onclick="f1()">Click</button 
+	</body>
+</html>
+
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<script>
+					//callie function
+					function f1()
+					{
+						document.writeln("This is JavaScript");
+						
+					}
+			</script>
+	</head>
+	<body>
+				
+				<button onclick="f1()">Click</button>
+	</body>
+</html>
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			<script>
+					//callie function
+					function f1()
+					{
+						document.bgColor="red";
+						
+					}
+			</script>
+	</head>
+	<body>
+				
+				<button onclick="f1()">Click</button>
+	</body>
+</html>
+
+
+function with no argument
+-------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					//callie function
+					function f1()
+					{
+						document.writeln("no-arg method");
+						
+					}
+					
+					//caller function
+					f1();
+			</script>
+	</body>
+</html>
+
+function with arguments
+------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					//callie function
+					function f1(number)
+					{
+						document.writeln(number*number);
+						
+					}
+					
+					//caller function
+					f1(5);
+			</script>
+	</body>
+</html>
+
+with return type with no parameter function
+======================================
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					//callie function
+					function f1()
+					{
+						var n=6;
+						return n*n;
+						
+					}
+					
+					//caller function
+					document.writeln(f1());
+			</script>
+	</body>
+</html>
+
+with return type with argument function
+----------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					//callie function
+					function f1(n)
+					{
+						
+						return n*n;
+						
+					}
+					
+					//caller function
+					document.writeln(f1(5));
+			</script>
+	</body>
+</html>
+
+Every JavaScript function Name is a case sensitive.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					
+					function f1()
+					{
+						document.writeln("this is f1 function");
+					}
+					//caller
+					f1(); //valid
+					F1(); //invalid
+					
+					
+				</script>
+	</body>
+</html>
+
+In JAvaScript one function can call another function.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					
+					function f1()
+					{
+						document.writeln("This is f1 function");
+						//caller function
+						f2();
+					}
+					function f2()
+					{
+						document.writeln("This is f2 function");
+					}
+					//caller
+					f1();
+					
+					
+				</script>
+	</body>
+</html>
+
+Function Object
+=================
+The purpose of Function constructor is to create a new Function object.
+
+It execute the code globally.
+
+However, if we call constructor directly ,a function is created dynamically but 
+in a unsecured way.
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					var sum=new Function("a","b","return a+b");
+					//caller 
+					document.writeln(sum(10,20));
+					
+					
+				</script>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					var power=new Function("a","b","return Math.pow(a,b)");
+					//caller 
+					document.writeln(power(5,3));
+					
+					
+				</script>
+	</body>
+</html>
+
+JavaScript objects
+=====================
+A JavaScript object is an entity having state and behaviour.
+
+In General, It is a collection of properties and functions.
+
+JavaScript is  an object-based language because everything is an object in JavaScript.
+
+JavaScript is a template based but not class based.so we don't need to create
+ class to  get objects.But directly we can create objects.
+
+There are 3 ways to create function objects.
+
+1)By Object Literal
+
+2)By creating instance of object directly i.e using new keyword.
+
+3)By using object constructor i.e using new keyword.
+
+1)By Object Literal
+-------------------
+syntax
+------
+	object={ property1 : value1,
+		 property2 : value2,	
+		 -
+		 -
+		propertyN : valueN
+	       }
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+					emp={
+						 eid : 111,
+					     ename : "Alan",
+						 esal : 10000 
+						 }
+				document.writeln("Employee Id ="+emp.eid+"<br>");	
+				document.writeln("Employee Name ="+emp.ename+"<br>");
+				document.writeln("Employee Salary ="+emp.esal+"<br>");		
+				</script>
+	</body>
+</html>
+
+2)By creating instance of object directly 
+------------------------------------------
+syntax
+------
+	var obj_name=new Object();
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var emp=new Object();
+				emp.eid=101;
+				emp.ename="BernersLee";
+				emp.esal="20000";
+				document.writeln("Employee Id ="+emp.eid+"<br>");	
+				document.writeln("Employee Name ="+emp.ename+"<br>");
+				document.writeln("Employee Salary ="+emp.esal+"<br>");		
+				</script>
+	</body>
+</html>
+
+
+3)By using object constructor 
+-------------------------------
+We need to create a function with arguments and each argument can be assigned
+in the current object by using "this" keyword.
+
+"this" keyword refers to current object.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				function emp(eid,ename,esal)
+				{
+					this.eid=eid;
+					this.ename=ename;
+					this.esal=esal;
+				}
+				e=new emp(111,"Alan",10000);
+				document.writeln("Employee Id ="+e.eid+"<br>");	
+				document.writeln("Employee Name ="+e.ename+"<br>");
+				document.writeln("Employee Salary ="+e.esal+"<br>");		
+				</script>
+	</body>
+</html>
+
+JavaScript Arrays
+===================
+JavaScript array is an object that represents collection of similar type of 
+elements.
+
+There are 3 ways to construct array in javascript.
+
+1)By Array Literal
+
+2)By creating instance of Array
+
+3)By using Array constructor.
+
+
+1)By Array Literal
+--------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var names=["Alan","Jessie","Erick","Maria"];	
+				var i;
+				for(i=0;i<names.length;i++)	
+				{
+						document.writeln(names[i]+" ---- "+i+"<br>");
+				}	
+				
+							
+				</script>
+	</body>
+</html>
+
+ex:2
+---
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var arr=[10,30,40,5,3];	
+				var i;
+				for(i=0;i<arr.length;i++)	
+				{
+						document.writeln(arr[i]+" ---- "+i+"<br>");
+				}	
+							
+				</script>
+	</body>
+</html>
+
+
+2)By creating instance of Array
+--------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var arr=new Array();
+				arr[0]="Jose";
+				arr[1]="Jasper";
+				arr[2]="Jasmine";
+				arr[3]="Sam";
+				
+				var i;
+				for(i=0;i<arr.length;i++)	
+				{
+						document.writeln(arr[i]+" ---- "+i+"<br>");
+				}	
+							
+				</script>
+	</body>
+</html>
+
+
+3)By using Array constructor.
+---------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var arr=new Array("HTML","CSS","BOOTSTRAP","ANGULAR7");
+				
+				var i;
+				for(i=0;i<arr.length;i++)	
+				{
+						document.writeln(arr[i]+" ---- "+i+"<br>");
+				}	
+							
+				</script>
+	</body>
+</html>
+
+JavaScript String
+=====================
+The JavaScript string is an object that represents a sequences of characters.
+
+There are 2 ways to create string in JavaScript.
+
+1)By String literal
+
+2)By String object.
+
+1)By String literal
+---------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var str="This is JS string";
+				document.writeln(str);
+							
+				</script>
+	</body>
+</html>
+
+2)By String object.
+---------------------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage!</title>
+			
+	</head>
+	<body>
+				
+				<script>
+				var str=new String("This is JavaScript String");
+				document.writeln(str);
+							
+				</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

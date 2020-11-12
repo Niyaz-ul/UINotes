@@ -1,0 +1,1094 @@
+Series Calls
+==============
+Executing server calls with dependency is called series calls.
+
+To perform series calls we need to use following urls.
+
+ex:
+	https://www.w3schools.com/angular/customers.php
+
+	http://restcountries.eu/rest/v2/all
+
+create a Project
+----------------
+	D:/Dummy> ng new SeriesCall
+
+Project structure
+----------------
+SeriesCall
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html   (default component)
+		|----app.component.spec.ts
+		|----app.component.ts
+		|----app.component.css
+		|
+		|----services (custom folder)
+			|
+			|-----customers.service.ts
+			|-----countries.service.ts
+			|
+		|
+		|
+		|----components (custom folder)
+		|	|
+		|	|-----series.component.ts
+		|	|-----serries.component.html
+		|	
+		|----app.module.ts (configuration file)
+	|
+	|------index.html (main template)
+	|
+	|------package.json (to check versions)
+
+customers.service.ts
+------------------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+
+export class CustomersService
+{
+	//dependency for HttpClient
+	constructor(private http:HttpClient){}
+
+	//call the rest api.
+	public getCustomers():any{
+		return this.http.get("https://www.w3schools.com/angular/customers.php");
+	}
+}
+
+
+countries.service.ts
+---------------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+
+export class CountriesService
+{
+	//dependency for HttpClient
+	constructor(private http:HttpClient){}
+
+	//call the rest api.
+	public getCountries():any{
+		return this.http.get("http://restcountries.eu/rest/v2/all");
+	}
+}
+
+series.component.ts
+-----------------------
+import {Component} from "@angular/core";
+import {HttpErrorResponse} from "@angular/common/http";
+import { CustomersService } from '../services/customers.service';
+import { CountriesService } from '../services/countries.service';
+@Component({
+    selector:"series",
+    templateUrl:"./series.component.html"
+})
+export class SeriesComponent
+{
+    //variables
+    public result1:any;
+    public result2:any;
+    
+    //dependency injection for services
+    constructor(private service1:CustomersService,
+        private service2:CountriesService){}
+
+    //life cycle method to call services methods
+    ngOnInit()
+    {
+        //calling first service.
+        this.service1.getCustomers().subscribe(res=>
+            {
+                this.result1=res;
+                  //calling second service
+                  this.service2.getCountries().subscribe(res=>
+                    {
+                        this.result2=res;
+                    },(err:HttpErrorResponse)=>
+                    {
+                            if(err.error instanceof Error)
+                            {
+                                console.log("Client Side Error");
+                            }
+                            else
+                            {
+                                console.log("Server side Error");
+                            }
+                    })  ;
+
+            },(err:HttpErrorResponse)=>
+            {
+                if(err.error instanceof Error)
+                {
+                    console.log("Client Side Error");
+                }
+                else{
+                    console.log("Server side Error");
+                }
+            });
+    }    
+
+}
+
+series.component.html
+---------------------
+<h5 style="color:red">{{ result1 | json}}</h5>
+
+<hr style="height:2px;background-color: purple;"/>
+
+<h5 style="color:blue">{{ result2 | json}}</h5>
+
+
+app.modules.ts
+---------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { SeriesComponent } from './components/series.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomersService } from './services/customers.service';
+import { CountriesService } from './services/countries.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SeriesComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [CustomersService,CountriesService],
+  bootstrap: [SeriesComponent]
+})
+export class AppModule { }
+
+index.html
+-----------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SeriesCall</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <series></series>
+</body>
+</html>
+
+Run the Angular project
+--------------------
+	D:/Dummy> cd SeriesCall
+
+	D:/Dummy/SeriesCall> npm start
+
+Test the application
+------------------
+	http://localhost:4200
+
+Parallel Calls
+================
+Executing Server Calls without dependency is called parallel calls.
+
+To perform parallel calls we need to use following urls.
+
+ex:
+ex:
+	https://www.w3schools.com/angular/customers.php
+
+	http://restcountries.eu/rest/v2/all
+
+create a Project
+----------------
+	D:/Dummy> ng new ParallelCall
+
+Project structure
+----------------
+ParallelCall
+|
+|------src
+	|
+	|------app
+		|
+		|----app.component.html   (default component)
+		|----app.component.spec.ts
+		|----app.component.ts
+		|----app.component.css
+		|
+		|----services (custom folder)
+			|
+			|-----customers.service.ts
+			|-----countries.service.ts
+			|
+		|
+		|
+		|----components (custom folder)
+		|	|
+		|	|-----parallel.component.ts
+		|	|-----parallel.component.html
+		|	
+		|----app.module.ts (configuration file)
+	|
+	|------index.html (main template)
+	|
+	|------package.json (to check versions)	
+
+customers.service.ts
+------------------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+
+export class CustomersService
+{
+	//dependency for HttpClient
+	constructor(private http:HttpClient){}
+
+	//call the rest api.
+	public getCustomers():any{
+		return this.http.get("https://www.w3schools.com/angular/customers.php");
+	}
+}
+
+
+countries.service.ts
+---------------------
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+
+export class CountriesService
+{
+	//dependency for HttpClient
+	constructor(private http:HttpClient){}
+
+	//call the rest api.
+	public getCountries():any{
+		return this.http.get("http://restcountries.eu/rest/v2/all");
+	}
+}
+
+parallel.series.component.ts
+------------------------------
+import {Component } from "@angular/core";
+import {HttpErrorResponse } from "@angular/common/http";
+import { CountriesService } from '../services/countries.service';
+import { CustomersService } from '../services/customers.service';
+import { forkJoin } from 'rxjs';
+@Component({
+    selector:"parallel",
+    templateUrl:"./parallel.component.html"
+})
+export class ParallelComponent
+{
+    //variables
+    public result1:any;
+    public result2:any;
+
+    //dependency injection for services
+    constructor(private service1:CustomersService,
+               private service2:CountriesService){}
+
+    //call life cycle method
+    ngOnInit()
+    {
+        forkJoin([this.service1.getCustomers(),
+                  this.service2.getCountries() ]).subscribe(res=>
+                    {
+                        this.result1=res[0];
+                        this.result2=res[1];
+                    },(err:HttpErrorResponse)=>
+                    {
+                        if(err.error instanceof Error)
+                        {
+                            console.log("Client Side Error");
+                        }
+                        else{
+                            console.log("Server Side Error");
+                        }
+                    });
+    }           
+}
+
+parallel.component.html
+----------------------
+<h5 style="color:red">{{ result1 | json}}</h5>
+
+<hr style="height:2px;background-color: purple;"/>
+
+<h5 style="color:blue">{{ result2 | json}}</h5>
+
+
+app.modules.ts
+-------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomersService } from './services/customers.service';
+import { CountriesService } from './services/countries.service';
+import { ParallelComponent } from './components/parallel.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ParallelComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [CustomersService,CountriesService],
+  bootstrap: [ParallelComponent]
+})
+export class AppModule { }
+
+
+index.html
+---------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SeriesCall</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <parallel></parallel>
+</body>
+</html>
+
+Run the Angular project
+--------------------
+	D:/Dummy> cd ParallelCall
+
+	D:/Dummy/ParallelCall> npm start
+
+Test the application
+--------------------
+http://localhost:4200/
+
+
+Node Integration
+=====================
+Node is a server side Scripting language.
+
+Using Node we can develop Http and TCP servers.
+
+We can develop Node Applications using Javascript.
+
+Node servers are light weight servers when compare to other servers.
+
+Node supports modules i.e predefine modules and Customized modules.
+
+Modules in NodeJS
+--------------------
+1)express
+---------
+	This module is used to develop REST API.
+
+2)mysql
+----------
+	This module used to interact with mysql database.
+
+3)mongodb
+-----------
+	Mongodb module is used to interact with mongodb database.
+	The stable version of mongodb is @2.2.23.
+
+4)msql
+------
+	This module i used to interact with sql server.
+
+5)fs
+----
+	fs stands for file system.
+	fs module is a native module.
+	using fs module we can interact with flat files.
+6)body-parser
+---------------
+	This module is used to set the MIME type.
+	This module is used to read the post parameters in REST API's.
+7)jwt-simple
+------------
+	This module is used to generat tokens.
+	jwt means Java web tokens.
+
+8)http
+------
+	This module is used to create http server.
+
+9)socket.io
+-------------
+	This module is used to implement the chat applications.
+
+and etc.
+
+
+We can download the above modules by using "npm"  or "yarn" tool.
+
+No need to download any native moduels.
+
+Native moduels available along with Node Engine.
+
+npm stands for Node packing manager.
+
+yarn is a packaging manager used to download the nodejs modules 
+in faster manner.
+
+yarn is a latest tool to download the node modules.
+
+we can install yarn by using following command.
+ex:
+	cmd> npm install -g yarn
+
+We can download the node modules by using following commands.
+ex:
+	yarn add express --save
+	yarn add mysql --save
+	yarn add mongodb --save
+
+All the modules will be dowloaded to "node_modules" folder in 
+current path.
+
+We can start Node server by using following command.
+syntax
+------
+	node file_name
+ex:
+	node server 
+
+
+Interacting with static files
+-------------------------------
+step1:
+-----
+	create a  Angular project "FlatFileProj".
+	ex:
+		D:/Dummy> ng new FlatFileProj
+
+step2:
+------
+	
+	create a static file sample.json inside server folder.
+
+	FlatFileProj
+	|
+	|------src
+	|	
+	|----server
+		|
+		|----sample.json.
+sample.json
+-------------
+[
+{"pid":111,"pname":"SONY","pprice":10000},
+{"pid":222,"pname":"LG","pprice":20000},
+{"pid":333,"pname":"LAVA","pprice":30000},
+{"pid":444,"pname":"MI","pprice":40000},
+{"pid":555,"pname":"HONDA","pprice":50000}
+]
+
+
+Here Angular is a FrontEnd and Nodejs is a Backend for sample.json.
+
+Simple Server side JAvascript program is called Node.
+
+Download "express" module and "fs" modules  by using yarn.
+ex:
+	D:/Dummy>yarn add express --save
+	D:/Dummy>yarn add fs --save
+
+
+step3:
+-------
+	implement NodeJs application.
+
+	FlatFileProj
+	|
+	|------src
+	|	
+	|
+	|---server
+		|---server.js
+
+server.js
+---------
+//import express module
+var express=require("express");
+
+//import fs module
+var fs=require("fs");
+
+//create a Rest object
+var app=express();
+
+//enable the CORS
+//http://enable-cors.org/server_expressjs.html
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
+//display rest api 
+// '/sample' it is a url pattern
+app.get("/sample",function(req,res){
+    fs.readFile("../server/sample.json",
+    function(err,data)
+    {
+        res.send(data);
+    });
+});
+
+
+//display port no
+app.listen(9898);
+console.log("server listening port no 9898");
+
+
+Note:
+-----
+	Communication between two port numbers is called 
+	enabling the CORS.
+	
+	To create a webservices we need to create a master object
+	by using express() method.
+
+step4:
+-----
+	start nodejs server.
+	ex:
+	D:dummy>cd FlatFileProj
+	D:/dummy/FlatFileProj>cd server 
+	D:/dummy/FlatFileProj/server>node server
+
+step5:
+-----
+	check the following REST API in POSTMAN tool.
+
+	ex:
+	method	url 
+	------	---
+	GET 	http://localhost:9898/sample
+
+
+step6:
+------
+create a  "static.service.ts" file inside "services" folder.
+ex:
+FlatFileProj
+	|
+	|------src
+	|	|
+		|-----app		
+			|
+			|------services(custom folder)
+				|
+				|---static.service.ts
+
+
+static.service.ts
+-----------------
+import {Inject, Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+@Injectable()
+export class StaticService
+{
+    //dependency injection for HttpClient
+    constructor(private http:HttpClient){}
+
+    //call rest api (node js url)
+    public getFileDetails():any{
+        return this.http.get("http://localhost:9898/sample");
+    }
+}
+
+step7:
+----
+create "static.component.ts" and "static.component.html" file 
+inside "components" folder.
+ex:
+FlatFileProj
+	|
+	|------src
+	|	|
+		|-----app		
+			|
+			|------components(custom folder)
+				|
+				|---static.component.ts
+				|---static.component.html
+
+static.component.ts
+--------------------
+import {Component} from "@angular/core";
+import {HttpErrorResponse } from "@angular/common/http";
+import { StaticService } from '../services/static.service';
+import { ConsoleReporter } from 'jasmine';
+@Component({
+    selector:"static",
+    templateUrl:"./static.component.html"
+})
+export class StaticComponent
+{
+    //variable
+    public result:any;
+
+    //dependency injection for service
+    constructor(private service:StaticService){}
+
+    //call service method
+    ngOnInit()
+    {
+            this.service.getFileDetails().subscribe(res=>
+                {
+                    this.result=res;
+                },(err:HttpErrorResponse)=>
+                {
+                    if(err.error instanceof Error)
+                    {
+                        console.log("Client Side Error");
+                    }
+                    else{
+                        console.log("Server Side Error");
+                    }
+                });
+
+    }
+}
+
+static.component.html
+-----------------------
+<h1 style="color:blue">{{ result | json}}</h1>
+
+
+step8:
+-------
+	Register Services ,components and modules in app.module.ts file.
+
+app.module.ts
+---------------
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { StaticComponent } from './components/static.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StaticService } from './services/static.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    StaticComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [StaticService],
+  bootstrap: [StaticComponent]
+})
+export class AppModule { }
+
+
+step9:
+=====
+place component selector in main template(index.html) file.
+
+index.html
+-----------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FlatFileProj</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <static></static>
+</body>
+</html>
+
+step10:
+-----
+	goto/jump to  angular project in another command prompt.
+		
+	ex:
+	D:Dummy> cd   FlatFileProj
+step11:
+-------
+	Run the angular project(make sure node server is running).
+	ex:
+	D:/Dummy/FlatFileProj> npm start
+
+step12:
+-----
+	Test the application 
+	ex:
+	http://localhost:4200
+	
+SPA
+====
+Loading one template to another template without refreshing th
+whole web page is called as single page application.
+
+loading one template to another template in SPA is called Routing.
+
+we will implement the Routing by using predefined Array called 
+as "Routes".
+
+"Route" is a predefined class used to define the Dynamic url's.
+
+"Routes","RouterModule" and "Route" available in "@angular/route"
+package/module.
+
+Project structure
+------------------
+SPAProj
+|
+|------src
+	|	
+	|-----app		
+		|
+		|-----components
+			|		
+			|-----index		
+				|	
+			|	|---index.component.ts
+			|	|---index.component.html(only write html file)
+			|	|---index.component.css
+			|	|---index.component.spec.ts
+			|
+			|-----pageone
+			|	|
+			|	|----pageone.component.ts
+			|	|----pageone.component.html
+			|	|----pageone.component.css
+			|	|----pageone.component.spec.ts
+			|
+			|-----pagetwo
+			|	|
+			|	|----pagetwo.component.ts (declare and initialize variable)
+			|	|----pagetwo.component.html (print the variable)
+			|	|----pagetwo.component.css
+			|	|----pagetwo.component.spec.ts
+			|
+			|-----pagethree
+			|	|		
+			|	|
+			|	|----pagethree.component.ts
+			|	|----pagethree.component.html
+			|	|----pagethree.component.css
+			|	|----pagethree.component.spec.ts
+
+		|
+		|----routes( folder)
+			|
+			|----app.routes.ts
+			|
+		|----app.module.ts
+	|
+	|-----index.html
+	
+
+Step 1:
+		create the angular application
+
+			> ng new SPAProj
+Step2:
+		Generate the Components By using Following Command.
+
+
+		D:Dummy/SPAProj> ng g c components/index
+
+		D:Dummy/SPAProj> ng g c component/pageone
+
+		D:Dummy/SPAProj> ng g c components/pagetwo
+
+		D:Dummy/SPAProj> ng g c components/pagethree
+
+
+		"g" stands for "generate"
+
+		"c" stands for "component".
+
+		where "IndexComponent" is the "Master / Source / Landing" Component.
+
+where "pageoneComponent", "pagetwoComponent"  and "pagethreeComponent" are "target" component.
+
+
+above command will generate the following files.
+		
+		1) style sheet (css file)
+
+		2) external template (html file)
+
+		3) unit testing file  (spec file)
+
+		4) component file (.ts file)
+
+
+Step 3:
+	implement bussiness logic in source component.
+	create the hyperlinks in master template (Presentation Logic)
+
+index.component.html
+----------------------
+<a [routerLink]="['/']"><b>page_one</b></a>  &nbsp;&nbsp;
+<a [routerLink]="['/page_two']"><b>page_two</b></a> &nbsp;&nbsp;
+<a [routerLink]="['/page_three']"><b>page_three</b></a> 
+<br><br>
+<router-outlet></router-outlet>
+
+
+Note:
+------
+	In index component we can write code only in 1 file.
+	keep remaining files as it is(dont't touch those files).
+
+[routerLink] is a attribute type directive.
+[routerLink] directive used to load the target component without refreshing.
+<router-outlet> is the element type directive.
+<router-outlet> directive behaves like place holder.
+Above placeholder used to hold the target components.
+
+
+step4:
+--------
+	implements bussiness logic in target components.
+
+
+pageone.component.ts
+---------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-pageone',
+  templateUrl: './pageone.component.html',
+  styleUrls: ['./pageone.component.css']
+})
+export class PageoneComponent implements OnInit {
+
+  public var_one:string;
+  constructor() { 
+    this.var_one="I am page one";
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+
+pageone.component.html
+----------------------
+<h1 style="color:red">{{var_one}}</h1>
+
+
+pageone.component.ts
+---------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-pageone',
+  templateUrl: './pageone.component.html',
+  styleUrls: ['./pageone.component.css']
+})
+export class PageoneComponent implements OnInit {
+
+  private var_two:string;
+  constructor() { 
+    this.var_two="I am page two";
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+
+pageone.component.html
+----------------------
+<h1 style="color:red">{{var_two}}</h1>
+
+
+pagethree.component.ts
+--------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-pagethree',
+  templateUrl: './pagethree.component.html',
+  styleUrls: ['./pagethree.component.css']
+})
+export class PagethreeComponent implements OnInit {
+ var_three:string;
+
+  constructor() { 
+    this.var_three="I am from PageThree";
+  }
+
+  ngOnInit(): void {
+  }
+
+}
+
+pagethree.component.html
+--------------------------
+<h1 style="color:blue">{{ var_three }}</h1>
+
+
+step4:
+---------
+	implements the Routing.
+
+app
+|
+|---routes
+	|
+	|---app.routes.ts
+
+
+app.routes.ts
+-------------
+import {Routes, Route} from "@angular/router";
+import { PageoneComponent } from '../components/pageone/pageone.component';
+import { PagethreeComponent } from '../components/pagethree/pagethree.component';
+import { PagetwoComponent } from '../components/pagetwo/pagetwo.component';
+export const appRoutes:Routes=[
+
+    {path:"",component:PageoneComponent},
+    {path:"page_two",component:PagetwoComponent},
+    {path:"page_three",component:PagethreeComponent}
+];
+
+step5:
+-------	
+	Register components,services and RouterModule in configuration file.
+
+app.module.ts
+==============
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { IndexComponent } from './components/index/index.component';
+import { PageoneComponent } from './components/pageone/pageone.component';
+import { PagetwoComponent } from './components/pagetwo/pagetwo.component';
+import { RouterModule } from '../../node_modules/@angular/router';
+import { appRoutes } from './routes/app.routes';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    IndexComponent,
+    PageoneComponent,
+    PagetwoComponent
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [],
+  bootstrap: [IndexComponent]
+})
+export class AppModule { }
+
+
+
+step6: display index selector in main template
+--------
+
+index.html
+-----------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SerEx7</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-index></app-index>
+</body>
+</html>
+
+
+step7:
+------
+	run the angular project.
+
+	D:Dummy/SPAProj>npm start 
+	or
+	D:Dummy/SPAProj>ng serve --open
+
+step8:
+------
+	Test the application.
+
+	http://localhost:4200	
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

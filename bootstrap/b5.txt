@@ -1,0 +1,1489 @@
+Bootstrap Glyphicons
+=====================
+Bootstrap icons are provided by Glyphicons.
+
+Bootstrap provide 260 Glypicons.
+
+As Glyphicon are font based,their color and size automatically adjusts to 
+the element color and size on which is being used.
+
+Glyphicons can be used in text,buttons,toolbars,navigation,forms and etc.
+
+We can see list of Glyphicons using below url.
+ex:
+	http://getbootstrap.com/docs/3.3/components/
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+          <span style="color:red;font-size:40px" class="glyphicon glyphicon-heart"></span>
+
+      </div>
+        
+  </body>
+</html>
+
+Display search icon on a button
+----------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+        <!-- left side search icon -->
+          <button>
+              <span class="glyphicon glyphicon-search"></span>Search
+          </button>
+
+          <!-- right side search icon -->
+           <button>
+             Search <span class="glyphicon glyphicon-search"></span>
+          </button>
+
+
+      </div>
+        
+  </body>
+</html>
+
+changing the button color
+---------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+        <!-- left side search icon -->
+          <button class="btn btn-primary btn-lg">
+              <span class="glyphicon glyphicon-search"></span>Search
+          </button>
+
+          <!-- right side search icon -->
+           <button class="btn btn-info btn-lg">
+             Search <span class="glyphicon glyphicon-search"></span>
+          </button>
+
+
+      </div>
+        
+  </body>
+</html>
+
+icon size
+------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+        <!-- left side search icon -->
+          <button class="btn btn-primary btn-lg">
+              <span class="glyphicon glyphicon-search"></span>Search
+          </button>
+
+          <!-- right side search icon -->
+           <button class="btn btn-info btn-sm">
+             Search <span class="glyphicon glyphicon-search"></span>
+          </button>
+
+
+      </div>
+        
+  </body>
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+        <!-- envelope -->
+        <span class="glyphicon glyphicon-envelope"></span>
+
+        <br>
+        <!-- envelope by using link -->
+        <a href="">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </a>
+
+        <br>
+        <!-- print button -->
+        <button>
+            <span class="glyphicon glyphicon-print"></span>Print
+        </button>
+
+
+      </div>
+        
+  </body>
+</html>
+
+
+Bootstrap Wells
+===================
+The "well" class adds a rounded border around an element with the gray 
+background color and some padding.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+        
+          <div class="well">Basic Well </div>
+
+      </div>
+        
+  </body>
+</html>
+
+
+We can change the size of the well by adding the "well-sm" for small well
+and "well-lg" for large well.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+        
+          <div class="well well-sm">small Well </div>
+          <div class="well well-lg">Large Well </div>
+      </div>
+        
+  </body>
+</html>
+
+
+Bootstrap Labels
+===================
+The label component is useful for providing important additional information.
+
+Use "label" class, followed by one of the following contextual classes within
+a <span> element/tag to create a label.
+
+ex:
+label-default
+
+label-primary
+
+label-success
+
+label-info
+
+label-warning
+
+label-danger
+
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="well">
+            <h3>GlobalEdx Current Courses</h3>
+            <hr/>
+            <h4>C language<span class="label label-default">
+                                Basics
+                          </span>
+            </h4>
+
+            <h4>UI Tech<span class="label label-primary">
+                                Beginner
+                          </span>
+            </h4>
+
+            <h4>Java<span class="label label-info">
+                                Intermediate
+                          </span>
+            </h4>
+
+            <h4>.Net<span class="label label-success">
+                                Advanced
+                          </span>
+            </h4>
+            <h4>Python <span class="label label-danger">
+                                Beginner
+                          </span>
+            </h4>
+
+            <h4>DM <span class="label label-warning">
+                                Basics
+                          </span>
+            </h4>
+         </div>
+      </div>
+        
+  </body>
+</html>
+
+Note:
+-----
+All labels adopts heading size only .
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="well">
+            <h3>GlobalEdx Current Courses</h3>
+            <hr/>
+           
+
+            <h4>UI Tech<span class="label label-primary">
+                                Beginner
+                          </span>
+            </h4>
+
+            <h3>Java<span class="label label-info">
+                                Intermediate
+                          </span>
+            </h3>
+
+            <h2>.Net<span class="label label-warning">
+                                Advanced
+                          </span>
+            </h2>
+
+            
+         </div>
+      </div>
+        
+  </body>
+</html>
+
+
+Bootstrap Badges
+=================
+The Badges component is usedful for providing important information like
+number of new messages in your email inbox.
+
+Use the "badge" class within <span> element/tag to create badges.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+          <a href="">News<span class="badge">5 new</span></a>
+
+            <a href="">Comments<span class="badge">10</span></a>
+
+              <a href="">likes<span class="badge">7</span></a>
+
+                <a href="">share<span class="badge">9</span></a>
+      </div>
+        
+  </body>
+</html>
+
+Budges can also be used inside other element like buttons.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+          <button class="btn btn-primary">News<span class="badge">5 new</span></button>
+            <br>
+           <button class="btn btn-success">Comments<span class="badge">8</span></button>
+
+            <br>
+            
+           <button class="btn btn-info">News<span class="badge">9</span></button>
+
+              
+      </div>
+        
+  </body>
+</html>
+
+
+Boostrap Progress Bar
+======================
+A Progress bar is  used for showing the progress of a task such as 
+downloading a file ,software installation and etc.
+
+In general, A progress bar can be used to show a user how far along he/she 
+is in a progress.
+
+To create progress bar we need to use "progress" class inside <div> tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar" style="width:80%">
+                  80%
+                </div>
+          </div>
+              
+      </div>
+        
+  </body>
+</html>
+
+striped progress bar
+--------------------
+To create striped progress bar we need to use "progress-bar-striped" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped" style="width:80%">
+                  80%
+                </div>
+          </div>
+              
+      </div>
+        
+  </body>
+</html>
+
+Problem to display low percentage value in a progress bar
+---------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped" style="width:1%">
+                  1%
+                </div>
+          </div>
+              
+      </div>
+        
+  </body>
+</html>
+
+solution
+-------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped" style="width:1%;min-width: 20px">
+                  1%
+                </div>
+          </div>
+              
+      </div>
+        
+  </body>
+</html>
+
+create a progress bar with different color schema
+------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-success" style="width:1%;min-width: 20px">
+                  1%
+                </div>
+          </div>
+         
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-info" style="width:40%;min-width: 20px">
+                  40%
+                </div>
+          </div>     
+
+          <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-danger" style="width:60%;min-width: 20px">
+                  60%
+                </div>
+          </div>
+
+
+          <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-warning" style="width:80%;min-width: 20px">
+                  80%
+                </div>
+          </div>  
+
+
+      </div>
+        
+  </body>
+</html>
+
+we can activate progress bar by using "active" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-success active" style="width:1%;min-width: 20px">
+                  1%
+                </div>
+          </div>
+         
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-info active" style="width:40%;min-width: 20px">
+                  40%
+                </div>
+          </div>     
+
+          <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-danger active" style="width:60%;min-width: 20px">
+                  60%
+                </div>
+          </div>
+
+
+          <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-warning active " style="width:80%;min-width: 20px">
+                  80%
+                </div>
+          </div>  
+
+
+      </div>
+        
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+         <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-success active" style="width:25%;min-width: 20px">
+                      Login
+                </div>
+      
+                <div class="progress-bar progress-bar-striped progress-bar-info active" style="width:25%;min-width: 20px">
+                    Shipping
+                </div>
+            
+          
+                <div class="progress-bar progress-bar-striped progress-bar-warning active" style="width:25%;min-width: 20px">
+                  payment
+                </div>
+          </div>
+
+
+          
+
+      </div>
+        
+  </body>
+</html>
+
+Bootstrap pager
+==================
+Pages provides previous and next buttons(links).
+
+To create a previous/next buttons,add the pager class to an <ul> element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pager">
+              <li><a href="">&larr;Previous</a></li>
+              <li><a href="">Next&rarr;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+
+we can use the "previous" and "next" classes to align each button to the
+sides of a page.
+ex:
+	
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pager">
+              <li class="previous"><a href="">&larr;Previous</a></li>
+              <li class="next"><a href="">Next&rarr;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+Note:
+-----
+Pagers will be aligned to left and right but not in center.
+
+we can disabled pager by using "disabled " sclass.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pager">
+              <li class="previous disabled"><a href="">&larr;Previous</a></li>
+              <li class="next"><a href="">Next&rarr;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+Bootstrap Pagination
+=====================
+If we have website with lot of pages ,you may wish to add some sort of 
+pagination to each page.
+
+To create a basic pagination ,add the "pagination" class to an <ul> element.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pagination">
+                <li><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pagination">
+              <li><a href="">&larr;</a></li>
+                <li><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&rarr;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pagination">
+              <li><a href="">&laquo;</a></li>
+                <li><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&raquo;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+We can add ".active" class to let the user known which page is on.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pagination">
+              <li><a href="">&laquo;</a></li>
+                <li><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li class="active"><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&raquo;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+We can disabled page by using "disabled" class.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pagination">
+              <li class="disabled"><a href="">&laquo;</a></li>
+                <li class="active"><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&raquo;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+We can add "pagination-lg" for large blocks or  "pagination-sm" for small 
+blocks.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body>
+      <br>
+      <div class="container">
+            <ul class="pagination">
+              <li class="disabled"><a href="">&laquo;</a></li>
+                <li class="active"><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&raquo;</a></li>
+            </ul>
+            <br>
+             <ul class="pagination  pagination-sm">
+              <li class="disabled"><a href="">&laquo;</a></li>
+                <li class="active"><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&raquo;</a></li>
+            </ul>
+             <br> 
+             <ul class="pagination  pagination-lg">
+              <li class="disabled"><a href="">&laquo;</a></li>
+                <li class="active"><a href="">1</a></li>
+                 <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                   <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">&raquo;</a></li>
+            </ul>
+      </div>
+        
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

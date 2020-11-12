@@ -1,0 +1,864 @@
+Bootstrap Carousel
+=====================
+creating an image carousel using the bootstrap carousel plugin.
+
+To create a bootstrap carousel we need to use "carousel" class.
+
+To get some side effects we can use "side" class.
+
+we can set the time interval on each slide by using "data-interval" 
+attribute and value is milli seconds.
+
+Default time interval is 5 seconds and data-interval attribute is optional.
+
+A "caurosel-inner" class acts like a container all the slides in a carousel.
+
+slide encapsulated itself in "item" class i.e 1 item is 1 slide.
+
+To create caption to image we need to use "carousel-caption" class.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div class="carousel slide" data-interval="2000">
+                <div class="carousel-inner">
+                  <div class="item">
+                    <img src="image1.jpg" width="600px" height="200px" />
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+Note:
+----
+In above example we can't see any carousel active.
+
+In order to active Carousel we need to use "active" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div class="carousel slide" data-interval="2000">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div class="carousel slide" data-interval="2000">
+                <div class="carousel-inner">
+                 <!-- 1 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+                  </div>
+                  <!-- 2 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature2</h3>
+                      <p>Beutiful2</p>
+                    </div>
+                  </div>
+                  <!-- 3 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature3</h3>
+                      <p>Beutiful3</p>
+                    </div>
+                  </div>
+                  <!-- 4 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature4</h3>
+                      <p>Beutiful4</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+To active Carousel we need to use "data-ride=carousel" attribute.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div class="carousel slide" data-interval="2000" data-ride="carousel">
+                <div class="carousel-inner">
+                 <!-- 1 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+                  </div>
+                  <!-- 2 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature2</h3>
+                      <p>Beutiful2</p>
+                    </div>
+                  </div>
+                  <!-- 3 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature3</h3>
+                      <p>Beutiful3</p>
+                    </div>
+                  </div>
+                  <!-- 4 slide i.e item -->
+                  <div class="item">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature4</h3>
+                      <p>Beutiful4</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+We can also add carousel action by using javascript.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div id="imageCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+
+                <div class="carousel-inner">
+                 <!-- 1 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+                  </div>
+                  <!-- 2 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature2</h3>
+                      <p>Beutiful2</p>
+                    </div>
+                  </div>
+                  <!-- 3 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature3</h3>
+                      <p>Beutiful3</p>
+                    </div>
+                  </div>
+                  <!-- 4 slide i.e item -->
+                  <div class="item">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature4</h3>
+                      <p>Beutiful4</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+          $("$imageCarousel").carousel();
+        })
+    </script>
+  </body>
+</html>
+
+How to get circle indicators on carousel
+-------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div id="imageCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+
+                 <!-- carousel indicators -->
+                 <ol class="carousel-indicators">
+                  <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                  
+                  <li data-target="#imageCarousel" data-slide-to="1"></li>
+                  
+                  <li data-target="#imageCarousel" data-slide-to="2"></li>
+
+                  <li data-target="#imageCarousel" data-slide-to="3"></li>
+                 </ol> 
+
+                <div class="carousel-inner">
+                 <!-- 1 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+                  </div>
+                  <!-- 2 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature2</h3>
+                      <p>Beutiful2</p>
+                    </div>
+                  </div>
+                  <!-- 3 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature3</h3>
+                      <p>Beutiful3</p>
+                    </div>
+                  </div>
+                  <!-- 4 slide i.e item -->
+                  <div class="item">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature4</h3>
+                      <p>Beutiful4</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+          $("$imageCarousel").carousel();
+        })
+    </script>
+  </body>
+</html>
+
+Adding Carousel control buttons
+==================================
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <!-- image carousel -->
+              <div id="imageCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+
+                 <!-- carousel indicators -->
+                 <ol class="carousel-indicators">
+                  <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                  
+                  <li data-target="#imageCarousel" data-slide-to="1"></li>
+                  
+                  <li data-target="#imageCarousel" data-slide-to="2"></li>
+
+                  <li data-target="#imageCarousel" data-slide-to="3"></li>
+                 </ol> 
+
+                <div class="carousel-inner">
+                 <!-- 1 slide i.e item -->
+                  <div class="item active">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature1</h3>
+                      <p>Beutiful1</p>
+                    </div>
+                  </div>
+                  <!-- 2 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature2</h3>
+                      <p>Beutiful2</p>
+                    </div>
+                  </div>
+                  <!-- 3 slide i.e item -->
+                  <div class="item ">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature3</h3>
+                      <p>Beutiful3</p>
+                    </div>
+                  </div>
+                  <!-- 4 slide i.e item -->
+                  <div class="item">
+                    <img src="image1.jpg" width="600px" height="200px" class="img-responsive"/>
+                    
+                    <div class="carousel-caption">
+                      <h3>Nature4</h3>
+                      <p>Beutiful4</p>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- carousel action button -->
+                <a href="#imageCarousel" class="carousel-control left" data-slide="prev">
+                    <!-- icon -->
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>  
+
+                <a href="#imageCarousel" class="carousel-control right" data-slide="next">
+                    <!-- icon -->
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>  
+
+              </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+          $("$imageCarousel").carousel();
+        })
+    </script>
+  </body>
+</html>
+
+
+
+Bootstrap popover
+===================
+It is a pop-up box that appears when the user clicks on an element.
+
+In popover we can display both title and content.
+
+To create popover ,add the  data-toggle="popver" attribute to an element.
+
+Use the title attribute to specify the header text of the popover.
+
+Use the "data-content" attribute to specify the text that should be displayed
+inside the popover's body.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <button id="btnPopover" class="btn btn-primary" title="tooltip title"
+            data-toggle="tooltip">Tooltip example
+          </button>
+    </div>
+   
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <button class="btn btn-primary" title="popover title"
+            data-toggle="popover" data-content="popover content">Popover example
+          </button>
+    </div>
+   <script>
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();
+        })
+   </script>
+  </body>
+</html>
+
+Use the data-placement attribute to set the position of the popover on
+top,bottom,left and right side of the element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <button data-placement="bottom" class="btn btn-primary" title="popover title"
+            data-toggle="popover" data-content="popover content">Popover example
+          </button>
+    </div>
+   <script>
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();
+        })
+   </script>
+  </body>
+</html>
+
+
+We can use the data-trigger="focus" attribute which will close the popover
+menu when clicking outside the element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <button data-trigger="focus" data-placement="bottom" class="btn btn-primary" title="popover title"
+            data-toggle="popover" data-content="popover content">Popover example
+          </button>
+    </div>
+   <script>
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();
+        })
+   </script>
+  </body>
+</html>
+
+
+If we want the popover to be displayed  when you move the mouse pointer
+over the element then use "data-trigger=hover" attribute.
+
+ 
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>       
+  <body>
+    <div class="container">
+        <button data-trigger="hover" data-placement="bottom" class="btn btn-primary" title="popover title"
+            data-toggle="popover" data-content="popover content">Popover example
+          </button>
+    </div>
+   <script>
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();
+        })
+   </script>
+  </body>
+</html>
+
+Bootstrap Scrollspy
+=======================
+The Bootstrap Scrollspy plugin automatically highlights the navigation links
+based on the scroll position to indicate where the user is currently on the page.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+    #section1
+    {
+      padding-top:50px; height:500px;color:#fff;background-color:#1E88E5;
+    }
+     #section2
+    {
+      padding-top:50px; height:500px;color:black;background-color:yellow;
+    }
+     #section3
+    {
+      padding-top:50px; height:500px;color:black;background-color:cyan;
+    }
+     #section4
+    {
+      padding-top:50px; height:500px;color:black;background-color:gray;
+    }
+    </style>
+  </head>       
+  <body>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- header -->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#myNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">GlobalEdx</a>
+      </div>
+      <!-- menu list -->
+      <div class="collapse navbar-collapse" id="myNavBar">
+      <ul class="nav navbar-nav">
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+         <li><a href="#section4">Section 4</a></li>
+      </ul>
+      </div>
+    </div>
+   </nav>
+   <div id="section1" class="container-fluid">
+      <h1>Section 1</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+   <div id="section2" class="container-fluid">
+      <h1>Section 2</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+   <div id="section3" class="container-fluid">
+      <h1>Section 3</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+   <div id="section4" class="container-fluid">
+      <h1>Section 4</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+    #section1
+    {
+      padding-top:50px; height:500px;color:#fff;background-color:#1E88E5;
+    }
+     #section2
+    {
+      padding-top:50px; height:500px;color:black;background-color:yellow;
+    }
+     #section3
+    {
+      padding-top:50px; height:500px;color:black;background-color:cyan;
+    }
+     #section4
+    {
+      padding-top:50px; height:500px;color:black;background-color:gray;
+    }
+    </style>
+  </head>       
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <br><br>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- header -->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#myNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">GlobalEdx</a>
+      </div>
+      <!-- menu list -->
+      <div class="collapse navbar-collapse" id="myNavBar">
+      <ul class="nav navbar-nav">
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+         <li><a href="#section4">Section 4</a></li>
+      </ul>
+      </div>
+    </div>
+   </nav>
+   <div id="section1" class="container-fluid">
+      <h1>Section 1</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+   <div id="section2" class="container-fluid">
+      <h1>Section 2</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+   <div id="section3" class="container-fluid">
+      <h1>Section 3</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+   <div id="section4" class="container-fluid">
+      <h1>Section 4</h1>
+      <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+       <p>This Bootstrap Class for Responsive design in globaledx to enchance the skills of a candiate to explore the talent in front of an interviewer.</p>
+   </div>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

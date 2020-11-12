@@ -1,0 +1,471 @@
+Javascript
+============
+q)What are the differences between Java and Javascript?
+ans)
+
+Java						Javascript
+----						-----------
+Java is not a scripting language.		Javascript is a scripting language.
+						(we don't need to compile the program).
+
+Java can run individually.			Javascript can't run individually.
+
+Java is a object oriented language.		Javascript is a object based language.	
+(class,object,inheritence,polymorphism and      (we can predefine objects).
+etc.)
+
+Java does not required Browser for execution.	Javascript required Browser for execution.
+
+Java is a strongly typed checking language.	Javascript is a loosely typed checking language.
+
+Java is a complex language.			Javascript is a simple language.
+
+What is Javascript?
+=====================
+Javascript is a loosely typed checking language.
+
+Original name of javascript is called LiveScript which completed development by 
+using c language syntax's.
+
+LiveScript is developed by Netscape Corporation in 1990's.
+
+In 1995, Brendan Eich popular scientist from Netscape Corporation rename LiveScript
+to JavaScript. 
+
+If we see the syntax of Javascript ,we can find similar to c language syntax's.
+
+Javascript Official name is ECMA script.
+
+Here ECMA means European computer Manufacturer's Association.
+
+Features of JavaScript
+=======================
+Javascript is a case sensitive language.
+
+Javascript is used to create interactive web sites.
+
+JavaScript executes at client side i.e Browser window.
+
+Javascript is used for client-side validation.
+
+Javascript supports Drop-Down Menu.
+
+Javascript makes our web page responsive(Dynamic).
+
+Javascript display pop-up windows and dialog boxes.
+
+Javscript creates cookies.
+
+Javascript supports objects.
+
+Javscript allows to hadle Date and Time.
+
+syntax of Javascript
+======================
+syntax1
+-------
+	<script type="text/javascript" language="javascript">
+	stmt1;
+	stmt2;
+	stmt3;
+	</script>
+
+syntax2
+-------
+	<script>
+	stmt1
+	stmt2
+	stmt3
+	</script>
+	Here type and language attribute is optional to declare.
+	Here semicolon is optional because javascript is a loosely typed checking language.
+
+example1
+--------
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			<script type="text/javascript" language="javascript">
+					document.write("Welcome To JavaScript");
+			</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+We have to save above program with ".html" or ".htm" extension because it 
+contains html code and javascript code.
+
+If a file contains only javascript code then we need to save that file with
+".js" extension.
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			<script type="text/javascript" language="javascript">
+					document.writeln("Welcome To JavaScript");
+					
+					document.write('Welcome To GlobalEdx');
+			</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+Here document.writeln() method is used to provide a space.
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			
+	</head>
+	<body>
+			<pre>
+			<script type="text/javascript" language="javascript">
+					document.writeln("Welcome To JavaScript");
+					
+					document.writeln('Welcome To GlobalEdx');
+			</script>
+			</pre>
+	</body>
+</html>
+<pre> tag is used to display pre formatted text.
+
+ex:4
+-----
+To provide new line we can use <br> tag.
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			
+	</head>
+	<body>
+			
+			<script type="text/javascript" language="javascript">
+					document.writeln("Welcome To JavaScript");
+					<br>
+					document.writeln('Welcome To GlobalEdx');
+			</script>
+	</body>
+</html>
+
+Here output will not be displayed because a <br> tag must not be used in 
+scripting environment area.
+
+In generally, we can't use Markup language inside scripting language.
+
+To use markup language inside scripting language we need to do following.
+
+ex:5
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			
+	</head>
+	<body>
+			
+			<script type="text/javascript" language="javascript">
+					document.writeln("Welcome To JavaScript");
+					document.writeln("<br>");
+					document.writeln('Welcome To GlobalEdx');
+			</script>
+	</body>
+</html>
+
+ex:6
+---
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			
+	</head>
+	<body>
+			
+			<script type="text/javascript" language="javascript">
+					document.writeln("Welcome To JavaScript <br/>");
+					document.writeln('Welcome To GlobalEdxxx');
+			</script>
+	</body>
+</html>
+
+Note:
+----
+	It is also possible to implement Html tags in Javascript.
+
+ex:7
+----
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			
+	</head>
+	<body>
+			
+			<script type="text/javascript" language="javascript">
+					document.writeln("<h1>Welcome To JavaScript</h1><br/>");
+					document.writeln('<b><i><center>Welcome To GlobalEdxxx</center></i></b>');
+			</script>
+	</body>
+</html>
+
+ex:8
+----
+Any program which contains html,css and javascript code then combinedly it is 
+called DHTML(Dynamic Hypertext Markup Language).
+
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>MyPage</title>
+			
+	</head>
+	<body>
+			
+			<script type="text/javascript" language="javascript">
+					document.writeln("<h1>Welcome To JavaScript</h1><br/>");
+					document.writeln('<b style="color:red;font-size:30px;background-color:cyan;">Welcome To GlobalEdxxx</b>');
+			</script>
+	</body>
+</html>
+
+
+Note:
+-----
+	DHTML is a term where group of terminologies we used.
+
+Types of Javascript
+======================
+We have two types of Javascript.
+
+1)Internal JavaScript / Embedded JavaScript
+
+2)External JavaScript / Seperate JavaScript
+
+
+1)Internal JavaScript
+---------------------
+Both html and javascript code will be written in the same file with .html 
+extension is called Internal JavaScript.
+
+Advantages
+----------
+	Easy to understand.
+
+	No Confusion of multiple files.
+
+Disadvantage
+---------------
+	If the code size is increases then it will increase developer confusion
+	also.
+
+conclusion
+----------
+	Internal Javascript is suitable for Learning and Practiceing level.
+
+2)External JavaScript
+----------------------
+External javascript contains Html code  in ".html" file and Javascript code 
+in ".js" file.
+
+In External Javascript , html code should call Javascript code internally.
+
+Diagram: js1.1
+
+Advantage/Merits
+----------------
+	Even though the code increases , the developer can understand the code
+	easily.
+
+Disadvantage/Demerits
+-----------------
+	Number of Files will be increases.
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

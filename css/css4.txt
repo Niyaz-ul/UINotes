@@ -1,0 +1,1100 @@
+margin auto value
+--------------------
+Using auto value we can set margin property to horizontal center.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+						width: 500px;
+						border: 2px solid black;
+						margin:auto;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<div>
+					This is GlobalEdx for UI classes those who registered as per  there wish.This is GlobalEdx for UI classes those who registered as per  there wish.
+			</div>	
+	</body>
+</html>
+
+margin inherit value
+-------------------------
+It specifies the margin should be inherited from the parent element.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+						border:1px solid black;
+						margin-left:100px;
+				}
+				p
+				{
+					margin-left:inherit;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<div>
+					<p>This is Paragraph tag to explain our margin property works.</p>
+			</div>	
+	</body>
+</html>
+
+CSS "id" attribute
+==================
+In CSS, "id" selector can be created by using hash character(#).
+syntax
+----
+#id_name
+{
+	-
+	-list of properties
+	-
+}
+
+The "id"  specifies a unique id for html elements/tags.
+
+The "id"  is used to point to a specific style declaration in a style sheet.
+
+This "id" is also used by javascript to access and manipulate the element with the
+specific id.
+
+problem without id attribute
+-----------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				p
+				{
+						color:blue;
+						font-size:20px;
+						font-family:arial;
+						text-align:center;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<p>This is Paragraph1</p>
+			<p>This is Paragraph2</p>
+			<p>This is Paragraph3</p>
+	</body>
+</html>
+
+Here same styles will be applied to all paragraphs.
+
+Solution for above example
+---------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				#id1
+				{
+						color:blue;
+						font-size:20px;
+						font-family:arial;
+						text-align:center;
+				}
+				#id2
+				{
+						background-color:red;
+						font-size:20px;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<p id="id1">This is Paragraph1</p>
+			<p id="id2">This is Paragraph2</p>
+			<p>This is Paragraph3</p>
+	</body>
+</html>
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				#id1
+				{
+						color:blue;
+						font-size:20px;
+						font-family:arial;
+						text-align:center;
+				}
+				#id2
+				{
+						background-color:red;
+						font-size:20px;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<p id="id1">This is Paragraph1</p>
+			<p id="id2">This is Paragraph2</p>
+			<!-- we can't give  two id's at a time -->
+			<p id="id1 id2">This is Paragraph3</p>
+	</body>
+</html>
+
+Note:
+------
+"id" attribute can hold only one id at a time.
+
+CSS class attribute
+=====================
+In CSS, class selector can be created by using dot(.) symbol.
+
+syntax
+-----
+	.class_name
+	{
+		-
+		-list of properties
+		-
+	}
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				.c1
+				{
+					color:blue;
+					font-size:20px;
+					font-family:sans-serif;
+					text-align: center;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<p class="c1">This is Paragraph1</p>
+			<p >This is Paragraph2</p>
+			<p >This is Paragraph3</p>
+	</body>
+</html>
+
+
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				.c1
+				{
+					color:blue;
+					font-size:20px;
+					font-family:sans-serif;
+					text-align: center;
+				}
+				.c2
+				{
+					background-color: pink;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<p class="c1">This is Paragraph1</p>
+			<p class="c2" >This is Paragraph2</p>
+			<p >This is Paragraph3</p>
+	</body>
+</html>
+
+A class attribute can hold multiple classes at a time.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				.c1
+				{
+					color:blue;
+					font-size:20px;
+					font-family:sans-serif;
+					text-align: center;
+				}
+				.c2
+				{
+					background-color: pink;
+				}
+		</style>
+		
+	</head>
+	<body >
+			<p class="c1">This is Paragraph1</p>
+			<p class="c2" >This is Paragraph2</p>
+			<p class="c1  c2">This is Paragraph3</p>
+	</body>
+</html>
+
+We can apply classes to any element/Tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				.c1
+				{
+					color:blue;
+					font-size:20px;
+					font-family:sans-serif;
+					text-align: center;
+					background:pink;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<p class="c1">This is Paragraph1</p>
+			<h1 class="c1" >This is heading </h1>
+			<div class="c1">This is division</div>
+	</body>
+</html>
+
+CSS padding 
+==============
+The CSS padding properties are used to generate space around elements content.
+
+We havae following CSS properties for specifying padding for each side.
+
+1)padding-top
+
+2)padding-right
+
+3)padding-bottom
+
+4)padding-left
+
+All the above padding properties can have following values.
+
+Note:
+-----
+	Negative values are not allowed but in margin -ve values are allowed.	
+	Margin is page/screen level and padding is a content level.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:2px solid black;
+					padding-top:50px;	
+					padding-left:50px;
+					padding-right:50px;
+					padding-bottom:50px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is Paragraph1</div>
+			
+	</body>
+</html>
+
+If padding property having four values.
+
+syntax
+-----
+	padding : 25px 50px 75px 100px;
+
+	top - 25px
+	right - 50px
+	bottom - 75px
+	left	- 100px
+
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:2px solid black;
+					padding : 25px 50px 75px 100px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is Paragraph1</div>
+			
+	</body>
+</html>
+
+If padding property has three values.
+
+syntax
+------
+	padding: 25px 50px 100px;
+
+	top : 25px
+
+	left and right : 50px;
+
+	bottom: 100px;
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:2px solid black;
+					padding: 25px 50px 100px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is Paragraph1</div>
+			
+	</body>
+</html>
+
+If padding property has two values.
+syntax:
+	padding : 25px 50px;
+ex:
+	top and bottom : 25px;
+	left and right : 50px;
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:2px solid black;
+					padding: 25px 50px ;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is Paragraph1</div>
+			
+	</body>
+</html>
+
+If padding property having only 1 value
+syntax
+-----
+	padding : 25px;
+
+	all four paddings are 25px.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:2px solid black;
+					padding: 25px ;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is Paragraph1</div>
+			
+	</body>
+</html>
+
+CSS setting Height and Width
+===========================
+The "height" and "width" property is used to set the height and width of an element.
+
+The height and width properties do not include padding ,borders and margins.
+
+It set height and width of the area inside the padding ,borders ,margins and other elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:1px solid black;
+					width: 200px;
+					height:50px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag</div>
+			
+	</body>
+</html>
+
+setting max-width
+-------------------
+The max-width property is used to set the maximum with of an element.
+
+The max-width value  can be declare in length,px,cm and etc.
+
+max-width improves the browser handling of small windows.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					border:1px solid black;
+					max-width: 700px;
+					height:50px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag</div>
+			
+	</body>
+</html>
+
+
+CSS Text
+=========
+1)text color
+-----------
+The color property is used to set the color of the text.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					//color:red;
+					//color:#ffff00;
+					//color:rgb(255,0,0);
+					color: hsl(0,100%,50%);
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag</div>
+			
+	</body>
+</html>
+
+2)text color and background color
+----------------------------------
+The background-color property is used to set the background color to element/tag.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					color:#FF00FF;
+					background-color:cyan;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag</div>
+			
+	</body>
+</html>
+
+
+3)Text Alignment
+------------------
+The text-align property is used to set hte horizontal alignment of a text.
+
+A text can be left ,right ,centered or justified.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					color:#FF00FF;
+					text-align: left;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag</div>
+			
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					color:#FF00FF;
+					text-align: right;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag</div>
+			
+	</body>
+</html>
+
+
+justify
+-----
+When the text-align property is set to justify each line is streached so that every line has equal 
+width. left and right margins are straight line.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					color:#FF00FF;
+					text-align: justify;
+					width:200px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag for text align property .This is CSS Divsion Tag for text align property .This is CSS Divsion Tag for text align property .This is CSS Divsion Tag for text align property .</div>
+			
+	</body>
+</html>
+
+center
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				div
+				{
+					color:#FF00FF;
+					text-align: center;
+					width:500px;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<div>This is CSS Divsion Tag for text align property .This is CSS Divsion Tag for text align property .This is CSS Divsion Tag for text align property .This is CSS Divsion Tag for text align property .</div>
+			
+	</body>
+</html>
+
+4)vertical alignment
+---------------------
+The vertical alignment property is used to set the vertical alignment of an element.
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				.va
+				{
+					//vertical-align: center;
+					//vertical-align: top;
+					vertical-align: bottom;	
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+			<p>CSS <img class="va" src="tony.gif" width="50px" height="50px"/>means Cascading Style Sheet</p>
+			
+	</body>
+</html>
+
+5)Text-Decoration
+-------------------
+Text-decoration property is used to set or remove decoration from the text.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				a
+				{
+					color:violet;
+					font-size:40px;
+					font-family: tahoma;
+					text-decoration: none;	
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+
+			<a href="#">ClickMe</a>
+			
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				a
+				{
+					color:violet;
+					font-size:40px;
+					font-family: tahoma;
+					//text-decoration: none;	
+					//text-decoration: overline;
+					//text-decoration: line-through;
+					text-decoration: underline; 
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+
+			<a href="#">ClickMe</a>
+			
+	</body>
+</html>
+
+6)Text Transformation
+-----------------------
+The text-transformation is used to specify uppercase,lowercase ,capitalize and 
+etc in a text.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+				p
+				{
+					font-size:20px;
+					font-style:italic;
+					color:blue;
+					//text-transform: uppercase;
+					//text-transform: lowercase;
+					text-transform: capitalize;
+				}
+				
+		</style>
+		
+	</head>
+	<body >
+
+			<p>this is Text Transformation FOR CSS</p>
+			
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

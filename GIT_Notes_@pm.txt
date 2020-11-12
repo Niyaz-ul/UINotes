@@ -1,0 +1,146 @@
+GIT/GIHUB
+=========
+Git is a distributed version-control system for tracking changes in source
+code during software development.
+
+GIT is opensource and  developed by Junio Hamano in 2005.
+
+It is specially designed  for coordinating work among progammers.
+
+The main objective of GIT is to include speed,data intigrity ,
+support of distributed and etc.
+
+Git has a centeralized server and repository.
+
+Git braches are easier to work and all the branches attached to master 
+branch.
+
+Steps to upload the project into a GIT/GITHUB 
+=============================================
+step1:
+-----
+	create an Account in GitHub.
+	ex:
+	www.github.com
+
+step2:
+-----
+	Login in GitHub Account.	
+	ex:
+	https://github.com/login
+	
+	username or email: ulhasan7867@gmail.com   or  Niyaz-ul
+	password : XXXXXX
+
+step3:
+-----
+	Install the GIT from below link.
+	ex:
+	https://git-scm.com/downloads
+
+step4:
+------
+	create a new project in Github.
+	ex:
+	click to start project-->repository name : ui2pm-->
+	create repository. (https://github.com/Niyaz-ul/ui2pm).
+
+step5:
+---------
+	Make sure Web Project is Ready to push/upload in a GIT.
+
+
+step6:
+-------
+	Open a bash prompt from "MainProject"  folder.
+	ex:
+	right click inside "MainProject" folder--> Git Bash Here.
+
+step7:
+-----
+	Use master branch.
+	ex:
+	git branch -u origin/master
+
+step8:
+------
+	Initialized empty Git repository.
+	ex:
+	git init
+
+step8:
+----
+	To check the status in git.
+	ex:
+	git status
+step9:
+-------
+	Add the folders and files to commit.
+	ex:
+	git add .
+		
+step10:
+----
+	Again check the status in git.
+	ex:
+	git status
+
+step11:
+--------
+	commit the files into master branch.
+	ex:
+	git commit -m "globaledx commit"
+
+step12:
+--------
+	add remote origin to git.
+	ex:
+	git remote add origin https://github.com/Niyaz-ul/ui2pm	
+
+step13:
+-------
+	push the project to master branch.
+	ex:
+	git push origin master	
+	or
+	git push -f origin master
+
+step14:
+--------
+	Goto github reposority and represent the web page.
+
+step15:
+-------
+	To see the project in GIT we need to select "master" branch 
+	from "main" branch.
+
+step16:
+-------
+	To download the project or to see the project.
+	ex:
+	https://github.com/Niyaz-ul/ui2pm/tree/master
+
+
+Note:
+----
+	If ask username
+	----------------
+git config --global user.email "ulhasan7867@gmail.com"
+git config --global user.name  "Niyaz-ul'
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

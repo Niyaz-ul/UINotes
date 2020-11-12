@@ -1,0 +1,952 @@
+JQuery clone()
+==================
+The Jquery clone() method is used to make copies of the set of matched 
+elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      <p>This is paragraph1</p>
+      <p>This is paragraph2</p> 
+      <button>Clone the paragraph</button>    
+      <script>
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("p").clone().appendTo("body");
+            })
+          })
+      </script>
+  </body>
+
+</html>
+
+JQuery remove()
+------------------
+The Jquery remove() method is used to remove the selected elements out 
+of the DOM..
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      <p>This is paragraph1</p>
+      <p>This is paragraph2</p> 
+      <button>Remove the paragraph</button>    
+
+      <script>
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("p").remove();
+            })
+          })
+      </script>
+  </body>
+
+</html>
+
+
+JQuery empty()
+----------------
+The Jquery empty() method is used to remove all child nodes and content 
+from the selected elements.
+
+This method does not remove the element itself.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+      div{
+          width:200px;
+          height:200px;
+          padding:10px;
+          border:2px solid black;
+        }
+    </style>
+  </head>
+  <body>
+      <div>
+          This is div tag to show you how Jquery empty() method works to prove the points given in a class room.
+      </div>
+      <button>Empty Div tag</button>
+
+
+      <script>
+          $(document).ready(function(){
+            $("button").click(function(){
+                $("div").empty();
+            });
+          });
+      </script>
+  </body>
+
+</html>
+
+
+
+JQuery detach() 
+-------------------
+The JQuery detach() method is used to remove the selected elements,including
+the texts and child nodes and keeps only data and events.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+     <p>This is pargraph 1</p>
+     <p>This is pargraph 2</p>
+     <p>
+        <b>This is bold</b>
+     </p>
+
+     <button>Detach all p </button>
+
+      <script>
+          $(document).ready(function(){
+            $("button").click(function(){
+                $("p").detach();
+            });
+          });
+      </script>
+  </body>
+
+</html>
+
+
+
+
+JQuery attr()
+============
+The Jquery attr() method is used to set or return attributes and values 
+of the selected elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+   
+  </head>
+  <body>
+    <img src="rock.jpg" width="200px" height="200px"/>
+    <br>
+    <button>attribute</button>
+
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("img").attr("width","500");
+          })
+        })
+    </script>
+  </body>
+
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    
+  </head>
+  <body>
+    <img src="rock.jpg" width="200px" height="200px"/>
+    <br>
+    <button>attribute</button>
+
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("img").attr("width","500");
+             $("img").attr("height","500");
+          })
+        })
+    </script>
+  </body>
+
+</html>
+
+JQuery prop()
+----------------
+The Jquery prop() method is generally used to retrieve property values 
+i.e DOM properties  like tagName,nodeName ,defaultChecked or own 
+custom made properties.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    
+  </head>
+  <body>
+   
+      <button>Add and Remove</button>
+      <div></div>
+
+      <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            var $x=$("div");
+            $x.prop("color","blue");
+           $x.append("The value of the color :"+$x.prop("color"));
+          
+           $x.removeProp("color");
+           $x.append("The value of the color :"+$x.prop("color"));
+
+          })
+        })
+      </script>
+  </body>
+
+</html>
+
+
+Jquery hasClass()
+--------------------
+The JQuery hasClass() method is used to check wheather selected elements 
+have specified class name or not.It returns TRUE if the specified class 
+is present in any of the selected elements otherwise it returns FALSE.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          .c1
+          {
+            text-align: center;
+            font-size: 30px;
+            color:blue;
+          }
+    </style>  
+  </head>
+  <body>
+        <p class="c1">This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <button>Find the class</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  alert($("p").hasClass("c1"));
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          .c1
+          {
+            text-align: center;
+            font-size: 30px;
+            color:blue;
+          }
+    </style>  
+  </head>
+  <body>
+        <p class="c1">This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <button>Find the class</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  alert($("p").hasClass("c2"));
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+JQuery toggleClass()
+-------------------
+The JQuery toggleClass() method is used to add and remove ,one or more classes
+from the selected elements.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          .c1
+          {
+            text-align: center;
+            font-size: 30px;
+            color:blue;
+          }
+    </style>  
+  </head>
+  <body>
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <button>click repeatedly</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("p").toggleClass("c1");
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+JQuery width()
+-----------------
+JQuery width() method is used to return or set the width of matched element.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          div
+          {
+            height: 100px;
+            width:200px;
+            padding:10px;
+            border:1px solid blue;
+            background-color:lightpink;
+          }
+    </style>  
+  </head>
+  <body>
+        <div></div>
+        <br>
+        <button>return width</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                 alert($("div").width());
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+Jquery height
+---------------
+JQuery height() method is used to return or set the height of matched element.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          div
+          {
+            height: 100px;
+            width:200px;
+            padding:10px;
+            border:1px solid blue;
+            background-color:lightpink;
+          }
+    </style>  
+  </head>
+  <body>
+        <div></div>
+        <br>
+        <button>return height</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                 alert($("div").height());
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+JQuery innerWidth()
+------------------------
+The Jquery innerWidth() method is used to return the inner width of the 
+first matched element without including border and margin.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          div
+          {
+            height: 100px;
+            width:200px;
+            padding:10px;
+            border:1px solid blue;
+            background-color:lightpink;
+          }
+    </style>  
+  </head>
+  <body>
+        <div></div>
+        <br>
+        <button>return inner width</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                 alert($("div").innerWidth());
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+JQuery innerHeight()
+------------------------
+The Jquery innerHeight() method is used to return the inner Height of the 
+first matched element without including border and margin.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          div
+          {
+            height: 100px;
+            width:200px;
+            padding:10px;
+            border:1px solid blue;
+            background-color:lightpink;
+          }
+    </style>  
+  </head>
+  <body>
+        <div></div>
+        <br>
+        <button>return inner Height</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                 alert($("div").innerHeight());
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+JQuery outerWidth()
+------------------------
+The Jquery outerWidth() method is used to return the outer width of the 
+first matched element with padding and border.
+
+The JQuery outerWidth() method works for both visible and hidden elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          div
+          {
+            height: 100px;
+            width:200px;
+            padding:10px;
+            border:1px solid blue;
+            background-color:lightpink;
+          }
+    </style>  
+  </head>
+  <body>
+        <div></div>
+        <br>
+        <button>return outer width</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                 alert($("div").outerWidth());
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+Jquery outerHeight()
+----------------------
+
+The Jquery outerHeight() method is used to return the outer height of the 
+first matched element with padding and border.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+          div
+          {
+            height: 100px;
+            width:200px;
+            padding:10px;
+            border:1px solid blue;
+            background-color:lightpink;
+          }
+    </style>  
+  </head>
+  <body>
+        <div></div>
+        <br>
+        <button>return outer height</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                 alert($("div").outerHeight());
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+JQuery wrap()
+-----------------
+The JQuery wrap() method is used to wrap specified HTML elements around 
+each selected elements.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+        <b>This is bold 1</b>
+        <b>This is bold 2</b>
+        <br>
+        <button>wrap the tag</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("b").wrap("<div></div>")
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+
+Jquery wrapAll()
+--------------
+The JQuery wrapAll() method is used to wrao specified HTML elements around 
+all selected elements.in a set of matched elements.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+        <b>This is bold 1</b>
+        <b>This is bold 2</b>
+        <br>
+        <button>wrap the tag</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("b").wrapAll("<div></div>");
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+JQuery wrapInner()
+--------------
+The Jquery wrapInner() method is used to wrap and HTML structure 
+around the content of each element in the set of matched element.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+        <p>This is bold 1</p>
+        <p>This is bold 2</p>
+        <br>
+        <button>wrap the emphasized element</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("p").wrapInner("<em></em>");
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+
+
+Jquery unwrap()
+----------------
+The JQuery unwrap() method is used to remove the parent element of the 
+selected elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+
+  </head>
+  <body>
+        <div>
+          <b>This is bold 1</b>
+        </div>
+
+        <div>
+        <b>This is bold 2</b>
+        </div>
+        <br>
+        <button>unwrap the tag</button>
+
+        <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("b").unwrap();
+                })
+              })
+        </script>
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

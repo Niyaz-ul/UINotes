@@ -1,0 +1,1039 @@
+Bootstrap nav component
+=======================
+Bootstrap nav component makes it very easy to create a navigation 
+components i.e navigation tabs or navigations pills.
+
+ex:
+In html , a menu is often defined in an unordered list <ul> tag.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul>
+              <li><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+              <li><a href="#">Menu3</a></li>
+              <li><a href="#">Menu4</a></li>
+          </ul>
+    </div>
+  </body>
+</html>
+
+To create a horizontal menu of the list we need to add "list-inline" class
+to <ul> tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="list-inline">
+              <li><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+              <li><a href="#">Menu3</a></li>
+              <li><a href="#">Menu4</a></li>
+          </ul>
+    </div>
+  </body>
+</html>
+
+Tabes are created  by using "nav nav-tabs" class.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-tabs">
+              <li><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+              <li><a href="#">Menu3</a></li>
+              <li><a href="#">Menu4</a></li>
+          </ul>
+    </div>
+  </body>
+</html>
+
+we can mark the current page with "active" class.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-tabs">
+              <li class="active"><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+              <li><a href="#">Menu3</a></li>
+              <li><a href="#">Menu4</a></li>
+          </ul>
+    </div>
+  </body>
+</html>
+
+
+To use navigation pills we need to use "nav nav-pills" class.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-pills">
+              <li class="active"><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+              <li><a href="#">Menu3</a></li>
+              <li><a href="#">Menu4</a></li>
+          </ul>
+    </div>
+  </body>
+</html>
+
+Icons using nav tabs or nav pills
+====================================
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-pills">
+              <li><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span>Info</a></li>
+          </ul>
+
+            <br>
+           <ul class="nav nav-tabs">
+              <li><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span>Info</a></li>
+          </ul> 
+
+
+
+    </div>
+  </body>
+</html>
+
+vetical stack navigation pills
+================================
+To create a vertically stack navigation pills we need to use "nav-stacked"
+class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span>Info</a></li>
+          </ul>
+
+
+
+
+    </div>
+  </body>
+</html>
+
+justified navigation pills and justified navigation tabs
+=========================================================
+To create justified navigation pills and justified navigation tabs we 
+need to use "nav-justified" class.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-pills nav-justified">
+              <li><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span>Info</a></li>
+          </ul>
+
+
+
+
+    </div>
+  </body>
+</html>
+
+Note:
+------
+Here if our view port falls below 760px .They will stack over each other.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-tabs nav-justified">
+              <li><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span>Info</a></li>
+          </ul>
+
+
+
+
+    </div>
+  </body>
+</html>
+
+we can disabled navigation tab by using "disabled " class.
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-tabs nav-justified">
+              <li class="active"><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li class="disabled"><a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span>Info</a></li>
+          </ul>
+
+
+
+
+    </div>
+  </body>
+</html>
+
+Navigation tab using dropdown
+====================================
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-tabs">
+
+              <li ><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-info-sign"></span>Info<span class="caret"></span>
+                </a>
+                <!-- drop down menu list -->
+                <ul class="dropdown-menu">
+                    <li><a href="">Link1</a></li>
+                    <li><a href="">Link2</a></li>
+                    <li><a href="">Link3</a></li>
+                </ul>
+              </li>
+
+          </ul>
+
+
+
+
+    </div>
+  </body>
+</html>
+
+Navigation pills using dropdown
+=================================
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+          <ul class="nav nav-pills">
+
+              <li ><a href="#">
+                  <span class="glyphicon glyphicon-home"></span>HOME</a>
+              </li>
+
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-earphone">
+                </span>Contact</a></li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-info-sign"></span>Info<span class="caret"></span>
+                </a>
+                <!-- drop down menu list -->
+                <ul class="dropdown-menu">
+                    <li><a href="">Link1</a></li>
+                    <li><a href="">Link2</a></li>
+                    <li><a href="">Link3</a></li>
+                </ul>
+              </li>
+
+          </ul>
+
+    </div>
+  </body>
+</html>
+
+Bootstrap navbar component
+============================
+Bootstrap navbar component is useful to creating responsive navigation
+header for a website.
+
+A navigation bar is a navigation header that is placed at the top of the page.
+
+A navigation bar cna be extend, collapse depending upon the screen size.
+
+A navigation bar is created by using "navbar navbar-default" class.
+
+"container-fluid" class is used to add hover features.
+
+"navbar-brand" class is used to align elements to left side floating.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+         <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <!-- header -->
+              <div class="navbar-header">
+                    <!-- brand -->
+                    <a href="#" class="navbar-brand">GlobalEdx</a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">ABOUT</a></li>
+                  <li><a href="#">SERVICE</a></li>
+                  <li><a href="#">CONTACT</a></li>
+              </ul>
+          </div>
+         </nav>
+    </div>
+  </body>
+</html>
+
+navbar-inverse class
+=====================
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+         <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+              <!-- header -->
+              <div class="navbar-header">
+                    <!-- brand -->
+                    <a href="#" class="navbar-brand">GlobalEdx</a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">ABOUT</a></li>
+                  <li><a href="#">SERVICE</a></li>
+                  <li><a href="#">CONTACT</a></li>
+              </ul>
+          </div>
+         </nav>
+    </div>
+  </body>
+</html>
+
+
+
+
+Responsive navigation bar
+============================
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-default">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+  </body>
+</html>
+
+To link the items with toggle button we need to use "data-target" attribute.
+
+data-target attribute always hold id of a element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-default">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-target="#navid"data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse" id="navid">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+	
+
+  </body>
+</html>
+
+Bydefault our navbar will be scrolled.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-default">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-target="#navid"data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse" id="navid">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+
+    <div class="container">
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+    </div>
+  </body>
+</html>
+
+To fixed the navbar at the top,we need to use "navbar-fixed-top" class.
+
+But our fixed navbar hiding the content.
+
+we need to push the content down by adding some padding in body element
+using custom style.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        body
+        {
+          padding-top:50px;
+        }
+      </style>
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-default  navbar-fixed-top">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-target="#navid"data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse" id="navid">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+
+    <div class="container">
+      <h1>This is heading 1</h1>
+      <h1>This is heading 2</h1>
+      <h1>This is heading 3</h1>
+      <h1>This is heading 4</h1>
+      <h1>This is heading 5</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+    </div>
+  </body>
+</html>
+
+we can add navbar at the button by using "navbar-fixed-bottom" class.
+
+But our fixed navbar hiding the content at bottom.
+
+we need to push the content top by using some padding in body element using
+custom styles.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        body
+        {
+          padding-bottom:50px;
+        }
+      </style>
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-default  navbar-fixed-bottom">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-target="#navid"data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse" id="navid">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+
+    <div class="container">
+      <h1>This is heading 1</h1>
+      <h1>This is heading 2</h1>
+      <h1>This is heading 3</h1>
+      <h1>This is heading 4</h1>
+      <h1>This is heading 5</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+    </div>
+  </body>
+</html>
+
+inverse navbar
+---------------
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        body
+        {
+          padding-top:50px;
+        }
+      </style>
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-inverse  navbar-fixed-top">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-target="#navid"data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse" id="navid">
+              <ul class="nav navbar-nav">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+
+    <div class="container">
+      <h1>This is heading 1</h1>
+      <h1>This is heading 2</h1>
+      <h1>This is heading 3</h1>
+      <h1>This is heading 4</h1>
+      <h1>This is heading 5</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+    </div>
+  </body>
+</html>
+
+menu bar items in center
+--------------------------
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        body
+        {
+          padding-top:50px;
+        }
+      </style>
+  </head>       
+  <body >
+    <div class="container">
+        <nav class="navbar navbar-inverse  navbar-fixed-top">
+          <!-- create a menu icon -->
+          <div class="navbar-header">
+              <!-- menu bar button -->
+              <button class="navbar-toggle" data-target="#navid"data-toggle="collapse">
+                <!-- creat three line -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- create items -->
+          <div class="navbar-collapse collapse" id="navid">
+              <ul class="nav navbar-nav text-center">
+                  <li class="active"><a href="">HOME</a></li>
+                   <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                     <li><a href="">CONTACT</a></li>
+              </ul>
+          </div>
+
+        </nav>
+    </div>
+
+    <div class="container">
+      <h1>This is heading 1</h1>
+      <h1>This is heading 2</h1>
+      <h1>This is heading 3</h1>
+      <h1>This is heading 4</h1>
+      <h1>This is heading 5</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+      <h1>This is heading 1</h1>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

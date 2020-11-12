@@ -1,0 +1,398 @@
+author
+-------
+	It defines Author of a page.
+
+	syntax
+	------
+	<meta name="author" content="GlobalEdx">
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<meta name="author" content="GlobalEdx">	
+	</head>
+	<body>
+		This is GlobalEdx
+	</body>
+</html>
+Note:
+-----
+	Too see the output for author we need to enable developer option 
+	by pressing F12 function key.
+
+
+viewport
+--------
+	Html5 introduced a method to let web designers take control over
+	the viewport through meta tag.
+
+	It makes our website as responsive.
+
+syntax
+-----
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	</head>
+	<body>
+		This is GlobalEdx
+	</body>
+</html>
+Note:
+-----
+	Too see the output for viewport we need to enable developer option 
+	by pressing F12 function key.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	<meta charset="UTF-8">	
+	<meta name="description" content="GlobalEdx Web site">
+	<meta name="keywords" content="HTML,CSS,JS">
+	<meta name="author" content="GlobalEdx">	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	</head>
+	<body>
+		This is GlobalEdx
+	</body>
+</html>
+
+Note:
+----
+	UTF-8 is one of the encoding method specifies what character set
+	is your website written with.	
+
+Q)How to add mobile view option on a browser window?
+ans)
+ADD "Mobile Browser Emulator" to see mobile view option.
+
+
+5)refresh
+----------
+	IT refresh the document every given seconds.
+	syntax
+	------
+	<meta http-equiv="refresh" content="05">
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	<meta charset="UTF-8">	
+	<meta name="description" content="GlobalEdx Web site">
+	<meta name="keywords" content="HTML,CSS,JS">
+	<meta name="author" content="GlobalEdx">	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="refresh" content="05">
+	</head>
+	<body>
+		This is GlobalEdx 
+	</body>
+</html>
+
+6)copyright
+-----------
+	To say photos and the text on your website 
+	are protected then we need to use COPYRIGHT meta tag.
+
+	The Copyright tag records information of who copyright ownership belongs to.
+
+	syntax
+	------
+	<meta name="copyright" content="Belongs to GlobalEdx">
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	<meta charset="UTF-8">	
+	<meta name="copyright" content="Belongs to GlobalEdx">
+	<meta name="description" content="GlobalEdx Web site">
+	<meta name="keywords" content="HTML,CSS,JS">
+	<meta name="author" content="GlobalEdx">	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="refresh" content="05">
+	
+	</head>
+	<body>
+		This is GlobalEdx 
+	</body>
+</html>
+
+Basic HTML Tags
+================
+heading tags
+---------------
+	When we place the text within heading tags <h1>........</h1>.
+	It will displayed on the browser window in bold format and size of 
+	a text depends on the number of heading tags.
+
+	There are six different html heading tags which are defined with 
+	the <h1> to <h6> from higher level to the least level.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	
+	</head>
+	<body>
+		<h1>This is GlobalEdx</h1>
+		<h2>This is GlobalEdx</h2>
+		<h3>This is GlobalEdx</h3>
+		<h4>This is GlobalEdx</h4>
+		<h5>This is GlobalEdx</h5>
+		<h6>This is GlobalEdx</h6>
+	</body>
+</html>
+
+paragraph tag
+-----------------
+	<p> tag is used to define a paragraph in a website.
+	syntax
+	-----
+	<p>.......</p>
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	
+	</head>
+	<body>
+		<p>
+			Web technology refers to the means by which computers communicate with each other using markup languages and multimedia packages. It gives us a way to interact with hosted information, like websites. Web technology involves the use of hypertext markup language (HTML) and cascading style sheets (CSS).Web technology refers to the means by which computers communicate with each other using markup languages and multimedia packages. It gives us a way to interact with hosted information, like websites. Web technology involves the use of hypertext markup language (HTML) and cascading style sheets (CSS).
+		</p>
+	</body>
+</html>
+
+bold tag
+-------
+<b> tag is used to display the text in bold format.
+
+italic tag
+----------
+<i> tag is used to dispaly the text in italic format.
+
+center tag
+----------
+<center> tag is used to display the text in center.
+
+underline tag
+-----------
+<u> tag is used to display the text in underline.
+
+strong tag
+-----------
+<strong> tag is used to display the text in strong.
+
+break line tag
+---------------
+<br> tag is used to break the line in a web page.
+
+<marquee> tag
+--------------
+It is used to scroll to the text on a web page.
+
+<hr> tag
+---------
+This tag is used to insert a horizontal line .
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	
+	</head>
+	<body>
+		<b>This is bold tag</b> <br>
+		<i>This is italic tag</i> <br/>
+		<center> This is Center tag </center> <br/>
+		<u>This is Underline tag</u> <br>
+		<strong>This Strong tag</strong>
+		<marquee>This is Marquee Tag </marquee>
+	</body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	
+	</head>
+	<body>
+		<center>
+			Welcome To GlobalEdx
+		</center>
+		<hr/>
+	</body>
+</html>
+
+Nested Tags in HTML
+-----------------------
+A Tag inside another tag is called nested tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage</title>
+	
+	</head>
+	<body>
+		<center>
+			<h1>
+				<i>
+				     <font color="red">
+						Welcome To GlobalEdx
+				     </font>
+				</i>
+			</h1>
+		</center>
+	</body>
+</html>
+
+Note:
+-----
+	In html a tag contains attributes and each attribute should be 
+	seperated with space.
+
+Assignment
+-----------
+	Plase submit assignment as soon as possible.
+	ex:
+		assignment1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

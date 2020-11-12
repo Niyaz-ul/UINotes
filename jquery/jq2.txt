@@ -1,0 +1,835 @@
+JQuery slideDown()
+---------------------
+JQuery slideDown() method is used to slide down an element.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        #panel,#flip
+        {
+          text-align: center;
+          background-color: #00ffff;
+          border:1px solid #c3c3c3;
+        }
+        #panel
+        {
+          padding:50px;
+          display:none;
+        }
+    </style>
+  </head>
+  <body>
+          
+   <div id="flip">Click to slideDown</div>
+
+   <div id="panel">
+    Hello www.globaledx.com! It is one of the best place to learn JQuery and other UI technologies to build IT career.
+   </div>
+
+   <script>
+      $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideDown("slow");
+        })
+      })
+   </script>
+
+  </body>
+</html>
+
+JQuery slideUp()
+------------------
+JQuery slideUp() method is used to slide up an element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        #panel,#flip
+        {
+          text-align: center;
+          background-color: #00ffff;
+          border:1px solid #c3c3c3;
+        }
+        #panel
+        {
+          padding:50px;
+         
+        }
+    </style>
+  </head>
+  <body>
+          
+   <div id="flip">Click to slideUp</div>
+
+   <div id="panel">
+    Hello www.globaledx.com! It is one of the best place to learn JQuery and other UI technologies to build IT career.
+   </div>
+
+   <script>
+      $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideUp("slow");
+        })
+      })
+   </script>
+
+  </body>
+</html>
+
+JQuery slideToggle()
+---------------------
+JQuery slideToggle() method is used to toggle between slideUp() and 
+slideDown() method.
+
+If the element is slide down,it will slide up the element and 
+if the element is slide up ,it will slide down the element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        #panel,#flip
+        {
+          text-align: center;
+          background-color: #00ffff;
+          border:1px solid #c3c3c3;
+        }
+        #panel
+        {
+          padding:50px;
+         
+        }
+    </style>
+  </head>
+  <body>
+          
+   <div id="flip">Click to slideUp</div>
+
+   <div id="panel">
+    Hello www.globaledx.com! It is one of the best place to learn JQuery and other UI technologies to build IT career.
+   </div>
+
+   <script>
+      $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        })
+      })
+   </script>
+
+  </body>
+</html>
+
+JQuery animate()
+----------------
+The JQuery animate() method provides you a way to create animations.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+         <button>Start Animation</button> 
+          <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+          <script>
+            $(document).ready(function(){
+              $("button").click(function(){
+                $("div").animate({left:"450px"});
+              })
+            })
+          </script>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+         <button>Start Animation</button> 
+          <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+          <script>
+            $(document).ready(function(){
+              $("button").click(function(){
+                $("div").animate({height:"toggle"});
+              })
+            })
+          </script>
+  </body>
+</html>
+
+JQuery delay()
+----------------
+The JQuery delay() method is used to delay the execution of functions in the 
+queue.It is a best method to make a delay between the queued Jquery effects.
+
+The delay() method is used to set the timmer to delay the execution of the 
+next item in the queue.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+         <button>Click Me </button> <br>
+         <div id="div1" style="width:90px;height:90px;display:none;background-color: black"></div>
+
+         <script>
+          $(document).ready(function(){
+            $("button").click(function(){
+              //$("#div1").delay("fast").fadeIn();
+              //$("#div1").delay("slow").fadeIn();
+              //$("#div1").delay(1000).fadeIn();
+              $("#div1").delay(4000).fadeIn();
+            })
+          })
+         </script>
+  </body>
+</html>
+
+Jquery HTML and CSS
+=====================
+
+Jquery html()
+-----------------
+JQuery html() method is used to change the entire content of the selected 
+elements.It replaces the selected element content with new content.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+         <button>Click Paragraph</button> <br>
+
+         <p>This is Paragraph 1.</p>
+        
+          <p>This is Paragraph 1.</p> 
+
+          <script>
+            $(document).ready(function(){
+               $("button").click(function(){
+                $("p").html("Hello <b>GlobalEdx</b>");
+               })
+            })
+          </script>
+  </body>
+</html>
+
+JQuery text()
+--------------
+The Jquery text() method is used to set or return the text content. of the 
+selected elements.
+
+In html() we can write text with markup but in text() method we can write 
+only text but not markup.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+         <button>Click Paragraph</button> <br>
+
+         <p>This is Paragraph 1.</p>
+        
+          <p>This is Paragraph 1.</p> 
+
+          <script>
+            $(document).ready(function(){
+               $("button").click(function(){
+                $("p").text("Hello <b>GlobalEdx</b>");
+               })
+            })
+          </script>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+      p{
+        color:blue;
+        margin:8px;
+      }
+      p b
+      {
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+         
+        <p><b>Hello!</b> This is GlobalEdx</p>
+        <p></p>
+
+
+
+          <script>
+            $(document).ready(function(){
+              //reading first paragraph data
+              var str=$("p:first").text();
+              $("p:last").html(str);
+
+            })
+          </script>
+  </body>
+</html>
+
+JQuery val()
+---------------
+There are two usage of value() method.
+
+1)It is used to set the value of every matched element.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+        <p>Name: <input type="text" name="user"/></p>
+        <button>set the value</button>         
+        
+        <script>
+            $(document).ready(function(){
+              $("button").click(function(){
+                $("input:text").val("GlobalEdx");
+              })
+            })
+        </script>
+  </body>
+</html>
+
+2)It is used to get the current value of the first element in the set of matched
+elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+       <p></p>
+       <select id="single">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+       </select>
+
+       <script>
+        function f1(){
+          var singleValue =$("#single").val();
+          $("p").html("<b>Value :</b>"+singleValue);
+        }
+        $("select").change(f1);
+        f1();
+       </script>
+
+  </body>
+</html>
+
+JQuery css()
+---------------
+The Jquery css() method  is used to get or set style properties or values for
+selected elements.It facilitates you to get one or more style properties.
+
+Jquery css() method provides two ways.
+
+1)return a CSS property
+------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      <h2>This is heading  tag</h2>
+      <p style="background-color: #ff4400">paragraph Backgroud color is red</p>
+      <button>click</button>
+
+      <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            alert(  $("p").css("background-color")  );
+          })
+        })
+      </script>
+  </body>
+</html>
+
+
+2)Set a CSS property
+-----------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      <h2>This is heading  tag</h2>
+      <p style="background-color: #ff4400">paragraph Backgroud color is red</p>
+      <button>click</button>
+
+      <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("p").css("background-color","violet") ;
+          })
+        })
+      </script>
+  </body>
+</html>
+
+
+Jquery before()
+---------------
+The jQuery before() method is used to insert the specified content before 
+the selected elements. It adds the content specified by the parameter,
+ before each element in the set of matched elements.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      
+      <button>add content before </button>
+
+      <p>This is paragraph1</p>
+      <p>This is paragraph2</p>
+
+
+       <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("p").before("<p><b>GlobalEdx</b></p>");
+          })
+        })
+       </script> 
+  </body>
+
+</html>
+
+
+Jquery after()
+-----------------
+The jQuery after() method is used to insert specified content after the 
+selected element. 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      
+      <button>add content before </button>
+
+      <p>This is paragraph1</p>
+      <p>This is paragraph2</p>
+
+
+       <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("p").after("<p><b>GlobalEdx</b></p>");
+          })
+        })
+       </script> 
+  </body>
+
+</html>
+
+
+JQuery prepend()
+-------------------
+The jQuery prepend() method is used to insert the specified content at the 
+beginning (as a first child) of the selected elements.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      
+      <button>add content before </button>
+
+      <p>This is paragraph1</p>
+      <p>This is paragraph2</p>
+
+
+       <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("p").prepend("<b>GlobalEdx</b>");
+          })
+        })
+       </script> 
+  </body>
+
+</html>
+
+
+Jquery append()
+------------------
+The jQuery append() method is used to insert the specified content at the 
+ending (as a last child) of the selected element.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPage</title>
+   
+    <!-- add jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body>
+      
+      <button>add content before </button>
+
+      <p>This is paragraph1</p>
+      <p>This is paragraph2</p>
+
+
+       <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("p").append("<b>GlobalEdx</b>");
+          })
+        })
+       </script> 
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

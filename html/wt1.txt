@@ -1,0 +1,116 @@
+Web technologies/UI Technologies
+---------------------------------
+HTML 5
+
+CSS 3
+
+BOOTSTRAP 4
+
+JavaScript
+
+Angular 7
+
+Jquery (Overview)
+
++
+
+Project     
+
+
+1)What is web site?
+------------------
+Website is a collection of web pages.
+
+ex:
+	Home page,
+	aboutus page,
+	service page,
+	contactus and etc.
+
+Website resides and execute in internet environment and it will give 24/7 
+accessibility.
+
+web means internet.
+
+A web page is a hypertext markup language connected with the World wide web.
+
+Web technologies are mainly used to develop web sites.
+
+We have following types of websites.
+
+1)static website
+
+2)Dynamic website
+
+3)E-commerce website
+
+1)static website
+-----------------
+A static website contains web pages with fixed content.
+ex:
+	www.globaledx.com
+
+In general , Each web page displays the same information to every visitor.
+
+2)Dynamic website
+------------------
+Any website is developed by using JAVA,.Net,Python,php and etc is called 
+Dynamic website.
+
+A dynamic website contains web pages with no fixed content because it is handled
+by server.
+
+ex:
+	www.cricketinfo.com
+	www.gmail.com and etc.
+
+
+3)Ecommerce website
+----------------------
+Ecommerce also known as Electronic commerce or internet commerce, refers to 
+buying and selling of products and services using the internet/web and 
+transfer of money and data to execute transactions.
+
+In general ,Online shopping websites are called Ecommerce website.
+
+ex:
+	www.flipkart.com
+	www.amazon.com
+	www.myntra.com
+	and etc.	 
+
+
+website phases
+---------------
+1)Gather requirement
+
+2)Designing  (Photoshop)
+
+3)coding     (VSC "Visual Studio Code",Dream viewer,sublime,Eclipse,Netbeans and etc).	
+
+4)Purchasing Domain  (www.godaddy.com)
+
+5)Hosting and Publishing website  (godaddy, amazon, GCP "google cloud provider" and etc).
+
+6)SEO (Search Engine Optimization) (optional) (Digital Marking Team)
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

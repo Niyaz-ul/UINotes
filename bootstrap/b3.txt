@@ -1,0 +1,1094 @@
+Bootstrap Tables
+==================
+To create table in bootstrap we need to use "table" utility class.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table>
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+A Basic Bootstrap table has a light padding and only horizontal dividers.
+
+The "table" class adds basic styling to table.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table class="table">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+striped rows
+---------------
+The "table-striped" class adds zebra-stripes to a table.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table class="table  table-striped">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+Bordered tables
+----------------
+The "table-bordered" class adds borders on all sides of the table and cells.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table class="table  table-bordered">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+
+hover rows
+------------
+The "table-hover" class adds a hover effect on table row.
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table class="table  table-bordered table-hover">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+condensed table
+------------------
+the "table-condensed" class makes a table more compact by cutting cell 
+padding in half.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table class="table  table-bordered  table-condensed">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+Responsive table
+--------------
+The "table-responsive" class creates a responsive table.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <table class="table  table-bordered  table-responsive">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+      </div>
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table  table-bordered  ">
+                <tr>
+                      <th>ENO</th>
+                      <th>ENAME</th>
+                      <th>Email</th>
+                </tr>
+                <tr>
+                      <td>111</td>
+                      <td>Alan</td>
+                      <td>alan@gmail.com</td>
+                </tr>  
+
+                <tr>
+                      <td>222</td>
+                      <td>Jose</td>
+                      <td>jose@yahoo.com</td>
+                </tr>  
+
+                <tr>
+                      <td>333</td>
+                      <td>Jessie</td>
+                      <td>jessie@hotmail.com</td>
+                </tr>  
+                <tr>
+                      <td>444</td>
+                      <td>Karen</td>
+                      <td>karen@zoho.com</td>
+                </tr>  
+          </table>
+        </div>
+      </div>
+  </body>
+</html>
+
+Bootstrap Images
+=================
+In Bootstrap we can display images in three forms.
+
+1)Rounded Corners   (rounded)
+
+2)Circle	    (rounded-circle) 	
+
+3)Thumbnail	     (img-thumbnail)	
+
+
+1)Rounded Corners
+------------------
+The "rounded" class adds rounded circle to an image.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+        <img  src="thumbnail2.jpg" class="rounded"/>
+       </div>
+  </body>
+</html>
+
+
+2)circle
+-------------
+The "rounded-circle" class shapes the image to a circle.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+        <img  src="thumbnail2.jpg" class="rounded-circle"/>
+       </div>
+  </body>
+</html>
+
+
+3)thumbnail
+-----------------
+The "img-thumbnail" class shapes the image to a thumbnail.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body class="bg-dark">
+      <div class="container">
+        <img  src="thumbnail2.jpg" class="img-thumbnail"/>
+       </div>
+  </body>
+</html>
+
+
+Bootstrap Design 1
+====================
+ex:1
+----
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+            <!-- create a row -->
+            <div class="row">
+                <!--- create 2 columns with 6 spaces -->
+               <div class="col-6 border border-primary mt-5">
+                 <img src="rock.jpg" width="80%" height="100%"/>
+               </div> 
+                <div class="col-6 border border-danger mt-5">
+                  <h1>Dwayne Johnson</h1>
+                  <h6>Hollywood Actor</h6>
+                  <p> Dwayne Douglas Johnson, also known by his ring name the Rock, is a American-Canadian actor, producer, businessman, retired professional wrestler, and former American football and Canadian football player. He wrestled for the World Wrestling Federation for eight years prior to pursuing an acting career. </p>
+                   <p> Dwayne Douglas Johnson, also known by his ring name the Rock, is a American-Canadian actor, producer, businessman, retired professional wrestler, and former American football and Canadian football player. He wrestled for the World Wrestling Federation for eight years prior to pursuing an acting career. </p>
+                </div> 
+            </div>
+       </div>
+  </body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+            <!-- create a row -->
+            <div class="row">
+                <!--- create 2 columns with 6 spaces -->
+               <div class="col-6  mt-5">
+                 <img src="rock.jpg" width="80%" height="100%"/>
+               </div> 
+                <div class="col-6 mt-5">
+                  <h1>Dwayne Johnson</h1>
+                  <h6>Hollywood Actor</h6>
+                  <p> Dwayne Douglas Johnson, also known by his ring name the Rock, is a American-Canadian actor, producer, businessman, retired professional wrestler, and former American football and Canadian football player. He wrestled for the World Wrestling Federation for eight years prior to pursuing an acting career. </p>
+                   <p> Dwayne Douglas Johnson, also known by his ring name the Rock, is a American-Canadian actor, producer, businessman, retired professional wrestler, and former American football and Canadian football player. He wrestled for the World Wrestling Federation for eight years prior to pursuing an acting career. </p>
+                </div> 
+            </div>
+       </div>
+  </body>
+</html>
+
+Bootstrap Design 2
+=====================
+index.html
+----------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- add external css file -->
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>       
+  <body>
+      <div class="container">
+
+            <!-- row -->
+            <div class="row">
+              <!-- column1 -->
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                <img src="thumbnail2.jpg" class="rounded-circle imgadj"/>
+                </div>
+
+              <!-- column 2 -->    
+                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <img src="thumbnail2.jpg" class="rounded-circle imgadj"/>
+                </div>
+
+              <!-- column 3 -->    
+                <div class="col-lg-4 col-md-4 col-sm-4 ">
+               <img src="thumbnail2.jpg" class="rounded-circle imgadj"/>
+                </div>
+            </div>
+      </div>
+  </body>
+</html>
+
+
+mystyle.css
+-----------
+.imgadj
+{
+	width:300px;
+	height:300px;
+}
+.row
+{
+		margin-top:150px;
+}
+
+
+Bootstrap Jumbotron
+====================
+Bootstrap Jumbotron component is generally used to showcase the key content
+on a website.
+
+A Jumbotron is displayed as a gray box with rounded corners.
+
+Inside a Jombotron component we can put any valid html tags ,including other
+Bootstrap elements /classes.
+
+Use "<div>" element/tag with class "jumbotron" to create a Jumbotron component.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  </head>       
+  <body>
+      <div class="container">
+          <div class="jumbotron">
+              
+          </div>
+      </div>     
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </head>       
+  <body>
+      <div class="container">
+          <div class="jumbotron">
+              <h2>GlobalEdx BootStrap</h2>
+              <p>Bootstrap4 introduced in 2015 by twitter for responsive design.</p>	 
+	 </div>
+      </div>     
+  </body>
+</html>
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  </head>       
+  <body>
+      <div class="container">
+          <div class="jumbotron">
+              <h2>GlobalEdx BootStrap</h2>
+              <p>Bootstrap4 introduced in 2015 by twitter for responsive design.</p>
+              <p><a href="#" style="padding:10px;background:#00ff00;border:1px solid black;color:white">Get started </a></p>
+          </div>
+      </div>     
+  </body>
+</html>
+
+Changing the default Jumbotron background color
+============================================
+step1:
+-----
+	check the class for jumbotron using developer option.
+
+step2:
+------
+	create mystyle.css file for the "jumbotron".
+
+mystyle.css
+--------------
+.jumbotron
+{
+	background-color: #0278ef;
+}
+
+step3:
+---------
+	Add external css file to html file using <link> tag.
+
+	ex:
+	<!-- add external css file -->
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+ex:
+index.html
+-----------
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- add external css file -->
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>       
+  <body>
+      <div class="container">
+          <div class="jumbotron">
+              <h2>GlobalEdx BootStrap</h2>
+              <p>Bootstrap4 introduced in 2015 by twitter for responsive design.</p>
+              <p><a href="#" style="padding:10px;background:#00ff00;border:1px solid black;color:white">Get started </a></p>
+          </div>
+      </div>     
+  </body>
+</html>
+
+mystyle.css
+-----------
+.jumbotron
+{
+	background-color: #0278ef;
+}
+
+We can place jumbotron outside of the container class.
+
+If we place Jumbotron outside of the container class then it extends to the 
+full screen.
+
+ex:
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MyPage!</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- add external css file -->
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>       
+  <body>
+      <div class="jumbotron">
+      <div class="container">
+        
+              <h2>GlobalEdx BootStrap</h2>
+              <p>Bootstrap4 introduced in 2015 by twitter for responsive design.</p>
+              <p><a href="#" style="padding:10px;background:#00ff00;border:1px solid black;color:white">Get started </a></p>
+          </div>
+      </div>     
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,326 @@
+Introduction of Typescript
+===========================
+Typescript is a programming language.
+
+Typescript introduced by microsoft in October 2012.
+
+Typescript is used to build the angular 2,4,5,6 and 7 applications.
+
+Typescript follows the OOPS concepts.
+
+Superset of JavaScript is a Typescript.
+ex:
+		TypeScript
+		    |
+		    |
+		JavaScript
+
+HTML won't understand Typescript.We need to convert Typescript to 
+Equivalent JavaScript.
+
+In general ,webpages won't understand typescript.So Angular Developer must 
+convert Typescript to Equivalent JavaScript.
+
+
+The process of converting Typescript to Equivalent Javascript is called
+"Transpilation".
+
+A "tsc" is a "Typescript Compiler " userd to perform Transpilation.
+
+
+Software Installations
+--------------------------
+1)Download and Install NodeJS.
+  ex:
+	website: http://nodejs.org/en/download/
+
+2)Download and Install GIT
+  ex:
+	website: http://www.git-scm.com/download/win
+
+
+
+3)Download and Install Viscual Studio Code(VSC).
+  ex:
+	website: http://code.visualstudio.com/docs/?div=wim	
+
+
+4) ADD nodeJS directory to environment variables.
+  ex:
+   right click to my computer --> properties --> advanced system settings
+   ---> environmental variables -->User variables --->click new button--> 
+ 
+   -----------------
+   variable Name : PATH
+   variable value :  C:\Program Files\nodejs;
+----------------------------------------------  ---> ok-->ok-->ok
+
+5)Install Typescript by using following commands.
+	
+	ex:
+	npm install -g typescript@latest	
+			
+	Here "npm" stands for "Node packaging Manager".
+	"npm" is a integrated tool of NodeJS.
+ 	'-g' stands for "Global Installation". 
+	
+Variables
+===============
+Variables are designed to store the data.
+
+By using variables we can store all categories of data.
+
+syntax
+--------
+	var  variable_name:datatype= value;
+
+	let  variable_name:datatype = value;
+
+	Here "let" is a keyword introduced in ECMA.
+	ECMA is a standard in JavaScript.
+	ECMA means Europeon Computer Manufacturers Assocation.
+
+
+Procedure  to develop and execute First Typescript program
+===========================================================
+1)create a "variables" folder on a "desktop".
+
+
+2)Drag and Drop "variables" folder inside Visual studio code.
+
+
+3)create a "ts" file by some name like "index.ts".
+
+index.ts
+-----------
+var var_one:number=10;
+var var_two:number=10.56;
+document.writeln(var_one+"<br>");
+document.writeln(var_two+"<br>");
+
+
+4)convert index.ts file to equivalent javascript file using below command.
+  ex:
+	variables> tsc  index.ts
+
+
+5)Load the "index.js" file in "index.html" file using <script> tag.
+  ex:
+	<script language="javascript" src="index.js"/>
+	
+
+6)  Test the program on browser window.
+
+
+
+Note:
+------
+
+Adding npm and nodejs directory in Environmental variables to execute the program.
+
+user variables (click to new button)
+--------------
+variable Name : PATH
+
+variable value: C:\Users\user\AppData\Roaming\npm;C:\Program Files\nodejs;
+
+-->ok--->ok--->ok.
+
+software versions
+-------------------------------
+To check the software versions we need to type below commands.
+
+variables> tsc -v
+
+Version 4.0.2
+
+variables> node -v 
+
+v12.18.3
+
+index.ts
+---------
+var var_one:number=10;
+var var_two:number=10.56;
+document.writeln(var_one+"<br>");
+document.writeln(var_two+"<br>")
+
+variables> tsc  index.ts
+
+index.html
+---------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+In Typescript we can represent string values.
+
+index.ts
+--------
+
+var var_three:string="hello";
+var var_four:string='bye';
+document.writeln(var_three+"<br>"); 
+document.writeln(var_four+"<br>");
+
+
+variables> tsc index.ts
+
+index.html
+--------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+In Typescript we can represent boolean values either true or false. 
+
+index.ts
+-------
+var var_five:boolean=true;
+var var_six:boolean=false;
+document.writeln(var_five+"<br>");
+document.writeln(var_six+"<br>");
+
+variables> tsc index.ts
+
+index.html
+----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+In Typescript we can represent "any" datatype.
+
+index.ts
+--------
+var var_seven:any=10;
+var var_eight:any=10.56;
+var var_nine:any="hello";
+var var_ten:any='bye';
+var var_eleven:any=true;
+document.writeln(var_seven+"<br>");
+document.writeln(var_eight+"<br>");
+document.writeln(var_nine+"<br>");
+document.writeln(var_ten+"<br>");
+document.writeln(var_eleven+"<br>");
+
+variables> tsc  index.ts
+
+index.html
+----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+
+In Typescript we can represent "array" datatype.
+
+index.ts
+-------
+var var_one:Array<number>=[10,20,30,40,50];
+for(var i:number=0;i<var_one.length;i++)
+{
+    document.writeln(var_one[i]+"<br>");
+}
+
+var var_two:Array<string>=["hi","hello","bye"];
+for(var i:number=0;i<var_two.length;i++)
+{
+    document.writeln(var_two[i]+"<br>");
+}
+
+var var_three:Array<any>=["hi","hello","bye"];
+for(var i:number=0;i<var_three.length;i++)
+{
+    document.writeln(var_three[i]+"<br>");
+}
+
+
+variables> tsc index.ts
+
+index.html
+----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+Array contains JSON data
+--------------------------
+
+index.ts
+---------
+var var_one:Array<any>=[
+
+                        {"p_id":111,"p_name":"LAPTOPS","p_price":10000},
+                        {"p_id":222,"p_name":"MOBILES","p_price":20000},
+                        {"p_id":333,"p_name":"TV","p_price":30000},
+                        {"p_id":444,"p_name":"SHOES","p_price":40000}    
+                        ];
+
+for(var i:number=0;i<var_one.length;i++)
+{
+document.writeln(var_one[i].p_id+" "+var_one[i].p_name+" "+var_one[i].p_price+"<br>");
+}
+
+variables> tsc index.ts
+
+index.html
+----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

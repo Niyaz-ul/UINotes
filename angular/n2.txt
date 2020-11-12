@@ -1,0 +1,430 @@
+Typescript Functions
+------------------------
+Functions are designed to maintain bussiness logic.
+
+Functions are used to reuse the bussiness logic.
+
+In Typescript, we have two types of functions
+
+1)Named Functions 
+
+2)Anonymous Functions
+
+1)Named Functions 
+---------------------
+Functions with name are called Named functions.
+To declare a function we need to use "functioin" keyword.
+
+syntax
+-------
+	//function declaration
+	function fun_name(arguments with datatype):return type
+	{
+	-
+	-//bussiness logic 
+	-
+	}
+
+	//caller function
+	fun_name(arguments);
+
+
+ex:1 
+Function without arguments
+---------------------------
+index.ts
+---------
+//function declaration 
+function fun_one():String{
+    return "Hello World";
+}
+//caller function
+document.writeln(fun_one()+"<br>");
+
+variables> tsc index.ts
+
+index.html
+-----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+ex:2 Function with arguments
+-----------------------------
+index.ts
+-------
+//function declaration 
+function fun_one(arg1:String,arg2:String):String
+{
+    return arg1+" "+arg2;
+}
+//caller function
+document.writeln(fun_one("global","Edx")+" ");
+
+variable>tsc index.ts
+
+index.html 
+--------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+ 
+Function returns another function
+----------------------------------
+index.ts
+----------
+//function declaration 
+function fun_one():any{
+    return fun_two();
+}
+function fun_two():String{
+    return "GlobalEDX";
+}
+//caller function 
+document.writeln(fun_one()+"<br>");
+
+variables>tsc index.ts
+
+index.html
+-----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+
+
+2)Anonymous Functions 
+-------------------------
+A function without name is called Anonymous function.
+
+Anonymous functions are more secure when compare to Named Functions.
+
+Anonymous functions utilize the heap memory efficiently.
+
+Anonymous functions are also called Arrow Functions.
+
+WE can represent Anonymous functions using Array symbol (=>).
+
+syntax
+---------
+//function declaration 
+var var_name=(arguments with datatypes):returntype=>
+{
+	-
+	-//bussiness logic
+	-
+}
+
+
+
+
+Anonymous function with no arguments.
+----------------------------------
+index.ts
+----------
+var fun_one=():String=>
+{
+    return "Angular7";
+}
+
+//calling
+//definition of a function
+document.writeln(fun_one+"<br>");
+
+//output 
+document.writeln(fun_one()+"<br>");
+
+
+variables>  tsc index.ts
+
+index.html
+---------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+
+Anonymous function with arguments
+--------------------------------------
+index.ts
+---------
+var fun_one=(arg1:String,arg2:String):String=>
+{
+    return arg1+" "+arg2;
+}
+document.writeln(fun_one("Mean","Stack")+"<br>");
+
+variables> tsc index.ts
+
+
+index.html
+------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+Arrow function returns another arrow function
+==============================================
+index.ts
+---------
+var fun_one=():any=>
+{
+    return  ():String=>
+            {
+                    return "ReactJS";
+            }
+}
+//definition of a function
+document.writeln(fun_one()+"<br>");
+
+//output 
+document.writeln(fun_one()()+"<br>");
+
+
+variables> tsc index.ts
+
+
+index.html
+----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+Class in Typescript
+========================
+A class is a collection of variables and functions.
+
+Ecapsulating of variables and functions is called as class.
+
+In Typescript, we can create a class by using "class" keyword. 
+
+Every class must have one constructor.
+
+We can declare a constructor with the help of "constructor" keyword.
+
+constructor is sued to initialized an object.
+
+WE can create object to a class by using "new " keyword.
+
+recommanded
+--------------
+In Class, variables should be declared as private only.
+In Class, functions should be declared as public only.
+
+syntax
+--------
+class class_name 
+{
+	//constructor
+	//variables 
+	//functions/methods
+}
+
+ex:
+class Example
+{
+    //variable declaration
+    private var_one:String;
+    private var_two:String;
+    private var_three:String;
+
+    //constructor
+    constructor(){
+        //initialize all the above variables.
+        this.var_one="Angular7";
+        this.var_two="ReactJS";
+        this.var_three="Bootstrap";
+    }
+    //functions
+    public getVarOne():String{
+        return this.var_one;
+    }
+    public getVarTwo():String{
+        return this.var_two;
+    }
+    public getVarThree():String{
+        return this.var_three;
+    }
+}
+var obj:Example=new Example();
+document.writeln("<h1 style='color:red'>"+obj.getVarOne()+"</h1>");
+document.writeln("<h1 style='color:blue'>"+obj.getVarTwo()+"</h1>");
+document.writeln("<h1 style='color:green'>"+obj.getVarThree()+"</h1>");
+
+variables> tsc index.ts
+
+
+index.htnl
+----------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPage</title>
+        <script language="javascript" src="index.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+
+
+Angular 7
+==============
+Diagram: angular
+
+
+If 1 crore request hitting to the server then following issues may raises on
+server side.
+ex:
+	Delay in response.
+	Server Down
+	server Crash.
+	Network Traffic and etc.
+
+To overcome this we can increase server configuration i. e 
+	for 50lakh request we will take 1 server.
+	Another 50 lakh request we will take 1 server.
+
+If company does not effort server configuration then we have only one choice.
+
+If have to move majority of bussiness component from server to client side.
+
+Moving the bussiness components from server to client by using MVC (Model 
+view controller) is called ANGULAR.
+
+server provides services to client over the network.
+
+For providing webservices we will use server.
+
+In server we will deploy applications ,those applications are called bussiness 
+components.
+
+When client send the request to  the server then server performs middleware 
+services.
+ex:
+	firewall
+	authentication
+	authorization
+	malware production
+	connection pooling 
+	and etc.
+
+AFter accepting the request from the client,server pass that request to 
+appropriate bussiness component.
+
+server send the output to client as a  response.		
+
+
+If Client requires web application with moderate performance  then we 
+need to use Angularjs (Aangular1.x).
+
+IF Client requires a web application with moderate performance ,mobile app
+with more performance then we need to use Angular2,4,5,6 and 7.
+
+If application logic is secured then don't use Angular.we need to use '
+JAVA,.NET,PYTHON ,PHP and etc.
+	ex:
+	paypall services
+	payment gateway and etc.
+
+
+Software Installation to build Angular Application
+--------------------------------------------------
+1)Download and Install NodeJS.
+
+2)Download and Install GIT.
+
+3)Download and Install Visual Studio Code.
+
+4)Intall the "YARN".	
+
+	yarn is a packing manager used to download node modules in faster 
+	manner.
+
+	cmd> npm install -g yarn
+
+	"npm" stands for node packing manager.
+	"npm" is a integrated tool for nodejs.
+	Here -g means for "global installation".
+
+5)Install Angular7 by using following command.
+
+	cmd> npm install -g @angular/cli@latest //10 version
+	
+	"cli" stands for "Command Line Interface".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
